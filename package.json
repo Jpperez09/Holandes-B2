@@ -1,0 +1,25 @@
+{
+  "name": "dutch-b2-app",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Juanpa's Dutch B2 localhost learning system",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "concurrently --names \"backend,frontend\" --prefix-colors \"blue,green\" --kill-others-on-fail \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix backend && npm run build --prefix frontend",
+    "validate-vault": "tsx scripts/validate-vault.ts",
+    "export": "tsx scripts/export.ts",
+    "import": "tsx scripts/import.ts",
+    "reset": "tsx scripts/reset.ts",
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "tsx": "^4.15.7",
+    "typescript": "^5.5.3"
+  }
+}

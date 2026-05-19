@@ -1,0 +1,29 @@
+{
+  "name": "dutch-b2-backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.10.0",
+    "chokidar": "^3.6.0",
+    "express": "^4.19.2",
+    "gray-matter": "^4.0.3",
+    "pino": "^9.2.0",
+    "pino-pretty": "^11.2.0",
+    "ts-fsrs": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.10",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.2",
+    "tsx": "^4.15.7",
+    "typescript": "^5.5.3",
+    "vitest": "^1.6.0"
+  }
+}
