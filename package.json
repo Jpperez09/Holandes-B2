@@ -11,10 +11,7 @@
     "dev:backend": "npm run dev --prefix backend",
     "dev:frontend": "npm run dev --prefix frontend",
     "build": "npm run build --prefix backend && npm run build --prefix frontend",
-    "validate-vault": "tsx scripts/validate-vault.ts",
-    "export": "tsx scripts/export.ts",
-    "import": "tsx scripts/import.ts",
-    "reset": "tsx scripts/reset.ts",
+    "test": "npm test --prefix backend",
     "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend"
   },
   "devDependencies": {
