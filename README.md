@@ -186,14 +186,13 @@ This is a working MVP. Known limitations, none of which block daily learning:
 - **No automated frontend tests yet** (the backend has 45 passing tests).
 - Speaking / real-world activities are shown with a generic icon.
 
-See [`docs/PHASE_3_COMPLETION_REPORT.md`](docs/PHASE_3_COMPLETION_REPORT.md) for the
-full status and roadmap.
-
 ## Documentation
 
-- [`docs/BROTHER_ONBOARDING.md`](docs/BROTHER_ONBOARDING.md) — friendly, non-technical setup guide
-- [`docs/QA_CHECKLIST.md`](docs/QA_CHECKLIST.md) — manual test checklist
-- [`docs/PHASE_3_COMPLETION_REPORT.md`](docs/PHASE_3_COMPLETION_REPORT.md) — project status
+Project documentation — the build & QA reports, the non-technical onboarding
+guide, the test checklist and the feature roadmap — lives in the Obsidian
+curriculum vault under `08_App_Architecture/` (alongside the architecture specs),
+not in this code repository. The README above is self-contained for installing
+and running the app.
 
 ## Open source
 
