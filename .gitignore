@@ -27,6 +27,10 @@ data/*.sqlite
 data/*.sqlite-shm
 data/*.sqlite-wal
 
+# Personal study journals — the app writes these into the bundled curriculum
+# at runtime. They are private progress, never committed.
+curriculum/04_Daily_Logs/
+
 # Logs
 logs/
 *.log

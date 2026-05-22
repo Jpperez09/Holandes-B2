@@ -44,11 +44,11 @@ There are **seven screens**: Home, Today, Learn, Review, Progress, Library, Sett
 
 - **Node.js 22 LTS** (recommended). Node 20+ works; Node 24 is also tested.
 - **npm** (comes with Node).
-- An **Obsidian vault** with the Dutch curriculum (the `03_Curriculum/`,
-  `05_Exercises/`, `06_Resources/` folders).
 - About 300 MB of disk space for dependencies.
 
-No database server, no Python, no Docker — just Node.
+No database server, no Python, no Docker — just Node. **The Dutch curriculum
+ships inside this repository** (the `curriculum/` folder), so there is nothing
+else to download — clone and run.
 
 ## Install
 
@@ -88,22 +88,20 @@ To stop the app, press **Ctrl+C** in the terminal.
 | `npm run build` | Production build of both |
 | `npm test` | Run the backend test suite |
 
-## Configure your vault path
+## The curriculum (no setup needed)
 
-The app needs to know where your Dutch curriculum vault lives. There are **two ways**:
+The Dutch curriculum lives in the **`curriculum/`** folder of this repo and the
+app reads it automatically — `git clone` then `npm run dev` and you are learning.
+There is no vault path to configure.
 
-**Option A — in the app (easiest).** Start the app, open **Settings → "For technical
-users"**, paste your vault folder path, and click *Save vault folder*.
+**Want to use your own curriculum instead?** (e.g. a personal Obsidian vault)
 
-**Option B — config file.** Copy the template and edit it:
+- In the app: **Settings → "For technical users"** → set your folder → *Save*, or
+- Copy `config.example.json` to `config.local.json` (git-ignored) and set
+  `vault_path` there — an absolute path, or one relative to the repo root.
 
-```bash
-cp config.example.json config.local.json
-```
-
-Then set `vault_path` in `config.local.json` to your vault folder, e.g.
-`D:\\Obsidian\\Juanpa-Holandes-B2`. `config.local.json` is git-ignored, so each
-person's machine keeps its own path.
+Any curriculum folder just needs `03_Curriculum/`, `05_Exercises/` and
+`06_Resources/` inside it.
 
 ## Start learning
 
@@ -116,32 +114,33 @@ person's machine keeps its own path.
 
 ---
 
-## How the Obsidian vault works
+## How the curriculum folder works
 
-The app and the vault have **clearly separated jobs**:
+The `curriculum/` folder is a small content vault. The app reads it and writes
+only your daily logs back into it:
 
 | Folder | App access |
 |---|---|
-| `03_Curriculum/` | **Read only** — modules and levels |
-| `05_Exercises/` | **Read only** — vocabulary & grammar seed data |
-| `06_Resources/` | **Read only** — supporting resources |
-| `04_Daily_Logs/` | **Write** — the app saves your daily log here |
-| everything else | Untouched |
+| `curriculum/03_Curriculum/` | **Read only** — modules and levels |
+| `curriculum/05_Exercises/` | **Read only** — vocabulary & grammar seed data |
+| `curriculum/06_Resources/` | **Read only** — supporting resources |
+| `curriculum/04_Daily_Logs/` | **Write** — your daily logs (created at runtime, git-ignored) |
 
-- The vault is the **single source of truth for curriculum content**.
-- The app **never edits your curriculum**. It only ever *writes* daily-log files,
-  and only into `04_Daily_Logs/`.
-- You can keep using Obsidian normally while the app runs. If you change a module
-  file, click **Settings → Re-scan vault for content** to pick it up.
+- The curriculum is plain Markdown — open `curriculum/` in [Obsidian](https://obsidian.md)
+  or any editor to read or extend it.
+- The app **never edits the curriculum**. It only ever *writes* daily-log files
+  into `04_Daily_Logs/`, which is git-ignored so your journal stays private.
+- If you edit a module file, click **Settings → Re-scan vault for content** to
+  pick up the change.
 
 ## Your data — what stays local
 
 | File | Contents | Committed to Git? |
 |---|---|---|
 | `progress.sqlite` | All your study progress: reviews, attempts, daily logs, streaks | **No — git-ignored** |
-| `config.local.json` | Your machine's vault path and name | **No — git-ignored** |
-| `04_Daily_Logs/*.md` | Your written daily journal (inside your vault) | (lives in your vault, not this repo) |
-| The curriculum vault | Dutch modules and exercises | (separate Obsidian repo) |
+| `config.local.json` | Your machine-specific overrides (optional) | **No — git-ignored** |
+| `curriculum/04_Daily_Logs/*.md` | Your written daily journal | **No — git-ignored** |
+| `curriculum/03_Curriculum`, `05_Exercises`, `06_Resources` | The Dutch lessons | **Yes — shipped with the repo** |
 
 Everything personal stays on your machine. To start completely fresh, stop the app
 and delete `progress.sqlite` — it is recreated empty on the next start.
@@ -153,6 +152,7 @@ and delete `progress.sqlite` — it is recreated empty on the next start.
 - `node_modules/` — dependencies
 - `progress.sqlite*` — your personal study database
 - `config.local.json` — your machine-specific config
+- `curriculum/04_Daily_Logs/` — your private daily journals
 - `dist/`, `build/` — compiled output
 - `.env*`, `logs/`, `*.log` — environment files and logs
 

@@ -57,6 +57,13 @@ function buildConfig(): AppConfig {
   if (process.env.API_PORT) merged.ports.backend = parseInt(process.env.API_PORT, 10);
   if (process.env.UI_PORT) merged.ports.frontend = parseInt(process.env.UI_PORT, 10);
 
+  // Resolve a relative vault_path against the project root. This lets the
+  // committed default ("./curriculum" — the bundled curriculum that ships with
+  // the repo) work from any clone, regardless of the process working directory.
+  if (merged.vault_path && !path.isAbsolute(merged.vault_path)) {
+    merged.vault_path = path.resolve(PROJECT_ROOT, merged.vault_path);
+  }
+
   return merged;
 }
 
