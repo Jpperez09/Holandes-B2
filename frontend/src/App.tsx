@@ -1,6 +1,10 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { endpoints } from './api/endpoints';
+import { useApi } from './hooks/useApi';
+import { Loading, ErrorState } from './components/ui';
 import { Sidebar } from './components/Sidebar';
+import { Onboarding } from './screens/Onboarding';
 import { Home } from './screens/Home';
 import { Today } from './screens/Today';
 import { Learn } from './screens/Learn';
@@ -13,6 +17,36 @@ import { Settings } from './screens/Settings';
 import { NotFound } from './screens/NotFound';
 
 export default function App(): React.JSX.Element {
+  // Settings load first: if no vault is configured yet, run the first-run wizard.
+  const { data: settings, loading, error, reload } = useApi(
+    () => endpoints.getSettings(),
+    [],
+  );
+
+  if (loading) {
+    return (
+      <div className="onboarding">
+        <div className="onboarding__card">
+          <Loading label="Starting up…" />
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="onboarding">
+        <div className="onboarding__card">
+          <ErrorState error={error} onRetry={reload} />
+        </div>
+      </div>
+    );
+  }
+
+  if (!settings || !settings['vault_path']) {
+    return <Onboarding onComplete={reload} />;
+  }
+
   return (
     <div className="app">
       <Sidebar />
