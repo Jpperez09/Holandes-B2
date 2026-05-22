@@ -3,9 +3,9 @@
 A calm, local-first app for learning Dutch up to **CEFR level B2**. It runs entirely
 on your own computer — **no cloud, no accounts, no sign-up, no tracking**.
 
-The app turns an [Obsidian](https://obsidian.md) vault of Dutch curriculum into a
-friendly daily study companion: a guided lesson plan, spaced-repetition vocabulary
-review, module browser, progress overview, and a daily learning journal.
+The Dutch curriculum ships inside this repo (`curriculum/`), and the app turns it
+into a friendly daily study companion: a guided lesson plan, spaced-repetition
+vocabulary review, module browser, progress overview, and a daily learning journal.
 
 ---
 
@@ -26,8 +26,7 @@ There are **seven screens**: Home, Today, Learn, Review, Progress, Library, Sett
 - **Juanpa** — the learner this was built for.
 - **His brother** — a second learner who clones the repo and runs it on his own machine.
 - **Any Spanish-speaking learner with good English** who wants a free, private, offline
-  way to study Dutch. (See [`docs/BROTHER_ONBOARDING.md`](docs/BROTHER_ONBOARDING.md)
-  for a friendly, non-technical setup guide.)
+  way to study Dutch. The five steps under *Install* and *Run* below are all you need.
 
 ## Why local-first
 
