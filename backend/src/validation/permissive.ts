@@ -1,6 +1,7 @@
 import type { CefrBand, CefrLetter, ContentType } from '../types/content';
 import type { ParserWarning } from '../types/parser';
 import { makeWarning } from '../types/parser';
+import type { MarkdownTable } from '../markdown/tables';
 
 export const KNOWN_TYPES: ReadonlySet<ContentType> = new Set<ContentType>([
   'module',
@@ -207,6 +208,35 @@ const KNOWN_FRONTMATTER_KEYS_BY_TYPE: Record<string, ReadonlySet<string>> = {
     'updated',
   ]),
 };
+
+/**
+ * Warn about data rows whose cell count does not match the header column count.
+ *
+ * A mismatch is the classic cause of shifted/garbled columns in a Markdown table
+ * (e.g. a vocab row missing its `article` cell pushes every later value left by
+ * one). Catching it here surfaces the typo immediately instead of silently
+ * storing wrong data. Severity is `warn` — the row is still indexed permissively.
+ */
+export function malformedTableRowWarnings(
+  table: MarkdownTable,
+  vault_path?: string,
+  context?: string,
+): ParserWarning[] {
+  return table.malformedRows.map((m) =>
+    makeWarning(
+      'table-row-column-mismatch',
+      `Table row at line ${m.line}${context ? ` in "${context}"` : ''} has ` +
+        `${m.cellCount} cell(s) but the header declares ${m.headerCount} column(s). ` +
+        `A missing or extra cell shifts every column — check this row.`,
+      'warn',
+      {
+        vault_path,
+        field: 'table-row',
+        context: { line: m.line, cellCount: m.cellCount, headerCount: m.headerCount },
+      },
+    ),
+  );
+}
 
 export function unknownFieldWarnings(
   raw: Record<string, unknown>,

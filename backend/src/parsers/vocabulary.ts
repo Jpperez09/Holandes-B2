@@ -12,6 +12,7 @@ import {
   coerceInteger,
   coerceStringArray,
   isString,
+  malformedTableRowWarnings,
   requireField,
   unknownFieldWarnings,
 } from '../validation/permissive';
@@ -143,6 +144,9 @@ export function parseVocabularySeed(
         // Not a vocab table — skip silently.
         continue;
       }
+
+      // Flag any row whose column count doesn't match the header.
+      warnings.push(...malformedTableRowWarnings(table, vault_path, section.title));
 
       table.rows.forEach((row, rowIdx) => {
         const lemma = cellOrNull(row['dutch']);

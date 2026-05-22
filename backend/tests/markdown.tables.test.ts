@@ -36,6 +36,38 @@ describe('extractMarkdownTables', () => {
     const tables = extractMarkdownTables(body);
     expect(tables[0].rows[0]).toEqual({ a: 'has | pipe', b: 'ok' });
   });
+
+  it('flags rows whose cell count does not match the header', () => {
+    const body = `
+| id | name | role |
+|----|------|------|
+| 1 | Alice | admin |
+| 2 | Bob |
+| 3 | Carol | user | extra |
+`;
+    const table = extractMarkdownTables(body)[0];
+    expect(table.malformedRows).toHaveLength(2);
+    expect(table.malformedRows[0]).toMatchObject({
+      rowIndex: 1,
+      cellCount: 2,
+      headerCount: 3,
+    });
+    expect(table.malformedRows[1]).toMatchObject({
+      rowIndex: 2,
+      cellCount: 4,
+      headerCount: 3,
+    });
+  });
+
+  it('reports no malformed rows for a well-formed table', () => {
+    const body = `
+| a | b |
+|---|---|
+| 1 | 2 |
+| 3 | 4 |
+`;
+    expect(extractMarkdownTables(body)[0].malformedRows).toEqual([]);
+  });
 });
 
 describe('splitByHeadings', () => {

@@ -10,6 +10,7 @@ import {
   coerceInteger,
   coerceStringArray,
   isString,
+  malformedTableRowWarnings,
   MODULE_ID_RE,
   parseEstimatedMinutes,
   requireField,
@@ -72,6 +73,9 @@ function parseActivities(body: string, vault_path: string): {
   if (!table) {
     return { activities: [], warnings };
   }
+
+  // Flag any activity row whose column count doesn't match the header.
+  warnings.push(...malformedTableRowWarnings(table, vault_path, 'Activities'));
 
   const headers = table.headers;
   const slugKey = headers.includes('#') ? '#' : headers.find((h) => h === 'slug') ?? null;

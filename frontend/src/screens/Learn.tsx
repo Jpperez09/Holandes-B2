@@ -46,10 +46,16 @@ export function Learn(): React.JSX.Element {
           g.modules.push(m);
         }
 
-        // Linear unlock: a module is open if it's the first or the previous one is done.
+        // Linear unlock: a module is open if it's the first, the previous one is
+        // done, or it has been started/finished already (you can always revisit
+        // a module you've touched — a done module must never read as locked).
         const unlocked = new Set<number>();
         sorted.forEach((m, i) => {
-          if (i === 0 || sorted[i - 1].percent_complete >= 1) {
+          if (
+            i === 0 ||
+            sorted[i - 1].percent_complete >= 1 ||
+            m.percent_complete > 0
+          ) {
             unlocked.add(m.id);
           }
         });

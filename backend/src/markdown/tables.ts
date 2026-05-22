@@ -1,3 +1,15 @@
+/** A data row whose raw cell count does not match the header column count. */
+export interface MalformedRow {
+  /** 0-based index into the table's `rows`. */
+  rowIndex: number;
+  /** 1-indexed line number in the Markdown body. */
+  line: number;
+  /** Number of cells actually found in the row. */
+  cellCount: number;
+  /** Number of columns the header declares. */
+  headerCount: number;
+}
+
 export interface MarkdownTable {
   /** Original raw header cells, lower-cased and trimmed. */
   headers: string[];
@@ -5,6 +17,11 @@ export interface MarkdownTable {
   rows: Array<Record<string, string>>;
   /** Line in the body where the table started (1-indexed). */
   startLine: number;
+  /**
+   * Data rows whose raw cell count differs from the header column count.
+   * A missing or extra cell shifts every column — the classic seed-table typo.
+   */
+  malformedRows: MalformedRow[];
 }
 
 const PIPE_LINE_RE = /^\s*\|/;
@@ -61,16 +78,25 @@ export function extractMarkdownTables(body: string): MarkdownTable[] {
       const startLine = i + 1; // 1-indexed
       i += 2; // skip header + separator
       const rows: Array<Record<string, string>> = [];
+      const malformedRows: MalformedRow[] = [];
       while (i < lines.length && PIPE_LINE_RE.test(lines[i])) {
         const cells = splitRow(lines[i]);
         const row: Record<string, string> = {};
         for (let c = 0; c < headerCells.length; c++) {
           row[headerCells[c]] = (cells[c] ?? '').trim();
         }
+        if (cells.length !== headerCells.length) {
+          malformedRows.push({
+            rowIndex: rows.length,
+            line: i + 1,
+            cellCount: cells.length,
+            headerCount: headerCells.length,
+          });
+        }
         rows.push(row);
         i++;
       }
-      tables.push({ headers: headerCells, rows, startLine });
+      tables.push({ headers: headerCells, rows, startLine, malformedRows });
       continue;
     }
     i++;

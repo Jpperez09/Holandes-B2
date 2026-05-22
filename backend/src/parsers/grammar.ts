@@ -7,6 +7,7 @@ import {
   coerceInteger,
   coerceStringArray,
   isString,
+  malformedTableRowWarnings,
   requireField,
   unknownFieldWarnings,
 } from '../validation/permissive';
@@ -127,6 +128,9 @@ export function parseGrammarRegistry(
       );
       continue;
     }
+
+    // Flag any field/value row whose column count doesn't match the header.
+    warnings.push(...malformedTableRowWarnings(table, vault_path, slug));
 
     const rows = table.rows;
     const slugFromTable = pickField(rows, 'slug')?.toLowerCase() ?? null;
