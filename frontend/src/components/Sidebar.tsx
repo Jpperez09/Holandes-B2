@@ -14,6 +14,7 @@ const NAV: NavItem[] = [
   { to: '/review', icon: '🔁', label: 'Review' },
   { to: '/progress', icon: '📈', label: 'Progress' },
   { to: '/library', icon: '💡', label: 'Library' },
+  { to: '/resources', icon: '🧰', label: 'Resources' },
   { to: '/settings', icon: '⚙️', label: 'Settings' },
 ];
 

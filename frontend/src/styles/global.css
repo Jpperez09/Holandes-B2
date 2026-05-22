@@ -528,6 +528,44 @@ a { color: var(--primary); }
 .skill-row__head { display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 4px; }
 
 .block-link { display: block; text-decoration: none; color: inherit; }
+
+/* filter chips (Resources screen) */
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 22px;
+}
+.filter-chip {
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-soft);
+  border-radius: 999px;
+  padding: 7px 15px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.filter-chip:hover { background: var(--surface-soft); }
+.filter-chip.is-active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+/* resource card */
+.resource {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  box-shadow: var(--shadow);
+}
+.resource__head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.resource__name { font-weight: 700; font-size: 1rem; }
+.resource__blurb { color: var(--text-soft); font-size: 0.9rem; margin: 6px 0 10px; }
+.resource__badges { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
 .gap-sm > * + * { margin-top: 8px; }
 .mt-s { margin-top: 8px; }
 .mt-m { margin-top: 16px; }

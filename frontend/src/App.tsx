@@ -8,6 +8,7 @@ import { ModuleDetail } from './screens/ModuleDetail';
 import { Review } from './screens/Review';
 import { Progress } from './screens/Progress';
 import { Library } from './screens/Library';
+import { Resources } from './screens/Resources';
 import { Settings } from './screens/Settings';
 import { NotFound } from './screens/NotFound';
 
@@ -24,6 +25,7 @@ export default function App(): React.JSX.Element {
           <Route path="/review" element={<Review />} />
           <Route path="/progress" element={<Progress />} />
           <Route path="/library" element={<Library />} />
+          <Route path="/resources" element={<Resources />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
