@@ -323,7 +323,7 @@ Every entry has the following fields. The app's vault indexer parses them as a s
 | **name_en** | Attributive adjectives — the *-e* rule |
 | **pienemann_stage** | 3 |
 | **cefr_band** | A0-A1 |
-| **module_introduced** | Previewed in MOD-004; fully drilled in MOD-017 per `03_Curriculum/A0_A1_Roadmap`. |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-013_Adjective_Endings]] (previewed in MOD-004). |
 | **dutch_pattern** | `[article/det] + [adj+e] + [N]` — with one exception: `een + [adj-base] + [het-noun]` keeps the adjective uninflected. |
 | **english_meaning** | Most attributive adjectives get *-e* in Dutch. The exception: *een* + adjective + het-noun → no *-e*. |
 | **spanish_contrast** | Spanish agrees gender + number. Dutch agrees only on this one rule. Subtle for L2 learners. |
@@ -362,7 +362,7 @@ Every entry has the following fields. The app's vault indexer parses them as a s
 | MOD-005 | `v2-main-clause`, `question-yes-no`, `question-word`, `present-tense-regular`, `negation-niet-geen`, `ik-woon-in` |
 | MOD-006 | `negation-niet-geen` (consolidated: *nooit*, *niets*, *niemand*, where *niet* goes) |
 | MOD-012 | `modal-kunnen-willen` (also `modal-moeten-mogen` in `Grammar_Patterns_A1`) |
-| MOD-017 (later) | `adjective-attributive` |
+| MOD-013 | `adjective-attributive` |
 | MOD-019 (later) | `future-gaan-infinitive` |
 
 ---

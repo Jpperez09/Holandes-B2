@@ -3,11 +3,11 @@ title: Vocabulary Seed — A1 (October 2026)
 type: vocabulary-seed
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012]
+covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013]
 created: 2026-09-30
 updated: 2026-09-30
-total_items: 98
-tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012]
+total_items: 112
+tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013]
 ---
 
 # Vocabulary Seed — A1 (MOD-006 to MOD-018)
@@ -165,3 +165,22 @@ Same as `Vocabulary_Seed_A0_A1`, plus two optional columns:
 | voc-A1-226 | dansen | — | verb | — | ik dans, hij danst · danste · gedanst | /ˈdɑnsə(n)/ | to dance | bailar | true | *Mijn dochter wil dansen.* | MOD-012 |
 | voc-A1-227 | samen | — | adv | — | — | /ˈsaːmə(n)/ | together | juntos | false | *Wij kunnen samen koken.* | MOD-012 |
 | voc-A1-228 | snel | — | adv | — | — | /snɛl/ | fast, quickly | rápido | false | *Hij kan snel fietsen.* | MOD-012 |
+
+### 2.8. Colours, size and people (MOD-013)
+
+| id | dutch | article | pos | plural | forms | ipa | gloss_en | gloss_es | cognate_en | example_nl | module_id |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| voc-A1-229 | rood | — | adj | — | — | /roːt/ | red | rojo | false | *Ik heb een rode fiets.* | MOD-013 |
+| voc-A1-230 | blauw | — | adj | — | — | /blʌu/ | blue | azul | partial | *Mijn blauwe jas is nieuw.* | MOD-013 |
+| voc-A1-231 | groen | — | adj | — | — | /ɣrun/ | green | verde | partial | *Het groene boek is mooi.* | MOD-013 |
+| voc-A1-232 | geel | — | adj | — | — | /ɣeːl/ | yellow | amarillo | partial | *Zij heeft een geel horloge.* | MOD-013 |
+| voc-A1-233 | zwart | — | adj | — | — | /zʋɑrt/ | black | negro | partial | *Ik heb een zwarte tas.* | MOD-013 |
+| voc-A1-234 | wit | — | adj | — | — | /ʋɪt/ | white | blanco | true | *Een wit huis is mooi.* | MOD-013 |
+| voc-A1-235 | lang | — | adj | — | — | /lɑŋ/ | long, tall | largo, alto | true | *De lange man werkt hier.* | MOD-013 |
+| voc-A1-236 | kort | — | adj | — | — | /kɔrt/ | short | corto, bajo | true | *Zij heeft een korte broek.* | MOD-013 |
+| voc-A1-237 | warm | — | adj | — | — | /ʋɑrm/ | warm, hot | cálido, caliente | true | *Ik drink een warme koffie.* | MOD-013 |
+| voc-A1-238 | koud | — | adj | — | — | /kʌut/ | cold | frío | true | *Het koude water is goed.* | MOD-013 |
+| voc-A1-239 | zwaar | — | adj | — | — | /zʋaːr/ | heavy | pesado | false | *Mijn tas is zwaar.* | MOD-013 |
+| voc-A1-240 | man | de | noun | mannen | — | /mɑn/ | man | hombre | true | *De lange man heet Pieter.* | MOD-013 |
+| voc-A1-241 | vrouw | de | noun | vrouwen | — | /vrʌu/ | woman | mujer | false | *Die vrouw is mijn tante.* | MOD-013 |
+| voc-A1-242 | jongen | de | noun | jongens | — | /ˈjɔŋə(n)/ | boy | chico, niño | false | *De jongen heeft een rode fiets.* | MOD-013 |
