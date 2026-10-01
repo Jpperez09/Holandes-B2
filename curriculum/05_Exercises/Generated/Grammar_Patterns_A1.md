@@ -3,10 +3,10 @@ title: Grammar Pattern Registry — A1 (October 2026)
 type: grammar-pattern-registry
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-014, MOD-015]
+covers_modules: [MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-014, MOD-015, MOD-016]
 created: 2026-09-30
 updated: 2026-09-30
-total_patterns: 12
+total_patterns: 14
 tags: [grammar, patterns, registry, A0, A1, october]
 ---
 
@@ -224,6 +224,40 @@ tags: [grammar, patterns, registry, A0, A1, october]
 | **practice_activity** | Make the diminutive of 8 nouns (A4). |
 | **srs_cloze_candidate** | true |
 
+### 13. `prepositions-of-place`
+
+| Field | Value |
+|---|---|
+| **slug** | `prepositions-of-place` |
+| **name_en** | Prepositions of place |
+| **pienemann_stage** | 2 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-016_Places_and_Er_Is_Er_Zijn]] |
+| **dutch_pattern** | `[thing] + staat / zit / is + in / op / onder / naast / achter / voor / tussen / boven / bij + de / het + [noun]` |
+| **english_meaning** | Saying where something is: in, on, under, next to, behind, in front of, between, above, at. |
+| **spanish_contrast** | Spanish *en* covers both *in* and *on*; Dutch separates *in* from *op*. Spanish *estar* becomes *staan / zitten / is* according to position. |
+| **examples** | De jas is in de kast. / De fles staat op de tafel. / De kat zit onder de tafel. / De lamp is boven de tafel. |
+| **common_mistake** | `*in de tafel` for "on the table", `*onder van de tafel`, and `*in mijn oma` for "at my grandmother's". |
+| **practice_activity** | Fill 12 gaps with the right preposition (A3) and describe a room aloud (A6). |
+| **srs_cloze_candidate** | true |
+
+### 14. `er-is-er-zijn`
+
+| Field | Value |
+|---|---|
+| **slug** | `er-is-er-zijn` |
+| **name_en** | There is / there are: er is, er zijn |
+| **pienemann_stage** | 3 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-016_Places_and_Er_Is_Er_Zijn]] |
+| **dutch_pattern** | `Er is + [een / geen + singular]` · `Er zijn + [number / plural / geen + plural]` · `Is er ...?` · `Zijn er ...?` |
+| **english_meaning** | "There is a table in the room." "There are two chairs." "Is there a shop?" |
+| **spanish_contrast** | Spanish *hay* is invariable; Dutch *er is* (singular) and *er zijn* (plural) agree with the thing. The negative always uses *geen*. |
+| **examples** | Er is een tafel in de kamer. / Er zijn twee stoelen. / Is er een winkel? / Er zijn geen katten in de tuin. |
+| **common_mistake** | `*Er is twee stoelen` (no agreement), `*Er is niet een lamp` (use *geen*) and `*Er zijn de tafel` (er with a known thing). |
+| **practice_activity** | Say 8 sentences with er is / er zijn, negative and as questions (A4). |
+| **srs_cloze_candidate** | true |
+
 ---
 
 ## Pattern Index (by Module)
@@ -238,6 +272,7 @@ tags: [grammar, patterns, registry, A0, A1, october]
 | MOD-012 | `modal-moeten-mogen` |
 | MOD-014 | `polite-requests` |
 | MOD-015 | `plural-irregular`, `diminutive-je` |
+| MOD-016 | `prepositions-of-place`, `er-is-er-zijn` |
 
 ---
 

@@ -3,11 +3,11 @@ title: Vocabulary Seed — A1 (October 2026)
 type: vocabulary-seed
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013, MOD-014, MOD-015]
+covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013, MOD-014, MOD-015, MOD-016]
 created: 2026-09-30
 updated: 2026-09-30
-total_items: 140
-tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013, MOD-014, MOD-015]
+total_items: 154
+tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013, MOD-014, MOD-015, MOD-016]
 ---
 
 # Vocabulary Seed — A1 (MOD-006 to MOD-018)
@@ -222,3 +222,22 @@ Same as `Vocabulary_Seed_A0_A1`, plus two optional columns:
 | voc-A1-268 | broodje | het | noun | broodjes | — | /ˈbroːtjə/ | bread roll, sandwich | panecillo, bocadillo | false | *Mag ik een broodje kaas?* | MOD-015 |
 | voc-A1-269 | kaartje | het | noun | kaartjes | — | /ˈkaːrtjə/ | ticket; small card | billete, entrada; tarjetita | false | *Hoeveel kost het kaartje?* | MOD-015 |
 | voc-A1-270 | beetje | het | noun | beetjes | — | /ˈbeːtjə/ | little bit | poquito | false | *Ik spreek een beetje Nederlands.* | MOD-015 |
+
+### 2.11. Places and prepositions (MOD-016)
+
+| id | dutch | article | pos | plural | forms | ipa | gloss_en | gloss_es | cognate_en | example_nl | module_id |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| voc-A1-271 | op | — | prep | — | — | /ɔp/ | on; at | sobre, en | false | *De fles staat op de tafel.* | MOD-016 |
+| voc-A1-272 | onder | — | prep | — | — | /ˈɔndər/ | under, below | debajo de | false | *De kat zit onder de tafel.* | MOD-016 |
+| voc-A1-273 | naast | — | prep | — | — | /naːst/ | next to, beside | al lado de | false | *De stoel staat naast de tafel.* | MOD-016 |
+| voc-A1-274 | achter | — | prep | — | — | /ˈɑxtər/ | behind | detrás de | false | *De fiets staat achter het huis.* | MOD-016 |
+| voc-A1-275 | voor | — | prep | — | — | /voːr/ | in front of; for | delante de; para | false | *De auto staat voor het huis.* | MOD-016 |
+| voc-A1-276 | tussen | — | prep | — | — | /ˈtʏsə(n)/ | between | entre | false | *De tafel staat tussen de stoelen.* | MOD-016 |
+| voc-A1-277 | boven | — | prep | — | — | /ˈboːvə(n)/ | above; upstairs | encima de; arriba | false | *De lamp is boven de tafel.* | MOD-016 |
+| voc-A1-278 | bij | — | prep | — | — | /bɛi/ | at, near; at the house of | junto a; en casa de | false | *Ik woon bij mijn oma.* | MOD-016 |
+| voc-A1-279 | er | — | adv | — | — | /ɛr/ | there (in *er is / er zijn*) | allí; hay (en er is) | false | *Er is een tafel in de kamer.* | MOD-016 |
+| voc-A1-280 | kast | de | noun | kasten | — | /kɑst/ | cupboard, wardrobe | armario | false | *De jas is in de kast.* | MOD-016 |
+| voc-A1-281 | lamp | de | noun | lampen | — | /lɑmp/ | lamp | lámpara | true | *De lamp staat naast het bed.* | MOD-016 |
+| voc-A1-282 | tuin | de | noun | tuinen | — | /tœyn/ | garden | jardín | false | *Onze tuin is groot.* | MOD-016 |
+| voc-A1-283 | winkel | de | noun | winkels | — | /ˈʋɪŋkəl/ | shop, store | tienda | false | *De winkel is naast het café.* | MOD-016 |
+| voc-A1-284 | supermarkt | de | noun | supermarkten | — | /ˈsypərmɑrkt/ | supermarket | supermercado | true | *Ik ben in de supermarkt.* | MOD-016 |
