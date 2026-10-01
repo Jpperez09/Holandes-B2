@@ -3,11 +3,11 @@ title: Vocabulary Seed — A1 (October 2026)
 type: vocabulary-seed
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009]
+covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009, MOD-010]
 created: 2026-09-30
 updated: 2026-09-30
-total_items: 56
-tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009]
+total_items: 70
+tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009, MOD-010]
 ---
 
 # Vocabulary Seed — A1 (MOD-006 to MOD-018)
@@ -108,3 +108,22 @@ Same as `Vocabulary_Seed_A0_A1`, plus two optional columns:
 | voc-A1-184 | tante | de | noun | tantes | — | /ˈtɑntə/ | aunt | tía | false | *Mijn tante heeft een hond.* | MOD-009 |
 | voc-A1-185 | gezin | het | noun | gezinnen | — | /ɣəˈzɪn/ | family (parents and children), household | familia (nuclear), hogar | false | *Ons gezin is klein.* | MOD-009 |
 | voc-A1-186 | familie | de | noun | families | — | /faːˈmili/ | family (including relatives) | familia (extensa) | true | *Mijn familie woont in Colombia.* | MOD-009 |
+
+### 2.5. Verbs: stems and spelling (MOD-010)
+
+| id | dutch | article | pos | plural | forms | ipa | gloss_en | gloss_es | cognate_en | example_nl | module_id |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| voc-A1-187 | maken | — | verb | — | ik maak, hij maakt · maakte · gemaakt | /ˈmaːkə(n)/ | to make | hacer, fabricar | partial | *Ik maak koffie.* | MOD-010 |
+| voc-A1-188 | leven | — | verb | — | ik leef, hij leeft · leefde · geleefd | /ˈleːvə(n)/ | to live, to be alive | vivir (estar vivo) | partial | *Mijn oma leeft, maar mijn opa leeft niet.* | MOD-010 |
+| voc-A1-189 | reizen | — | verb | — | ik reis, hij reist · reisde · gereisd | /ˈrɛizə(n)/ | to travel | viajar | false | *Mijn oom reist in oktober.* | MOD-010 |
+| voc-A1-190 | kopen | — | verb | — | ik koop, hij koopt · kocht · gekocht | /ˈkoːpə(n)/ | to buy | comprar | false | *Ik koop een fiets.* | MOD-010 |
+| voc-A1-191 | lopen | — | verb | — | ik loop, hij loopt · liep · gelopen | /ˈloːpə(n)/ | to walk | caminar | partial | *Ik loop hier, jij loopt daar.* | MOD-010 |
+| voc-A1-192 | slapen | — | verb | — | ik slaap, hij slaapt · sliep · geslapen | /ˈslaːpə(n)/ | to sleep | dormir | true | *Ik slaap in mijn kamer.* | MOD-010 |
+| voc-A1-193 | schrijven | — | verb | — | ik schrijf, hij schrijft · schreef · geschreven | /ˈsxrɛivə(n)/ | to write | escribir | false | *Ik schrijf een boek.* | MOD-010 |
+| voc-A1-194 | lezen | — | verb | — | ik lees, hij leest · las · gelezen | /ˈleːzə(n)/ | to read | leer | false | *Ik lees mijn boek.* | MOD-010 |
+| voc-A1-195 | spelen | — | verb | — | ik speel, hij speelt · speelde · gespeeld | /ˈspeːlə(n)/ | to play | jugar, tocar | false | *Mijn zoon speelt in zijn kamer.* | MOD-010 |
+| voc-A1-196 | praten | — | verb | — | ik praat, hij praat · praatte · gepraat | /ˈpraːtə(n)/ | to talk, to chat | hablar, charlar | partial | *Wij praten Nederlands.* | MOD-010 |
+| voc-A1-197 | zitten | — | verb | — | ik zit, hij zit · zat · gezeten | /ˈzɪtə(n)/ | to sit, to be sitting | estar sentado | true | *Hij zit in zijn kamer.* | MOD-010 |
+| voc-A1-198 | vinden | — | verb | — | ik vind, hij vindt · vond · gevonden | /ˈvɪndə(n)/ | to find; to think (an opinion) | encontrar; opinar | true | *Ik vind Nederlands niet moeilijk.* | MOD-010 |
+| voc-A1-199 | kijken | — | verb | — | ik kijk, hij kijkt · keek · gekeken | /ˈkɛikə(n)/ | to look, to watch | mirar | false | *Kijk, daar is je tas!* | MOD-010 |
+| voc-A1-200 | staan | — | verb | — | ik sta, hij staat · stond · gestaan | /staːn/ | to stand; to be (upright) | estar de pie | true | *De fiets staat hier.* | MOD-010 |

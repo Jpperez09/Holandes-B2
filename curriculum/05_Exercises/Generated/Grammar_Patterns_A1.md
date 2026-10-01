@@ -3,10 +3,10 @@ title: Grammar Pattern Registry — A1 (October 2026)
 type: grammar-pattern-registry
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-007, MOD-008, MOD-009]
+covers_modules: [MOD-007, MOD-008, MOD-009, MOD-010]
 created: 2026-09-30
 updated: 2026-09-30
-total_patterns: 5
+total_patterns: 7
 tags: [grammar, patterns, registry, A0, A1, october]
 ---
 
@@ -105,6 +105,40 @@ tags: [grammar, patterns, registry, A0, A1, october]
 | **practice_activity** | 12 gap sentences choosing the right possessive, then 8 phrases to translate (A3 and A4). |
 | **srs_cloze_candidate** | true |
 
+### 6. `verb-stem-spelling`
+
+| Field | Value |
+|---|---|
+| **slug** | `verb-stem-spelling` |
+| **name_en** | Verb stems and spelling rules |
+| **pienemann_stage** | 2 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-010_Verb_Stems_and_Spelling]] |
+| **dutch_pattern** | `stem = infinitive - en` · `ik + stem` · `jij / hij / zij / het + stem + t` · `wij / jullie / zij + infinitive` · spelling: aa/ee/oo/uu, v to f, z to s, double consonant to single |
+| **english_meaning** | The present tense of regular verbs, with the spelling changes that keep the sound the same. |
+| **spanish_contrast** | Spanish changes the ending, not the stem spelling (*vivo, vives*). Dutch keeps the sound and changes the letters: *maken, ik maak*; *leven, ik leef*; *reizen, ik reis*. |
+| **examples** | Ik maak koffie. / Ik leef, jij leeft. / Ik reis, hij reist. / Hij zit en hij praat. / Ik vind, hij vindt. |
+| **common_mistake** | Keeping the infinitive for *ik* (`*Ik maken`), adding a second *t* (`*hij zitt`), writing *z* or *v* at the end of the stem (`*ik reiz`, `*ik leev`) and forgetting the *-dt* of *vindt*. |
+| **practice_activity** | Give the *ik* and *hij* forms of 12 verbs (A3), then fill 8 gaps (A4). |
+| **srs_cloze_candidate** | true |
+
+### 7. `irregular-verbs-gaan-staan-doen-zien`
+
+| Field | Value |
+|---|---|
+| **slug** | `irregular-verbs-gaan-staan-doen-zien` |
+| **name_en** | The present tense of gaan, staan, doen, zien |
+| **pienemann_stage** | 2 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-010_Verb_Stems_and_Spelling]] |
+| **dutch_pattern** | `ik ga / sta / doe / zie` · `jij / hij gaat / staat / doet / ziet` · `wij gaan / staan / doen / zien` |
+| **english_meaning** | go, stand, do, see: short verbs with a short *ik*-form and *-t* in the third person. |
+| **spanish_contrast** | Spanish *voy, vas, va* and *hago* are irregular in the stem; the Dutch four are regular after the short stem. The stem alone is the imperative: *Ga! Kijk!* |
+| **examples** | Ik ga niet. / Hij staat hier. / Wat doe je? / Ik zie een hond. |
+| **common_mistake** | `*Ik gaan`, `*hij gaan`, `*Wat doet je?` (the *-t* drops with *je* in inversion). |
+| **practice_activity** | Complete the table from memory, then 8 short sentences (A4). |
+| **srs_cloze_candidate** | true |
+
 ---
 
 ## Pattern Index (by Module)
@@ -114,6 +148,7 @@ tags: [grammar, patterns, registry, A0, A1, october]
 | MOD-007 | `numbers-11-100`, `age-and-price` |
 | MOD-008 | `telling-time`, `days-and-months` |
 | MOD-009 | `possessive-determiners` |
+| MOD-010 | `verb-stem-spelling`, `irregular-verbs-gaan-staan-doen-zien` |
 
 ---
 
