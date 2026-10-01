@@ -5,6 +5,7 @@ import { ApiError } from '../api/client';
 import type { ModuleSummary, TodayPlan, VocabItem } from '../api/types';
 import { useApi } from '../hooks/useApi';
 import { AsyncView, ProgressBar } from '../components/ui';
+import { StudyTimer } from '../components/StudyTimer';
 import { getTodayDoneSteps, setTodayStep } from '../lib/storage';
 import { num, todayIso } from '../lib/friendly';
 import { firstUnfinishedStandard, standardModules } from '../lib/progression';
@@ -54,6 +55,8 @@ export function Today(): React.JSX.Element {
   const [doneSteps, setDoneSteps] = useState<Set<string>>(() =>
     getTodayDoneSteps(date),
   );
+  // Bumped when the timer adds minutes, so the daily log below shows them.
+  const [logVersion, setLogVersion] = useState(0);
 
   function toggleStep(id: string): void {
     const next = new Set(doneSteps);
@@ -142,6 +145,8 @@ export function Today(): React.JSX.Element {
               <ProgressBar value={doneCount / totalSteps} variant="accent" />
             </div>
 
+            <StudyTimer onLogged={() => setLogVersion((v) => v + 1)} />
+
             <div className="checklist">
               {steps.map((step, idx) => {
                 const isDone = doneSteps.has(step.id);
@@ -180,6 +185,7 @@ export function Today(): React.JSX.Element {
               {/* Step 5 — daily log (always last, appended client-side) */}
               <DailyLogStep
                 date={date}
+                version={logVersion}
                 done={doneSteps.has('log')}
                 onSaved={() => markStep('log', true)}
               />
@@ -205,10 +211,13 @@ export function Today(): React.JSX.Element {
 /** Step 5: inline daily-log editor. */
 function DailyLogStep({
   date,
+  version,
   done,
   onSaved,
 }: {
   date: string;
+  /** Changes when something else (the timer) saved minutes for the day. */
+  version: number;
   done: boolean;
   onSaved: () => void;
 }): React.JSX.Element {
@@ -237,6 +246,23 @@ function DailyLogStep({
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [date]);
+
+  // The timer saved minutes: show them, but leave any notes being typed alone.
+  useEffect(() => {
+    if (version === 0) return;
+    let cancelled = false;
+    endpoints
+      .getDailyLog(date)
+      .then((log) => {
+        if (!cancelled && log.minutes) setMinutes(String(log.minutes));
+      })
+      .catch(() => {
+        /* keep what is on screen */
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [date, version]);
 
   async function save(): Promise<void> {
     setSaving(true);
