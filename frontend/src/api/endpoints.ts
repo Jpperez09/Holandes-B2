@@ -18,6 +18,7 @@ import type {
   VaultWarningsResponse,
   VocabItem,
   VocabStats,
+  WeeklyStats,
 } from './types';
 
 export const endpoints = {
@@ -61,6 +62,8 @@ export const endpoints = {
 
   // progress
   getProgress: () => api.get<ProgressResponse>('/api/progress'),
+  getWeeklyStats: (end?: string) =>
+    api.get<WeeklyStats>(`/api/stats/weekly${end ? `?end=${encodeURIComponent(end)}` : ''}`),
 
   // vault diagnostics
   getVaultSnapshot: () => api.get<VaultSnapshot>('/api/vault/snapshot'),

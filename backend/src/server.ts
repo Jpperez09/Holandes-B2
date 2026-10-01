@@ -20,6 +20,7 @@ import activitiesRouter from './routes/activities';
 import vocabularyRouter from './routes/vocabulary';
 import dailyLogsRouter from './routes/daily-logs';
 import progressRouter from './routes/progress';
+import statsRouter from './routes/stats';
 import vaultRouter from './routes/vault';
 import todayRouter from './routes/today';
 
@@ -36,6 +37,7 @@ app.use('/api/activities', activitiesRouter);
 app.use('/api/vocabulary', vocabularyRouter);
 app.use('/api/daily-logs', dailyLogsRouter);
 app.use('/api/progress', progressRouter);
+app.use('/api/stats', statsRouter);
 app.use('/api/vault', vaultRouter);
 app.use('/api/today', todayRouter);
 

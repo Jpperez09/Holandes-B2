@@ -153,6 +153,27 @@ export interface ProgressResponse {
   recentActivity: Array<{ day: string; attempts: number }>;
 }
 
+/** GET /api/stats/weekly — 7 local days ending on `end`. */
+export interface WeeklyStats {
+  start: string;
+  end: string;
+  minutesPerDay: Array<{ date: string; minutes: number }>;
+  totalMinutes: number;
+  modulesCompleted: {
+    count: number;
+    items: Array<{ id: string; title: string; completedOn: string }>;
+  };
+  reviews: {
+    count: number;
+    goodOrBetter: number;
+    percentGoodOrBetter: number | null;
+  };
+  newCardsIntroduced: number;
+  dueCardsPending: number;
+  /** Plain-text summary, ready to paste into a chat. */
+  text: string;
+}
+
 export interface DailyLog {
   id?: number;
   log_date: string;
