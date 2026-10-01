@@ -3,11 +3,11 @@ title: Vocabulary Seed — A1 (October 2026)
 type: vocabulary-seed
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-006]
+covers_modules: [MOD-006, MOD-007]
 created: 2026-09-30
 updated: 2026-09-30
-total_items: 14
-tags: [vocabulary, seed, A0, A1, october, MOD-006]
+total_items: 28
+tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007]
 ---
 
 # Vocabulary Seed — A1 (MOD-006 to MOD-018)
@@ -51,3 +51,22 @@ Same as `Vocabulary_Seed_A0_A1`, plus two optional columns:
 | voc-A1-142 | nooit | — | adv | — | — | /nojt/ | never | nunca | false | *Ik drink nooit koffie.* | MOD-006 |
 | voc-A1-143 | niets | — | pron | — | — | /nits/ | nothing | nada | false | *Ik heb niets.* | MOD-006 |
 | voc-A1-144 | niemand | — | pron | — | — | /ˈnimɑnt/ | nobody, no one | nadie | false | *Niemand woont hier.* | MOD-006 |
+
+### 2.2. Numbers 11–100, age and prices (MOD-007)
+
+| id | dutch | article | pos | plural | forms | ipa | gloss_en | gloss_es | cognate_en | example_nl | module_id |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| voc-A1-145 | elf | — | num | — | — | /ɛlf/ | eleven | once | partial | *Het kost elf euro.* | MOD-007 |
+| voc-A1-146 | twaalf | — | num | — | — | /tʋaːlf/ | twelve | doce | partial | *Mijn zus is twaalf jaar oud.* | MOD-007 |
+| voc-A1-147 | dertien | — | num | — | — | /ˈdɛrtin/ | thirteen | trece | partial | *Het kost dertien euro.* | MOD-007 |
+| voc-A1-148 | veertien | — | num | — | — | /ˈveːrtin/ | fourteen | catorce | partial | *Mijn broer is veertien jaar oud.* | MOD-007 |
+| voc-A1-149 | vijftien | — | num | — | — | /ˈvɛiftin/ | fifteen | quince | partial | *Het boek kost vijftien euro.* | MOD-007 |
+| voc-A1-150 | twintig | — | num | — | — | /ˈtʋɪntəx/ | twenty | veinte | partial | *Ik ben twintig jaar oud.* | MOD-007 |
+| voc-A1-151 | dertig | — | num | — | — | /ˈdɛrtəx/ | thirty | treinta | partial | *Hij is dertig jaar oud.* | MOD-007 |
+| voc-A1-152 | veertig | — | num | — | — | /ˈveːrtəx/ | forty | cuarenta | partial | *Mijn vader is veertig jaar oud.* | MOD-007 |
+| voc-A1-153 | vijftig | — | num | — | — | /ˈvɛiftəx/ | fifty | cincuenta | partial | *Mijn moeder is vijftig jaar oud.* | MOD-007 |
+| voc-A1-154 | honderd | — | num | — | — | /ˈhɔndərt/ | one hundred | cien | partial | *De fiets kost honderd euro.* | MOD-007 |
+| voc-A1-155 | jaar | het | noun | jaren | — | /jaːr/ | year | año | partial | *Ik ben dertig jaar oud.* | MOD-007 |
+| voc-A1-156 | euro | de | noun | euro's | — | /ˈøːro/ | euro | euro | true | *Het kost tien euro.* | MOD-007 |
+| voc-A1-157 | prijs | de | noun | prijzen | — | /prɛis/ | price | precio | partial | *Wat is de prijs?* | MOD-007 |
+| voc-A1-158 | kosten | — | verb | — | het kost, ze kosten · kostte · gekost | /ˈkɔstə(n)/ | to cost | costar | true | *Hoeveel kost de fiets?* | MOD-007 |

@@ -61,6 +61,25 @@ describe('the whole curriculum', () => {
     expect(clashes).toEqual([]);
   });
 
+  it('keeps grammar pattern slugs unique across registry files (a duplicate would overwrite the first)', () => {
+    const slugs = reader.grammarPatterns().map((p) => p.slug);
+    const dupes = slugs.filter((slug, i) => slugs.indexOf(slug) !== i);
+    expect(dupes).toEqual([]);
+  });
+
+  it('only references grammar patterns that exist in a registry', () => {
+    const known = new Set(reader.grammarPatterns().map((p) => p.slug));
+    const missing: string[] = [];
+    for (const m of modules()) {
+      const block = source(m).match(/grammar_pattern_slugs:\n((?:  - [^\n]+\n)+)/);
+      for (const line of block?.[1].trim().split('\n') ?? []) {
+        const slug = line.replace(/^\s*-\s*/, '').trim();
+        if (!known.has(slug)) missing.push(`${m.module_id}: ${slug}`);
+      }
+    }
+    expect(missing).toEqual([]);
+  });
+
   it('adds at most 180 new lemmas on top of the original 130', () => {
     const added = reader.vocabularyItems().filter((i) => num(i.module_id ?? 'MOD-000') >= FIRST_NEW_STANDARD);
     expect(added.length).toBeLessThanOrEqual(MAX_NEW_LEMMAS);
