@@ -2,25 +2,32 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { endpoints } from '../api/endpoints';
 import { ApiError } from '../api/client';
-import type { ModuleSummary, TodayPlan, VocabItem } from '../api/types';
+import type { ModuleSummary, SettingsMap, TodayPlan, VocabItem } from '../api/types';
 import { useApi } from '../hooks/useApi';
 import { AsyncView, ProgressBar } from '../components/ui';
 import { StudyTimer } from '../components/StudyTimer';
 import { getTodayDoneSteps, setTodayStep } from '../lib/storage';
 import { num, todayIso } from '../lib/friendly';
-import { firstUnfinishedStandard, standardModules } from '../lib/progression';
+import { parseStudyCalendar, planForDay, type DayPlan } from '../lib/studyCalendar';
 
 interface TodayData {
   today: TodayPlan | null;
   dueCount: number;
-  currentModule: ModuleSummary | null;
+  /** What the study calendar proposes for today: a module, this week's review, or only the word review. */
+  plan: DayPlan<ModuleSummary>;
 }
 
 async function loadToday(): Promise<TodayData> {
   const modules = await endpoints.getModules();
-  // Weekly reviews are never "the module up next".
-  const standards = standardModules(modules);
-  const currentModule = firstUnfinishedStandard(modules) ?? standards[0] ?? null;
+  // Weekly reviews are never "the module up next"; the calendar decides which
+  // days get a module, the week's review, or only the word review.
+  let settings: SettingsMap = {};
+  try {
+    settings = await endpoints.getSettings();
+  } catch {
+    /* no settings: the default calendar applies */
+  }
+  const plan = planForDay(todayIso(), parseStudyCalendar(settings['study_calendar']), modules);
 
   let today: TodayPlan | null = null;
   try {
@@ -37,7 +44,7 @@ async function loadToday(): Promise<TodayData> {
     /* keep today's count */
   }
 
-  return { today, dueCount, currentModule };
+  return { today, dueCount, plan };
 }
 
 interface Step {
@@ -77,11 +84,12 @@ export function Today(): React.JSX.Element {
   return (
     <AsyncView loading={loading} error={error} data={data} onRetry={reload}>
       {(d) => {
-        const mod = d.currentModule;
+        const mod = d.plan.module;
         const modPath = mod ? `/learn/${mod.module_id}` : '/learn';
+        const reviewOnly = d.plan.mode === 'review-only';
+        const weeklyReview = d.plan.mode === 'weekly-review';
 
-        const steps: Step[] = [
-          {
+        const reviewStep: Step = {
             id: 'review',
             icon: '🔁',
             title: 'Review your words',
@@ -94,11 +102,18 @@ export function Today(): React.JSX.Element {
                 : "You're caught up — a quick look is still nice",
             to: '/review',
             cta: 'Start',
-          },
+          };
+
+        // Review-only days (Wednesday, Sunday by default) have no module steps.
+        const moduleSteps: Step[] = reviewOnly ? [] : [
           {
             id: 'module',
-            icon: '📚',
-            title: mod ? `Continue ${mod.title}` : 'Open your module',
+            icon: weeklyReview ? '🗓️' : '📚',
+            title: mod
+              ? weeklyReview
+                ? `Repaso semanal: ${mod.title}`
+                : `Continue ${mod.title}`
+              : 'Open your module',
             meta: mod
               ? `Module ${mod.module_id} · about ${num(mod.estimated_minutes) || 30} min`
               : 'Pick up where you left off',
@@ -122,6 +137,7 @@ export function Today(): React.JSX.Element {
             cta: 'Go',
           },
         ];
+        const steps: Step[] = [reviewStep, ...moduleSteps];
 
         const totalSteps = steps.length + 1; // + daily log
         const doneCount =
@@ -132,8 +148,18 @@ export function Today(): React.JSX.Element {
           <>
             <h1 className="page-title">Today</h1>
             <p className="page-sub">
-              A calm checklist for today. Do what you can — every step counts.
+              {reviewOnly
+                ? 'Hoy no hay módulo nuevo: solo el repaso de palabras.'
+                : weeklyReview
+                  ? 'Sábado de repaso: un solo módulo, sin palabras nuevas.'
+                  : 'A calm checklist for today. Do what you can — every step counts.'}
             </p>
+
+            {reviewOnly && d.plan.note && (
+              <div className="card card--tint" style={{ marginBottom: 22 }}>
+                <strong>{d.plan.note}</strong>
+              </div>
+            )}
 
             <div className="card card--soft" style={{ marginBottom: 22 }}>
               <div className="spread" style={{ marginBottom: 8 }}>

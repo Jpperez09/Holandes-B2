@@ -6,6 +6,7 @@ import {
   updateSettings,
 } from '../services/settings-service';
 import { runFullIndex } from '../services/vault-indexer';
+import { validateStudyCalendar } from '../services/study-calendar';
 import { logger } from '../config/logger';
 
 const router = Router();
@@ -32,7 +33,9 @@ async function handleUpdateSettings(req: Request, res: Response): Promise<void> 
   const stringUpdates: Record<string, string> = {};
   for (const [key, value] of Object.entries(updates)) {
     if (value === null || value === undefined) continue;
-    stringUpdates[key] = String(value);
+    // The calendar is JSON text; accept it as an object too.
+    stringUpdates[key] =
+      key === 'study_calendar' && typeof value === 'object' ? JSON.stringify(value) : String(value);
   }
 
   // Validate daily_goal_minutes
@@ -63,6 +66,22 @@ async function handleUpdateSettings(req: Request, res: Response): Promise<void> 
       return;
     }
     stringUpdates['new_cards_per_day'] = String(cap);
+  }
+
+  // Validate study_calendar (what Today proposes on each weekday)
+  if ('study_calendar' in stringUpdates) {
+    const problem = validateStudyCalendar(stringUpdates['study_calendar']);
+    if (problem) {
+      res.status(422).json({
+        type: 'https://datatracker.ietf.org/doc/html/rfc7807',
+        title: 'Validation Error',
+        status: 422,
+        detail: problem,
+      });
+      return;
+    }
+    // Store it compact and in one canonical form.
+    stringUpdates['study_calendar'] = JSON.stringify(JSON.parse(stringUpdates['study_calendar']));
   }
 
   // Validate target_level
