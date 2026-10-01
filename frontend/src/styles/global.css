@@ -518,6 +518,9 @@ a { color: var(--primary); }
 .dialogue__speaker { color: var(--primary); }
 .dialogue__note { margin: 0 0 8px; font-size: 0.85rem; }
 
+/* A Belgian (Flemish) source in the Resources hub. */
+.chip--flemish { background: var(--accent-soft); border-color: #f0dcc2; }
+
 /* Study timer on Today. */
 .study-timer__clock { font-size: 1.9rem; font-weight: 700; font-variant-numeric: tabular-nums; }
 

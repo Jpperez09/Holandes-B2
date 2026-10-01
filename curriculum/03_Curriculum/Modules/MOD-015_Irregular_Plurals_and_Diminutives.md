@@ -57,7 +57,7 @@ tags: [module, MOD-015, A0, foundation, plurals, diminutives]
 | schip | het | schepen | /sxɪp/ | ship, boat | barco | *Het schip is groot.* |
 | blad | het | bladeren | /blɑt/ | leaf; sheet of paper | hoja | *Dit blad is groen.* |
 | weg | de | wegen | /ʋɛx/ | road, way | camino, carretera | *De weg is lang.* |
-| been | het | benen | /beːn/ | leg (also: bone, in some words) | pierna | *Mijn been is moe.* |
+| been | het | benen | /beːn/ | leg (also: bone, in some words) | pierna | *Mijn benen zijn moe.* |
 | lied | het | liederen | /lit/ | song | canción | *Dit lied is mooi.* |
 | kop | de | koppen | /kɔp/ | head (informal); cup, mug | cabeza; taza | *Ik heb een kop koffie.* |
 
@@ -70,7 +70,7 @@ tags: [module, MOD-015, A0, foundation, plurals, diminutives]
 | kopje | het | kopjes | /ˈkɔpjə/ | cup | taza | *Ik wil graag een kopje koffie.* |
 | broodje | het | broodjes | /ˈbroːtjə/ | bread roll, sandwich | panecillo, bocadillo | *Mag ik een broodje kaas?* |
 | kaartje | het | kaartjes | /ˈkaːrtjə/ | ticket; small card | billete, entrada; tarjetita | *Hoeveel kost het kaartje?* |
-| beetje | het | beetjes | /ˈbeːtjə/ | little bit | poquito | *Ik spreek een beetje Nederlands.* |
+| beetje | het | beetjes (rare) | /ˈbeːtjə/ | little bit | poquito | *Ik spreek een beetje Nederlands.* |
 
 ---
 
@@ -229,7 +229,7 @@ Anna: Een kaartje kost tien euro. Twee kaartjes kosten twintig euro.
 Juan: Goed. Ik wil graag een broodje met kaas.
 Anna: Ik wil een kopje koffie en een ei.
 Juan: Een ei? Eieren zijn lekker!
-Anna: Ja, ik eet graag eieren. Mijn been is moe, ik wil zitten.
+Anna: Ja, ik eet graag eieren. Mijn benen zijn moe, ik wil zitten.
 Juan: Mag ik hier zitten? Het meisje en het jongetje spelen daar.
 Anna: Dit lied is mooi. Ik spreek een beetje Nederlands, maar ik begrijp het lied niet.
 Juan: Hoeveel kost een kopje koffie hier?
@@ -250,7 +250,7 @@ Anna: Goed! Dank je wel, Juan! Tot ziens!
 | Juan | Goed. Ik wil graag een broodje met kaas. | Good. I would like a cheese roll. |
 | Anna | Ik wil een kopje koffie en een ei. | I would like a cup of coffee and an egg. |
 | Juan | Een ei? Eieren zijn lekker! | An egg? Eggs are delicious! |
-| Anna | Ja, ik eet graag eieren. Mijn been is moe, ik wil zitten. | Yes, I like eating eggs. My leg is tired, I want to sit. |
+| Anna | Ja, ik eet graag eieren. Mijn benen zijn moe, ik wil zitten. | Yes, I like eating eggs. My legs are tired, I want to sit. |
 | Juan | Mag ik hier zitten? Het meisje en het jongetje spelen daar. | May I sit here? The girl and the little boy are playing there. |
 | Anna | Dit lied is mooi. Ik spreek een beetje Nederlands, maar ik begrijp het lied niet. | This song is nice. I speak a little Dutch, but I do not understand the song. |
 | Juan | Hoeveel kost een kopje koffie hier? | How much does a cup of coffee cost here? |

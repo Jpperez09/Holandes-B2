@@ -53,7 +53,7 @@ tags: [module, MOD-008, A0, foundation, time, days, months]
 | Dutch | Article | Plural / forms | IPA | English | Español | Example |
 |---|---|---|---|---|---|---|
 | maandag | de | maandagen | /ˈmaːndɑx/ | Monday | lunes | *Vandaag is het maandag.* |
-| dinsdag | de | dinsdagen | /ˈdinzdɑx/ | Tuesday | martes | *Morgen is het dinsdag.* |
+| dinsdag | de | dinsdagen | /ˈdɪnzdɑx/ | Tuesday | martes | *Morgen is het dinsdag.* |
 | woensdag | de | woensdagen | /ˈʋunzdɑx/ | Wednesday | miércoles | *Woensdag werk ik niet.* |
 | donderdag | de | donderdagen | /ˈdɔndərdɑx/ | Thursday | jueves | *Donderdag werk ik in Amsterdam.* |
 | vrijdag | de | vrijdagen | /ˈvrɛidɑx/ | Friday | viernes | *Vrijdag ben ik moe.* |

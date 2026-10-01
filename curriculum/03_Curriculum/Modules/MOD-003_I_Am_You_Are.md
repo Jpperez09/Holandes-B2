@@ -5,7 +5,7 @@ subtype: standard
 level: 3
 cefr_band: A0-A1
 topic: "I Am, You Are"
-vocabulary_count: 25
+vocabulary_count: 32
 grammar_focus: [present-tense-zijn-hebben, ik-kom-uit, ik-spreek, dit-is-dat-is]
 pronunciation_focus: ["final-devoicing", "nationality-stress", "schwa"]
 estimated_minutes: 45
@@ -44,7 +44,7 @@ tags: [module, MOD-003, A0, foundation, grammar, zijn, identity]
 
 ## 3. Vocabulary
 
-> 25 new lemmas from [[../../05_Exercises/Generated/Vocabulary_Seed_A0_A1]] with `module: MOD-003`.
+> 32 lemmas in [[../../05_Exercises/Generated/Vocabulary_Seed_A0_A1]] carry `module: MOD-003` and all become SRS cards. The tables below teach the core words; *mijn, zijn, vriend, vriendin, Colombiaans, en, uit, in* are in the seed too and appear in the grammar and the examples. (*Engelsman* is in a table but not in the seed.)
 
 ### 3.1. Subject pronouns (8)
 

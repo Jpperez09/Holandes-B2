@@ -1,6 +1,6 @@
 ---
 title: Dutch Music
-status: placeholder
+status: replaced
 type: resources
 created: 2026-05-19
 updated: 2026-05-19
@@ -15,7 +15,7 @@ Catalog Dutch artists and bands useful for passive listening exposure and phonol
 
 ## Status
 
-Placeholder. Fill during Phase 1 research.
+Replaced by the app's Resources Hub (the Resources screen). It is not going to be filled in here.
 
 ## Dutch Artists and Bands
 

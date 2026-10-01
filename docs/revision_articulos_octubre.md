@@ -72,7 +72,7 @@
 - de rekening — rekeningen
 - de wijn — wijnen
 - de appeltaart — appeltaarten
-- de suiker — suikers
+- de suiker — suikers (rare)
 - de limonade — limonades
 
 ## MOD-015 — Irregular plurals and diminutives (14)
@@ -90,7 +90,7 @@
 - het kopje — kopjes
 - het broodje — broodjes
 - het kaartje — kaartjes
-- het beetje — beetjes
+- het beetje — beetjes (rare)
 
 ## MOD-016 — Places and prepositions (5)
 

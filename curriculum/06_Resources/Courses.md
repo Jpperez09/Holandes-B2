@@ -37,7 +37,7 @@ Evaluated catalogue of structured Dutch learning resources (courses, YouTube cha
 - **Cost**: **Free**.
 - **How Juanpa should use it**: Companion to whatever main course; one chapter per week aligned to current grammar focus.
 
-### NedBox (KU Leuven / CTO)
+### NedBox (KU Leuven / CTO) — Belgian (Flemish) source
 
 - **Link**: https://www.nedbox.be
 - **Level**: A2–B2.
@@ -298,7 +298,7 @@ Evaluated catalogue of structured Dutch learning resources (courses, YouTube cha
 - Bart de Pau — *Learn Dutch* (YouTube + courses): https://www.learndutch.org
 - Language Transfer — *Complete Dutch*: https://www.languagetransfer.org/dutch
 - Dutchgrammar.com: https://www.dutchgrammar.com
-- NedBox (CTO / KU Leuven): https://www.nedbox.be
+- NedBox (CTO / KU Leuven), Belgian (Flemish) source: https://www.nedbox.be
 - NT2 Taalmenu: https://nt2taalmenu.nl
 - Naar Nederland / Oefenen.nl: https://www.naarnederland.nl
 - NPO Radio 1 podcasts: https://www.nporadio1.nl/podcasts

@@ -66,7 +66,7 @@ tags: [module, MOD-010, A0, foundation, verbs, spelling, irregular]
 
 | Dutch | Article | Plural / forms | IPA | English | Español | Example |
 |---|---|---|---|---|---|---|
-| praten | — | ik praat, hij praat · praatte · gepraat | /ˈpraːtə(n)/ | to talk, to chat | hablar, charlar | *Wij praten Nederlands.* |
+| praten | — | ik praat, hij praat · praatte · gepraat | /ˈpraːtə(n)/ | to talk, to chat | hablar, charlar | *Mijn broer en ik praten in de keuken.* |
 | zitten | — | ik zit, hij zit · zat · gezeten | /ˈzɪtə(n)/ | to sit, to be sitting | estar sentado | *Hij zit in zijn kamer.* |
 | vinden | — | ik vind, hij vindt · vond · gevonden | /ˈvɪndə(n)/ | to find; to think (an opinion) | encontrar; opinar | *Ik vind Nederlands niet moeilijk.* |
 | kijken | — | ik kijk, hij kijkt · keek · gekeken | /ˈkɛikə(n)/ | to look, to watch | mirar | *Kijk, daar is je tas!* |
@@ -194,7 +194,7 @@ Write the right form of the verb in brackets.
 2. Hij ___ in zijn kamer. (zitten)
 3. Wij ___ koffie. (kopen)
 4. Jij ___ hier. (staan)
-5. ___ jij Nederlands? (praten)
+5. ___ jij altijd in de keuken? (praten)
 6. Ik ___ in mijn kamer. (slapen)
 7. Wat ___ je? (doen)
 8. Hij ___ Nederlands niet moeilijk. (vinden)
@@ -234,7 +234,7 @@ Anna: Schrijf je een boek? Mooi!
 Juan: Ja, ik schrijf in mijn kamer. Daar staat mijn tafel.
 Anna: Kijk, daar komt mijn zus!
 Juan: Hallo! Wat maak je?
-Anna: Zij maakt koffie en wij praten Nederlands.
+Anna: Zij maakt koffie en wij spreken Nederlands.
 Juan: Waar slaap jij?
 Anna: Ik slaap in mijn kamer. Mijn bed staat daar.
 Juan: Ik koop koffie en jij koopt brood.
@@ -258,7 +258,7 @@ Juan: Ik praat ook Nederlands! Tot ziens!
 | Juan | Ja, ik schrijf in mijn kamer. Daar staat mijn tafel. | Yes, I write in my room. My table is there. |
 | Anna | Kijk, daar komt mijn zus! | Look, there comes my sister! |
 | Juan | Hallo! Wat maak je? | Hello! What are you making? |
-| Anna | Zij maakt koffie en wij praten Nederlands. | She is making coffee and we are speaking Dutch. |
+| Anna | Zij maakt koffie en wij spreken Nederlands. | She is making coffee and we are speaking Dutch. |
 | Juan | Waar slaap jij? | Where do you sleep? |
 | Anna | Ik slaap in mijn kamer. Mijn bed staat daar. | I sleep in my room. My bed is there. |
 | Juan | Ik koop koffie en jij koopt brood. | I buy coffee and you buy bread. |
@@ -273,7 +273,7 @@ Juan: Ik praat ook Nederlands! Tot ziens!
 
 ### 8.4. Reading text
 
-> Ik slaap in mijn kamer. Ik lees een boek en ik schrijf in mijn boek. Mijn zus maakt koffie. Zij zit in de keuken. Mijn broer loopt hier. Hij vindt het boek mooi. Wij praten Nederlands en wij drinken koffie.
+> Ik slaap in mijn kamer. Ik lees een boek en ik schrijf in mijn boek. Mijn zus maakt koffie. Zij zit in de keuken. Mijn broer loopt hier. Hij vindt het boek mooi. Wij spreken Nederlands en wij drinken koffie.
 
 *I sleep in my room. I read a book and I write in my book. My sister is making coffee. She is sitting in the kitchen. My brother is walking here. He thinks the book is lovely. We speak Dutch and we drink coffee.*
 

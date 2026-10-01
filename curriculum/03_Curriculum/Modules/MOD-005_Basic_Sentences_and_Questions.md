@@ -5,7 +5,7 @@ subtype: standard
 level: 5
 cefr_band: A0-A1
 topic: "Basic Sentences and Questions"
-vocabulary_count: 25
+vocabulary_count: 24
 grammar_focus: [v2-main-clause, question-yes-no, question-word, present-tense-regular]
 pronunciation_focus: ["question-intonation", "short-vs-long-vowel-preview"]
 estimated_minutes: 60
@@ -45,7 +45,7 @@ tags: [module, MOD-005, A0, foundation, V2, questions, sentence-building]
 
 ## 3. Vocabulary
 
-> 25 new lemmas from [[../../05_Exercises/Generated/Vocabulary_Seed_A0_A1]] with `module: MOD-005`.
+> 24 new lemmas from [[../../05_Exercises/Generated/Vocabulary_Seed_A0_A1]] carry `module: MOD-005`. The last table also lists *en*, which is already in the seed under MOD-003.
 
 ### 3.1. Question words (7)
 

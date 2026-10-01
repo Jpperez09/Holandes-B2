@@ -5,7 +5,7 @@ subtype: standard
 level: 4
 cefr_band: A0-A1
 topic: "Nouns: De / Het and Core Objects"
-vocabulary_count: 30
+vocabulary_count: 39
 grammar_focus: [de-het-article, present-tense-zijn-hebben, plural-formation, noun-phrase-een]
 pronunciation_focus: ["consonant-clusters", "au-ou", "de-vs-dé"]
 estimated_minutes: 50
@@ -44,7 +44,7 @@ tags: [module, MOD-004, A0, foundation, de-het, nouns, hebben, plurals]
 
 ## 3. Vocabulary
 
-> 30 new lemmas from [[../../05_Exercises/Generated/Vocabulary_Seed_A0_A1]] with `module: MOD-004`. **Every noun row has its article on the front.**
+> 39 lemmas in [[../../05_Exercises/Generated/Vocabulary_Seed_A0_A1]] carry `module: MOD-004` and all become SRS cards. The tables below teach 30 core words; *hebben, drinken, eten, ouders, groot, klein, mooi, raam, boek, bier* are in the seed too and appear in the grammar and the examples. (*een* is the word already met as a number in MOD-002.) **Every noun row has its article on the front.**
 
 ### 3.1. Home objects (10)
 

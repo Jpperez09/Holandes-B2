@@ -27,6 +27,8 @@ export interface Resource {
   cost: ResourceCost;
   /** One friendly line: how a learner should actually use it. */
   blurb: string;
+  /** Belgian (Flemish) source: the Dutch of Flanders, not of the Netherlands. */
+  region?: 'flemish';
 }
 
 export const CATEGORY_META: Record<
@@ -72,6 +74,7 @@ export const RESOURCES: Resource[] = [
     category: 'course',
     bands: ['A2-B1', 'B1-B2'],
     cost: 'free',
+    region: 'flemish',
     blurb:
       'Free practice with authentic Dutch — news clips, songs and exercises, all tagged by CEFR level.',
   },
@@ -187,6 +190,7 @@ export const RESOURCES: Resource[] = [
     category: 'reading',
     bands: ['A2-B1'],
     cost: 'free',
+    region: 'flemish',
     blurb: 'An easy-Dutch weekly newspaper — the gentlest authentic reading to start with.',
   },
   {
