@@ -175,7 +175,7 @@ tags: [module, MOD-003, A0, foundation, grammar, zijn, identity]
 
 | # | Type | Activity | Estimated time |
 |---|---|---|---|
-| A1 | listening | 3 short dialogues (60–90s) of two speakers introducing each other. Identify each *zijn*-form. | 8 min |
+| A1 | listening | Listen to the 3 short dialogues in §8.1 (60–90 s in total) once without reading, then shadow each one. Identify each *zijn*-form (§8.3). | 8 min |
 | A2 | grammar | Conjugation drill (recorded): say all 6 forms of *zijn* with subject pronouns. | 5 min |
 | A3 | grammar | Fill-in drill: 10 sentences using *zijn*. | 5 min |
 | A4 | vocab | Active recall on 25 vocabulary items. | 6 min |
@@ -195,8 +195,85 @@ tags: [module, MOD-003, A0, foundation, grammar, zijn, identity]
 
 ## 8. Listening Practice
 
-A1: three dialogues at slow-natural speed. Suggested sources: Bart de Pau A1, *Heb je zin?*, *Dutch with Kim* — pick any dialogue under 90 seconds.
+- A1 is the three short dialogues below, built only from the words and patterns of MOD-001 to MOD-003.
+- Each dialogue is a separate block: listen to one at a time, then shadow it.
 
+### 8.1. Dialogues for shadowing (three short introductions, about 130 words, 60–90 seconds in total)
+
+Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times. While you listen, note every form of *zijn* (*ben*, *bent*, *is*, *zijn*).
+
+**Dialogue 1 — at the course (formal)**
+
+```
+Juan: Goedemorgen, mevrouw. Ik ben Juan. En u?
+Sophie: Goedemorgen, meneer. Ik ben Sophie. Ik ben leraar. Bent u student?
+Juan: Ja, ik ben student. Ik kom uit Colombia. Ik ben Colombiaan.
+Sophie: Goed! Spreekt u Spaans?
+Juan: Ja, ik spreek Spaans en Engels. Ik leer Nederlands.
+Sophie: Dank u wel, meneer. Tot ziens!
+```
+
+**Dialogue 2 — two friends (informal)**
+
+```
+Juan: Hallo Anna! Dit is mijn vriend. Hij heet Carlos.
+Anna: Hallo Carlos! Kom je uit Spanje?
+Carlos: Ja, ik ben Spanjaard. En jij? Ben je Nederlander?
+Anna: Ja, ik ben Nederlander. Ik kom uit Nederland.
+Carlos: Spreek je Spaans?
+Anna: Nee, ik spreek Nederlands en Engels.
+```
+
+**Dialogue 3 — a new friend**
+
+```
+Pieter: Hallo! Ben jij Juan?
+Juan: Ja, ik ben Juan. En jij?
+Pieter: Ik ben Pieter. Wij zijn jong! Zij is mijn vriendin. Zij heet Maria.
+Maria: Hallo, Juan! Ik kom uit Spanje. Jullie zijn studenten, ja?
+Juan: Ja, wij zijn studenten. Dat is goed!
+```
+
+### 8.2. English
+
+**Dialogue 1**
+
+| Speaker | Dutch | English |
+|---|---|---|
+| Juan | Goedemorgen, mevrouw. Ik ben Juan. En u? | Good morning, madam. I am Juan. And you? |
+| Sophie | Goedemorgen, meneer. Ik ben Sophie. Ik ben leraar. Bent u student? | Good morning, sir. I am Sophie. I am a teacher. Are you a student? |
+| Juan | Ja, ik ben student. Ik kom uit Colombia. Ik ben Colombiaan. | Yes, I am a student. I come from Colombia. I am Colombian. |
+| Sophie | Goed! Spreekt u Spaans? | Good! Do you speak Spanish? |
+| Juan | Ja, ik spreek Spaans en Engels. Ik leer Nederlands. | Yes, I speak Spanish and English. I'm learning Dutch. |
+| Sophie | Dank u wel, meneer. Tot ziens! | Thank you, sir. Goodbye! |
+
+**Dialogue 2**
+
+| Speaker | Dutch | English |
+|---|---|---|
+| Juan | Hallo Anna! Dit is mijn vriend. Hij heet Carlos. | Hello Anna! This is my friend. He is called Carlos. |
+| Anna | Hallo Carlos! Kom je uit Spanje? | Hello Carlos! Do you come from Spain? |
+| Carlos | Ja, ik ben Spanjaard. En jij? Ben je Nederlander? | Yes, I am Spanish. And you? Are you Dutch? |
+| Anna | Ja, ik ben Nederlander. Ik kom uit Nederland. | Yes, I am Dutch. I come from the Netherlands. |
+| Carlos | Spreek je Spaans? | Do you speak Spanish? |
+| Anna | Nee, ik spreek Nederlands en Engels. | No, I speak Dutch and English. |
+
+**Dialogue 3**
+
+| Speaker | Dutch | English |
+|---|---|---|
+| Pieter | Hallo! Ben jij Juan? | Hello! Are you Juan? |
+| Juan | Ja, ik ben Juan. En jij? | Yes, I am Juan. And you? |
+| Pieter | Ik ben Pieter. Wij zijn jong! Zij is mijn vriendin. Zij heet Maria. | I am Pieter. We are young! She is my girlfriend / friend. She is called Maria. |
+| Maria | Hallo, Juan! Ik kom uit Spanje. Jullie zijn student, ja? | Hello, Juan! I come from Spain. You are students, right? |
+| Juan | Ja, wij zijn student. Dat is goed! | Yes, we are students. That is good! |
+
+### 8.3. Check
+
+- Write down every form of *zijn* you hear (*ben*, *bent*, *is*, *zijn*) and the pronoun next to it. Which form goes with *jullie* and *wij*? (*zijn*)
+- Who speaks formally with *u* (Dialogue 1) and who says *je* / *jij* (Dialogues 2 and 3)?
+- Which country does Carlos come from? And Anna? (*Spanje*, *Nederland*)
+- Which languages does Anna speak? (*Nederlands*, *Engels*)
 ---
 
 ## 9. Speaking Practice
