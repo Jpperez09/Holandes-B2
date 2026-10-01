@@ -153,7 +153,7 @@ Fixed chunks from MOD-001, used without analysing them yet: *Ik ben Juan.* / *Mi
 
 ### 8.1. Shadowing text (meeting a neighbour, about 30 words)
 
-Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once, then read it aloud *with* the voice (shadowing), twice.
+In the app, press ▶ (the whole text, or one line at a time). Outside the app, paste the Dutch below into your system voice. Listen once, then read it aloud *with* the voice (shadowing), twice.
 
 ```
 Juan: Goedemiddag, mevrouw.

@@ -217,7 +217,7 @@ Say each sentence in Dutch. Write the ones you miss.
 
 ### 8.1. Dialogue for shadowing (describing a room, about 142 words, 60–90 seconds)
 
-Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
+In the app, press ▶ (the whole text, or one line at a time). Outside the app, paste the Dutch below into your system voice. Listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
 ```
 Juan: Wat is dit, Anna? Is dit je kamer?

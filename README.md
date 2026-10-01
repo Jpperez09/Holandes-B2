@@ -85,7 +85,7 @@ To stop the app, press **Ctrl+C** in the terminal.
 | `npm run dev:backend` | Start only the backend |
 | `npm run dev:frontend` | Start only the frontend |
 | `npm run build` | Production build of both |
-| `npm test` | Run the test suite (274 tests; it also covers the frontend logic, see below) |
+| `npm test` | Run the test suite (275 tests; it also covers the frontend logic, see below) |
 
 ## The curriculum (no setup needed)
 
@@ -238,7 +238,7 @@ This is a working MVP. Known limitations, none of which block daily learning:
 - **Vocabulary review shows up to 50 cards per round**; when a round ends it offers the next one if cards are due or coming back within 20 minutes.
 - **Audio uses your browser's built-in speech voices** — quality depends on your
   operating system.
-- **The frontend has no test runner of its own.** The suite (274 tests) runs from the backend's `vitest`, which also exercises the frontend's logic: the Markdown renderer, the voice choice, the review queue, the study timer and the study calendar. Screens themselves are checked by hand.
+- **The frontend has no test runner of its own.** The suite (275 tests) runs from the backend's `vitest`, which also exercises the frontend's logic: the Markdown renderer, the voice choice, the review queue, the study timer and the study calendar. Screens themselves are checked by hand.
 - Speaking / real-world activities are shown with a generic icon.
 
 ## Documentation

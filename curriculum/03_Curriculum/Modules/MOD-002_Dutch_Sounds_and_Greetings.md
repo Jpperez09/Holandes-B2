@@ -160,7 +160,7 @@ tags: [module, MOD-002, A0, foundation, sounds, greetings, numbers]
 
 ### 8.1. Monologue for shadowing (introducing yourself, about 90 words, ~60 seconds at a slow pace)
 
-Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
+In the app, press ▶ (the whole text, or one line at a time). Outside the app, paste the Dutch below into your system voice. Listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
 ```
 Hallo! Goedemorgen, mevrouw. Goedemorgen, meneer. Dag!

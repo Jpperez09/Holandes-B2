@@ -200,7 +200,7 @@ tags: [module, MOD-003, A0, foundation, grammar, zijn, identity]
 
 ### 8.1. Dialogues for shadowing (three short introductions, about 130 words, 60–90 seconds in total)
 
-Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times. While you listen, note every form of *zijn* (*ben*, *bent*, *is*, *zijn*).
+In the app, press ▶ (the whole text, or one line at a time). Outside the app, paste the Dutch below into your system voice. Listen once without reading, then read it aloud *with* the voice (shadowing) two times. While you listen, note every form of *zijn* (*ben*, *bent*, *is*, *zijn*).
 
 **Dialogue 1 — at the course (formal)**
 

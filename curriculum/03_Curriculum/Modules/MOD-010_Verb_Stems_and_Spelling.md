@@ -219,7 +219,7 @@ Write the right form of the verb in brackets.
 
 ### 8.1. Dialogue for shadowing (at home on a Sunday, about 130 words, 60–90 seconds)
 
-Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
+In the app, press ▶ (the whole text, or one line at a time). Outside the app, paste the Dutch below into your system voice. Listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
 ```
 Anna: Hallo Juan! Wat doe je?

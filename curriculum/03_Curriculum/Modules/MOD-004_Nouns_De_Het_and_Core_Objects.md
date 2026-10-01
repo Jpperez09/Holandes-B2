@@ -206,7 +206,7 @@ This module introduces the basic pattern. Edge cases drilled across Levels 5–1
 
 ### 8.1. Dialogues for shadowing (a house, a family, a kitchen; about 140 words, 60–90 seconds in total)
 
-Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times. While you listen, note every noun and its article (*de* or *het*).
+In the app, press ▶ (the whole text, or one line at a time). Outside the app, paste the Dutch below into your system voice. Listen once without reading, then read it aloud *with* the voice (shadowing) two times. While you listen, note every noun and its article (*de* or *het*).
 
 **Dialogue 1 — my house**
 

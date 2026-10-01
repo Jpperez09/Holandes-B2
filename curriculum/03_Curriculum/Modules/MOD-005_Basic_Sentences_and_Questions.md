@@ -212,7 +212,7 @@ tags: [module, MOD-005, A0, foundation, V2, questions, sentence-building]
 
 ### 8.1. Dialogues for shadowing (meeting, asking, planning; about 135 words, 60–90 seconds in total)
 
-Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times. While you listen, count the statements that start with an adverb (*vandaag*, *morgen*, *nu*) and the questions.
+In the app, press ▶ (the whole text, or one line at a time). Outside the app, paste the Dutch below into your system voice. Listen once without reading, then read it aloud *with* the voice (shadowing) two times. While you listen, count the statements that start with an adverb (*vandaag*, *morgen*, *nu*) and the questions.
 
 **Dialogue 1 — at a party**
 

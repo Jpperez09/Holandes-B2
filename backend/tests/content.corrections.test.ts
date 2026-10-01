@@ -107,6 +107,18 @@ describe('MOD-014 dialogue: nobody calls "Ober!"', () => {
   });
 });
 
+describe('the dialogues are played with the button, not pasted into a voice (P2)', () => {
+  it('the text above every shadowing block points to the play button and no longer says to paste it', () => {
+    const wrong: string[] = [];
+    for (const m of modules()) {
+      if (!/### 8\.1\./.test(source(m.module_id))) continue; // MOD-001 has no dialogue
+      const intro = source(m.module_id).match(/### 8\.1\.[^\n]*\n\n([^\n]+)/)?.[1] ?? '';
+      if (!intro.includes('▶') || /Paste the Dutch/.test(intro)) wrong.push(m.module_id);
+    }
+    expect(wrong).toEqual([]);
+  });
+});
+
 describe('06_Resources: what the files say about themselves is true', () => {
   const dir = () => path.join(vault, '06_Resources');
 

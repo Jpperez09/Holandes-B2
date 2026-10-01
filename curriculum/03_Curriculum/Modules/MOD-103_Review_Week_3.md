@@ -188,7 +188,7 @@ tags: [module, MOD-103, A0, foundation, review, weekly-review]
 
 ### 8.1. Shadowing text (a visit, about 94 words)
 
-Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once, then read it aloud *with* the voice (shadowing), twice.
+In the app, press ▶ (the whole text, or one line at a time). Outside the app, paste the Dutch below into your system voice. Listen once, then read it aloud *with* the voice (shadowing), twice.
 
 ```
 Anna: Hallo Juan! Mijn oma en mijn opa komen vandaag.
