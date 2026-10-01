@@ -3,11 +3,11 @@ title: Vocabulary Seed — A1 (October 2026)
 type: vocabulary-seed
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-006, MOD-007, MOD-008]
+covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009]
 created: 2026-09-30
 updated: 2026-09-30
-total_items: 42
-tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008]
+total_items: 56
+tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009]
 ---
 
 # Vocabulary Seed — A1 (MOD-006 to MOD-018)
@@ -89,3 +89,22 @@ Same as `Vocabulary_Seed_A0_A1`, plus two optional columns:
 | voc-A1-170 | vroeg | — | adj | — | — | /vrux/ | early | temprano | false | *Zij is vroeg.* | MOD-008 |
 | voc-A1-171 | half | — | adj | — | — | /hɑlf/ | half | medio | true | *Het is half drie.* | MOD-008 |
 | voc-A1-172 | kwart | — | num | — | — | /kʋɑrt/ | quarter | cuarto | true | *Het is kwart over drie.* | MOD-008 |
+
+### 2.4. Possessives and family (MOD-009)
+
+| id | dutch | article | pos | plural | forms | ipa | gloss_en | gloss_es | cognate_en | example_nl | module_id |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| voc-A1-173 | jouw | — | det | — | — | /jʌu/ | your (informal, stressed) | tu, tuyo | false | *Is dit jouw tas?* | MOD-009 |
+| voc-A1-174 | haar | — | det | — | — | /haːr/ | her | su (de ella) | false | *Haar broer heet Pieter.* | MOD-009 |
+| voc-A1-175 | ons | — | det | — | — | /ɔns/ | our (+ het-word) | nuestro | partial | *Ons huis is groot.* | MOD-009 |
+| voc-A1-176 | onze | — | det | — | — | /ˈɔnzə/ | our (+ de-word or plural) | nuestro, nuestra | partial | *Onze moeder woont in Utrecht.* | MOD-009 |
+| voc-A1-177 | hun | — | det | — | — | /hʏn/ | their | su (de ellos) | false | *Hun huis is mooi.* | MOD-009 |
+| voc-A1-178 | uw | — | det | — | — | /yʋ/ | your (formal) | su (de usted) | false | *Is dit uw tas, mevrouw?* | MOD-009 |
+| voc-A1-179 | oma | de | noun | oma's | — | /ˈoːma/ | grandmother, grandma | abuela | false | *Mijn oma woont in Colombia.* | MOD-009 |
+| voc-A1-180 | opa | de | noun | opa's | — | /ˈoːpa/ | grandfather, grandpa | abuelo | false | *Mijn opa is zeventig jaar oud.* | MOD-009 |
+| voc-A1-181 | zoon | de | noun | zonen | — | /zoːn/ | son | hijo | partial | *Zij heeft een zoon en een dochter.* | MOD-009 |
+| voc-A1-182 | dochter | de | noun | dochters | — | /ˈdɔxtər/ | daughter | hija | partial | *Onze dochter is twaalf jaar oud.* | MOD-009 |
+| voc-A1-183 | oom | de | noun | ooms | — | /oːm/ | uncle | tío | false | *Mijn oom werkt in Amsterdam.* | MOD-009 |
+| voc-A1-184 | tante | de | noun | tantes | — | /ˈtɑntə/ | aunt | tía | false | *Mijn tante heeft een hond.* | MOD-009 |
+| voc-A1-185 | gezin | het | noun | gezinnen | — | /ɣəˈzɪn/ | family (parents and children), household | familia (nuclear), hogar | false | *Ons gezin is klein.* | MOD-009 |
+| voc-A1-186 | familie | de | noun | families | — | /faːˈmili/ | family (including relatives) | familia (extensa) | true | *Mijn familie woont in Colombia.* | MOD-009 |

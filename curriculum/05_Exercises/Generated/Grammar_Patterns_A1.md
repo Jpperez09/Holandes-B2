@@ -3,10 +3,10 @@ title: Grammar Pattern Registry — A1 (October 2026)
 type: grammar-pattern-registry
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-007, MOD-008]
+covers_modules: [MOD-007, MOD-008, MOD-009]
 created: 2026-09-30
 updated: 2026-09-30
-total_patterns: 4
+total_patterns: 5
 tags: [grammar, patterns, registry, A0, A1, october]
 ---
 
@@ -88,6 +88,23 @@ tags: [grammar, patterns, registry, A0, A1, october]
 | **practice_activity** | Say what you do on each day of next week, one sentence per day (A7). |
 | **srs_cloze_candidate** | true |
 
+### 5. `possessive-determiners`
+
+| Field | Value |
+|---|---|
+| **slug** | `possessive-determiners` |
+| **name_en** | Possessive determiners |
+| **pienemann_stage** | 2 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-009_Possessives]] |
+| **dutch_pattern** | `mijn / jouw (je) / uw / zijn / haar / ons (+ het) · onze (+ de, plural) / jullie / hun` + `[noun]` · `[Name]` + `-s` + `[noun]` |
+| **english_meaning** | my, your, his, her, our, their: the form depends on the owner; only *ons / onze* changes with the noun. |
+| **spanish_contrast** | Spanish *su* means his, her, their and your (formal); Dutch has four different words. Spanish *nuestro / nuestra* agrees in gender and number; Dutch *ons / onze* agrees with het-words versus de-words and plurals. |
+| **examples** | Mijn oma woont in Colombia. / Haar broer heet Pieter. / Ons huis is groot. / Onze moeder woont in Utrecht. / Anna's moeder werkt in Amsterdam. |
+| **common_mistake** | Using one word for Spanish *su* (`*Zijn moeder` for "her mother"), and `*Onze huis` / `*ons tafel`. |
+| **practice_activity** | 12 gap sentences choosing the right possessive, then 8 phrases to translate (A3 and A4). |
+| **srs_cloze_candidate** | true |
+
 ---
 
 ## Pattern Index (by Module)
@@ -96,6 +113,7 @@ tags: [grammar, patterns, registry, A0, A1, october]
 |---|---|
 | MOD-007 | `numbers-11-100`, `age-and-price` |
 | MOD-008 | `telling-time`, `days-and-months` |
+| MOD-009 | `possessive-determiners` |
 
 ---
 
