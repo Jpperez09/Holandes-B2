@@ -3,11 +3,11 @@ title: Vocabulary Seed — A1 (October 2026)
 type: vocabulary-seed
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011]
+covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012]
 created: 2026-09-30
 updated: 2026-09-30
-total_items: 84
-tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011]
+total_items: 98
+tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012]
 ---
 
 # Vocabulary Seed — A1 (MOD-006 to MOD-018)
@@ -146,3 +146,22 @@ Same as `Vocabulary_Seed_A0_A1`, plus two optional columns:
 | voc-A1-212 | nieuw | — | adj | — | — | /niu/ | new | nuevo | partial | *Mijn fiets is nieuw.* | MOD-011 |
 | voc-A1-213 | duur | — | adj | — | — | /dyr/ | expensive | caro | false | *Die jas is duur.* | MOD-011 |
 | voc-A1-214 | goedkoop | — | adj | — | — | /ɣutˈkoːp/ | cheap | barato | partial | *Deze broek is goedkoop.* | MOD-011 |
+
+### 2.7. Modal verbs and activities (MOD-012)
+
+| id | dutch | article | pos | plural | forms | ipa | gloss_en | gloss_es | cognate_en | example_nl | module_id |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| voc-A1-215 | kunnen | — | verb | — | ik kan, jij kunt, hij kan · kon · gekund | /ˈkʏnə(n)/ | can, to be able to | poder (capacidad) | false | *Ik kan Nederlands spreken.* | MOD-012 |
+| voc-A1-216 | willen | — | verb | — | ik wil, jij wilt, hij wil · wilde · gewild | /ˈʋɪlə(n)/ | to want | querer | true | *Ik wil koffie drinken.* | MOD-012 |
+| voc-A1-217 | moeten | — | verb | — | ik moet, jij moet, hij moet · moest · gemoeten | /ˈmutə(n)/ | must, to have to | tener que, deber | false | *Ik moet vandaag werken.* | MOD-012 |
+| voc-A1-218 | mogen | — | verb | — | ik mag, jij mag, hij mag · mocht · gemogen | /ˈmoːɣə(n)/ | may, to be allowed to | poder (permiso) | false | *Mag ik een koffie?* | MOD-012 |
+| voc-A1-219 | zwemmen | — | verb | — | ik zwem, hij zwemt · zwom · gezwommen | /ˈzʋɛmə(n)/ | to swim | nadar | false | *Mijn zoon kan goed zwemmen.* | MOD-012 |
+| voc-A1-220 | fietsen | — | verb | — | ik fiets, hij fietst · fietste · gefietst | /ˈfitsə(n)/ | to cycle, to bike | andar en bicicleta | false | *Ik wil morgen fietsen.* | MOD-012 |
+| voc-A1-221 | koken | — | verb | — | ik kook, hij kookt · kookte · gekookt | /ˈkoːkə(n)/ | to cook | cocinar | false | *Mijn zus kan koken.* | MOD-012 |
+| voc-A1-222 | bellen | — | verb | — | ik bel, hij belt · belde · gebeld | /ˈbɛlə(n)/ | to call, to phone | llamar (por teléfono) | false | *Ik moet mijn moeder bellen.* | MOD-012 |
+| voc-A1-223 | helpen | — | verb | — | ik help, hij helpt · hielp · geholpen | /ˈhɛlpə(n)/ | to help | ayudar | false | *Kun je helpen?* | MOD-012 |
+| voc-A1-224 | betalen | — | verb | — | ik betaal, hij betaalt · betaalde · betaald | /bəˈtaːlə(n)/ | to pay | pagar | false | *Ik wil betalen.* | MOD-012 |
+| voc-A1-225 | wachten | — | verb | — | ik wacht, hij wacht · wachtte · gewacht | /ˈʋɑxtə(n)/ | to wait | esperar | false | *Wij moeten hier wachten.* | MOD-012 |
+| voc-A1-226 | dansen | — | verb | — | ik dans, hij danst · danste · gedanst | /ˈdɑnsə(n)/ | to dance | bailar | true | *Mijn dochter wil dansen.* | MOD-012 |
+| voc-A1-227 | samen | — | adv | — | — | /ˈsaːmə(n)/ | together | juntos | false | *Wij kunnen samen koken.* | MOD-012 |
+| voc-A1-228 | snel | — | adv | — | — | /snɛl/ | fast, quickly | rápido | false | *Hij kan snel fietsen.* | MOD-012 |

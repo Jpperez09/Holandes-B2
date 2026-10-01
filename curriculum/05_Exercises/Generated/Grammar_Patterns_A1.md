@@ -3,10 +3,10 @@ title: Grammar Pattern Registry — A1 (October 2026)
 type: grammar-pattern-registry
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-007, MOD-008, MOD-009, MOD-010, MOD-011]
+covers_modules: [MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012]
 created: 2026-09-30
 updated: 2026-09-30
-total_patterns: 8
+total_patterns: 9
 tags: [grammar, patterns, registry, A0, A1, october]
 ---
 
@@ -156,6 +156,23 @@ tags: [grammar, patterns, registry, A0, A1, october]
 | **practice_activity** | 12 gap sentences choosing deze / die / dit / dat (A3), then 8 sentences to say in Dutch (A4). |
 | **srs_cloze_candidate** | true |
 
+### 9. `modal-moeten-mogen`
+
+| Field | Value |
+|---|---|
+| **slug** | `modal-moeten-mogen` |
+| **name_en** | Modals: moeten (must) and mogen (may) |
+| **pienemann_stage** | 3 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-012_Modal_Verbs]] |
+| **dutch_pattern** | `[Subj] + moet / mag + [...] + [infinitive]` · `Moet / Mag + [subj] + [...] + [infinitive]?` |
+| **english_meaning** | "I must work." "May I cycle?" The finite modal is second; the main verb is an infinitive at the end. |
+| **spanish_contrast** | Spanish *tengo que trabajar* and *puedo / ¿puedo...?* use *tener que* and *poder*. Dutch *moeten* is "must" and *mogen* is "may"; *kunnen* is ability. *Ik moet niet werken* means "I must not", not "I do not have to". |
+| **examples** | Ik moet vandaag werken. / Mag ik een koffie? / Wij mogen hier niet fietsen. / Moet je morgen werken? |
+| **common_mistake** | `*Ik moet niet werken` for "I do not have to work" (it means "I must not"), `*Ik wil te werken` and the infinitive not at the end. |
+| **practice_activity** | Make 8 modal sentences by adding a modal and moving the verb to the end (A4). |
+| **srs_cloze_candidate** | true |
+
 ---
 
 ## Pattern Index (by Module)
@@ -167,6 +184,7 @@ tags: [grammar, patterns, registry, A0, A1, october]
 | MOD-009 | `possessive-determiners` |
 | MOD-010 | `verb-stem-spelling`, `irregular-verbs-gaan-staan-doen-zien` |
 | MOD-011 | `demonstratives` |
+| MOD-012 | `modal-moeten-mogen` |
 
 ---
 

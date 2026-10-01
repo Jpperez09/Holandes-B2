@@ -272,7 +272,7 @@ Every entry has the following fields. The app's vault indexer parses them as a s
 | **name_en** | Modals: *kunnen* (can) and *willen* (want) |
 | **pienemann_stage** | 3 |
 | **cefr_band** | A0-A1 |
-| **module_introduced** | Previewed in MOD-005; fully drilled in MOD-014 / MOD-015 per `03_Curriculum/A0_A1_Roadmap`. |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-012_Modal_Verbs]] (previewed in MOD-005; `moeten` and `mogen` are in `Grammar_Patterns_A1`). |
 | **dutch_pattern** | `[Subj] + [modal-fin] + [...] + [infinitive]` (infinitive at clause end) |
 | **english_meaning** | Modal + bare infinitive; the infinitive moves to the end of the clause. |
 | **spanish_contrast** | Spanish *quiero hablar* keeps verbs adjacent. Dutch separates: *Ik wil Nederlands spreken.* |
@@ -361,7 +361,7 @@ Every entry has the following fields. The app's vault indexer parses them as a s
 | MOD-004 | `de-het-article`, `present-tense-zijn-hebben` (hebben), `plural-formation`, `noun-phrase-een` |
 | MOD-005 | `v2-main-clause`, `question-yes-no`, `question-word`, `present-tense-regular`, `negation-niet-geen`, `ik-woon-in` |
 | MOD-006 | `negation-niet-geen` (consolidated: *nooit*, *niets*, *niemand*, where *niet* goes) |
-| MOD-014 (later) | `modal-kunnen-willen` |
+| MOD-012 | `modal-kunnen-willen` (also `modal-moeten-mogen` in `Grammar_Patterns_A1`) |
 | MOD-017 (later) | `adjective-attributive` |
 | MOD-019 (later) | `future-gaan-infinitive` |
 
