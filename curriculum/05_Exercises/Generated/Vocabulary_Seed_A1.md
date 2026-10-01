@@ -3,11 +3,11 @@ title: Vocabulary Seed — A1 (October 2026)
 type: vocabulary-seed
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013]
+covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013, MOD-014]
 created: 2026-09-30
 updated: 2026-09-30
-total_items: 112
-tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013]
+total_items: 126
+tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013, MOD-014]
 ---
 
 # Vocabulary Seed — A1 (MOD-006 to MOD-018)
@@ -184,3 +184,22 @@ Same as `Vocabulary_Seed_A0_A1`, plus two optional columns:
 | voc-A1-240 | man | de | noun | mannen | — | /mɑn/ | man | hombre | true | *De lange man heet Pieter.* | MOD-013 |
 | voc-A1-241 | vrouw | de | noun | vrouwen | — | /vrʌu/ | woman | mujer | false | *Die vrouw is mijn tante.* | MOD-013 |
 | voc-A1-242 | jongen | de | noun | jongens | — | /ˈjɔŋə(n)/ | boy | chico, niño | false | *De jongen heeft een rode fiets.* | MOD-013 |
+
+### 2.9. At the café (MOD-014)
+
+| id | dutch | article | pos | plural | forms | ipa | gloss_en | gloss_es | cognate_en | example_nl | module_id |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| voc-A1-243 | graag | — | adv | — | — | /ɣraːx/ | gladly, please (softens a request); like to | con gusto, por favor | false | *Ik wil graag een koffie.* | MOD-014 |
+| voc-A1-244 | bestellen | — | verb | — | ik bestel, hij bestelt · bestelde · besteld | /bəˈstɛlə(n)/ | to order | pedir | false | *Wij willen graag bestellen.* | MOD-014 |
+| voc-A1-245 | nog | — | adv | — | — | /nɔx/ | still; another, more | todavía; otro, más | false | *Nog een koffie, alstublieft.* | MOD-014 |
+| voc-A1-246 | met | — | prep | — | — | /mɛt/ | with | con | false | *Een koffie met melk, alstublieft.* | MOD-014 |
+| voc-A1-247 | zonder | — | prep | — | — | /ˈzɔndər/ | without | sin | partial | *Ik drink koffie zonder suiker.* | MOD-014 |
+| voc-A1-248 | lekker | — | adj | — | — | /ˈlɛkər/ | tasty, delicious; nice | rico, sabroso | false | *De appeltaart is lekker.* | MOD-014 |
+| voc-A1-249 | café | het | noun | cafés | — | /kɑˈfeː/ | café, bar | cafetería, bar | true | *Het café is klein, maar mooi.* | MOD-014 |
+| voc-A1-250 | ober | de | noun | obers | — | /ˈoːbər/ | waiter | camarero | false | *Ober, mag ik de rekening?* | MOD-014 |
+| voc-A1-251 | kaart | de | noun | kaarten | — | /kaːrt/ | menu; card; map | carta; tarjeta; mapa | partial | *Mag ik de kaart, alstublieft?* | MOD-014 |
+| voc-A1-252 | rekening | de | noun | rekeningen | — | /ˈreːkənɪŋ/ | bill, check | cuenta | false | *Mag ik de rekening?* | MOD-014 |
+| voc-A1-253 | wijn | de | noun | wijnen | — | /ʋɛin/ | wine | vino | true | *Mijn opa drinkt graag wijn.* | MOD-014 |
+| voc-A1-254 | appeltaart | de | noun | appeltaarten | — | /ˈɑpəltaːrt/ | apple pie | tarta de manzana | partial | *De appeltaart is lekker.* | MOD-014 |
+| voc-A1-255 | suiker | de | noun | suikers | — | /ˈsœykər/ | sugar | azúcar | partial | *Koffie zonder suiker, alstublieft.* | MOD-014 |
+| voc-A1-256 | limonade | de | noun | limonades | — | /limoˈnaːdə/ | lemonade, soft drink | limonada, refresco | true | *Mijn zoon wil graag limonade.* | MOD-014 |

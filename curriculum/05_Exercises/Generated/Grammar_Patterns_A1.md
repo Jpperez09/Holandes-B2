@@ -3,10 +3,10 @@ title: Grammar Pattern Registry — A1 (October 2026)
 type: grammar-pattern-registry
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012]
+covers_modules: [MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-014]
 created: 2026-09-30
 updated: 2026-09-30
-total_patterns: 9
+total_patterns: 10
 tags: [grammar, patterns, registry, A0, A1, october]
 ---
 
@@ -173,6 +173,23 @@ tags: [grammar, patterns, registry, A0, A1, october]
 | **practice_activity** | Make 8 modal sentences by adding a modal and moving the verb to the end (A4). |
 | **srs_cloze_candidate** | true |
 
+### 10. `polite-requests`
+
+| Field | Value |
+|---|---|
+| **slug** | `polite-requests` |
+| **name_en** | Polite requests: ik wil graag, mag ik |
+| **pienemann_stage** | 3 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-014_At_the_Cafe]] |
+| **dutch_pattern** | `Ik wil graag + [noun]` · `Mag ik + [noun / ... infinitive]?` · `[noun], alstublieft` · `met / zonder + [noun]` · `Ja, graag` / `Nee, dank u wel` |
+| **english_meaning** | Ordering and asking politely: "I would like a coffee", "May I have the bill?", "Yes, please", "No, thank you". |
+| **spanish_contrast** | Spanish uses *quisiera* or *me gustaría*; Dutch softens *ik wil* with *graag* and has no conditional here. *Ik wil graag* is polite, whereas English "I want" is not. |
+| **examples** | Ik wil graag een koffie. / Mag ik de kaart? / Een koffie met melk, zonder suiker. / Ja, graag. |
+| **common_mistake** | `*Ik wil een koffie.` (blunt), `*Ik graag een koffie.` (no verb), and answering an offer with `*Ja, dank u wel`. |
+| **practice_activity** | Fill 12 gaps with graag, mag, met, zonder, nog and alstublieft (A3), then say 8 café sentences (A4). |
+| **srs_cloze_candidate** | true |
+
 ---
 
 ## Pattern Index (by Module)
@@ -185,6 +202,7 @@ tags: [grammar, patterns, registry, A0, A1, october]
 | MOD-010 | `verb-stem-spelling`, `irregular-verbs-gaan-staan-doen-zien` |
 | MOD-011 | `demonstratives` |
 | MOD-012 | `modal-moeten-mogen` |
+| MOD-014 | `polite-requests` |
 
 ---
 
