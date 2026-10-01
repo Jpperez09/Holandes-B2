@@ -3,11 +3,11 @@ title: Vocabulary Seed — A1 (October 2026)
 type: vocabulary-seed
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013, MOD-014]
+covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013, MOD-014, MOD-015]
 created: 2026-09-30
 updated: 2026-09-30
-total_items: 126
-tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013, MOD-014]
+total_items: 140
+tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013, MOD-014, MOD-015]
 ---
 
 # Vocabulary Seed — A1 (MOD-006 to MOD-018)
@@ -203,3 +203,22 @@ Same as `Vocabulary_Seed_A0_A1`, plus two optional columns:
 | voc-A1-254 | appeltaart | de | noun | appeltaarten | — | /ˈɑpəltaːrt/ | apple pie | tarta de manzana | partial | *De appeltaart is lekker.* | MOD-014 |
 | voc-A1-255 | suiker | de | noun | suikers | — | /ˈsœykər/ | sugar | azúcar | partial | *Koffie zonder suiker, alstublieft.* | MOD-014 |
 | voc-A1-256 | limonade | de | noun | limonades | — | /limoˈnaːdə/ | lemonade, soft drink | limonada, refresco | true | *Mijn zoon wil graag limonade.* | MOD-014 |
+
+### 2.10. Irregular plurals and diminutives (MOD-015)
+
+| id | dutch | article | pos | plural | forms | ipa | gloss_en | gloss_es | cognate_en | example_nl | module_id |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| voc-A1-257 | stad | de | noun | steden | — | /stɑt/ | city, town | ciudad | false | *Amsterdam is een grote stad.* | MOD-015 |
+| voc-A1-258 | ei | het | noun | eieren | — | /ɛi/ | egg | huevo | partial | *Ik eet een ei.* | MOD-015 |
+| voc-A1-259 | schip | het | noun | schepen | — | /sxɪp/ | ship, boat | barco | partial | *Het schip is groot.* | MOD-015 |
+| voc-A1-260 | blad | het | noun | bladeren | — | /blɑt/ | leaf; sheet of paper | hoja | false | *Dit blad is groen.* | MOD-015 |
+| voc-A1-261 | weg | de | noun | wegen | — | /ʋɛx/ | road, way | camino, carretera | partial | *De weg is lang.* | MOD-015 |
+| voc-A1-262 | been | het | noun | benen | — | /beːn/ | leg (also: bone, in some words) | pierna | false | *Mijn been is moe.* | MOD-015 |
+| voc-A1-263 | lied | het | noun | liederen | — | /lit/ | song | canción | false | *Dit lied is mooi.* | MOD-015 |
+| voc-A1-264 | kop | de | noun | koppen | — | /kɔp/ | head (informal); cup, mug | cabeza; taza | partial | *Ik heb een kop koffie.* | MOD-015 |
+| voc-A1-265 | meisje | het | noun | meisjes | — | /ˈmɛiʃə/ | girl | niña, chica | false | *Het meisje heeft een rode fiets.* | MOD-015 |
+| voc-A1-266 | jongetje | het | noun | jongetjes | — | /ˈjɔŋətjə/ | little boy | niñito | false | *Het jongetje speelt in zijn kamer.* | MOD-015 |
+| voc-A1-267 | kopje | het | noun | kopjes | — | /ˈkɔpjə/ | cup | taza | false | *Ik wil graag een kopje koffie.* | MOD-015 |
+| voc-A1-268 | broodje | het | noun | broodjes | — | /ˈbroːtjə/ | bread roll, sandwich | panecillo, bocadillo | false | *Mag ik een broodje kaas?* | MOD-015 |
+| voc-A1-269 | kaartje | het | noun | kaartjes | — | /ˈkaːrtjə/ | ticket; small card | billete, entrada; tarjetita | false | *Hoeveel kost het kaartje?* | MOD-015 |
+| voc-A1-270 | beetje | het | noun | beetjes | — | /ˈbeːtjə/ | little bit | poquito | false | *Ik spreek een beetje Nederlands.* | MOD-015 |

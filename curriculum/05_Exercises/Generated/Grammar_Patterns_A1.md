@@ -3,10 +3,10 @@ title: Grammar Pattern Registry — A1 (October 2026)
 type: grammar-pattern-registry
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-014]
+covers_modules: [MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-014, MOD-015]
 created: 2026-09-30
 updated: 2026-09-30
-total_patterns: 10
+total_patterns: 12
 tags: [grammar, patterns, registry, A0, A1, october]
 ---
 
@@ -190,6 +190,40 @@ tags: [grammar, patterns, registry, A0, A1, october]
 | **practice_activity** | Fill 12 gaps with graag, mag, met, zonder, nog and alstublieft (A3), then say 8 café sentences (A4). |
 | **srs_cloze_candidate** | true |
 
+### 11. `plural-irregular`
+
+| Field | Value |
+|---|---|
+| **slug** | `plural-irregular` |
+| **name_en** | Irregular plurals |
+| **pienemann_stage** | 2 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-015_Irregular_Plurals_and_Diminutives]] |
+| **dutch_pattern** | `-eren` (ei, blad, lied, kind) · `vowel change or lengthening` (stad - steden, schip - schepen, weg - wegen, glas - glazen) · `diminutive + -s` |
+| **english_meaning** | Plurals that are not simply -en or -s: eieren, bladeren, liederen, steden, schepen, wegen. |
+| **spanish_contrast** | Spanish adds -s / -es and keeps the stem; Dutch changes the vowel (*stad - steden*) or adds *-eren*, which Spanish does not have. |
+| **examples** | het ei, de eieren / de stad, de steden / het schip, de schepen / het blad, de bladeren |
+| **common_mistake** | Regularising the word: `*eien`, `*bladen`, `*stads`, `*schips`. |
+| **practice_activity** | Give the plural of 12 nouns (A3) and say each singular and plural aloud. |
+| **srs_cloze_candidate** | true |
+
+### 12. `diminutive-je`
+
+| Field | Value |
+|---|---|
+| **slug** | `diminutive-je` |
+| **name_en** | Diminutives: -je, -tje, -etje, -pje |
+| **pienemann_stage** | 2 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-015_Irregular_Plurals_and_Diminutives]] |
+| **dutch_pattern** | `[noun] + je / tje / etje / pje` → always `het`, plural `-s` |
+| **english_meaning** | "Small" or "cute" forms: het kopje, het broodje, het tafeltje. Also used for softening and in fixed expressions. |
+| **spanish_contrast** | Spanish *-ito / -ita* keeps the gender; Dutch makes every diminutive a *het*-word with plural *-s*: *de tafel* becomes *het tafeltje*. |
+| **examples** | de kop, het kopje / het brood, het broodje / de tafel, het tafeltje / de boom, het boompje |
+| **common_mistake** | Keeping the old article (`*de kopje`), an adjective ending after *een* (`*een kleine kopje`) and the wrong suffix (`*boomje`). |
+| **practice_activity** | Make the diminutive of 8 nouns (A4). |
+| **srs_cloze_candidate** | true |
+
 ---
 
 ## Pattern Index (by Module)
@@ -203,6 +237,7 @@ tags: [grammar, patterns, registry, A0, A1, october]
 | MOD-011 | `demonstratives` |
 | MOD-012 | `modal-moeten-mogen` |
 | MOD-014 | `polite-requests` |
+| MOD-015 | `plural-irregular`, `diminutive-je` |
 
 ---
 
