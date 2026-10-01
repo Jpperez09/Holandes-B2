@@ -28,10 +28,13 @@ router.get('/', requireVault, (req: Request, res: Response) => {
 });
 
 // GET /api/vocabulary/due
-router.get('/due', requireVault, (_req: Request, res: Response) => {
+router.get('/due', requireVault, (req: Request, res: Response) => {
   // Overdue cards, then new cards from started modules within the daily
-  // new_cards_per_day budget — see services/due-cards.ts.
-  res.json(getDueCards());
+  // new_cards_per_day budget — see services/due-cards.ts. With
+  // ?within_minutes=N, the cards that come due in the next N minutes follow
+  // (Review asks for them when its queue runs out).
+  const within = parseInt(String(req.query['within_minutes'] ?? ''), 10);
+  res.json(getDueCards(getDb(), Number.isFinite(within) ? { withinMinutes: within } : {}));
 });
 
 // GET /api/vocabulary/stats

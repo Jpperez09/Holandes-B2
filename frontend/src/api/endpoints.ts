@@ -43,7 +43,13 @@ export const endpoints = {
     api.post<ActivityAttempt>(`/api/activities/${activityId}/attempts`, {}),
 
   // vocabulary
-  getDueVocabulary: () => api.get<VocabItem[]>('/api/vocabulary/due'),
+  /** Due and new cards; with withinMinutes, also the ones that come due within that many minutes. */
+  getDueVocabulary: (opts: { withinMinutes?: number } = {}) =>
+    api.get<VocabItem[]>(
+      opts.withinMinutes
+        ? `/api/vocabulary/due?within_minutes=${opts.withinMinutes}`
+        : '/api/vocabulary/due',
+    ),
   getVocabularyStats: () => api.get<VocabStats>('/api/vocabulary/stats'),
   reviewVocabulary: (id: number, grade: 1 | 2 | 3 | 4, elapsedSeconds?: number) =>
     api.post<ReviewResponse>(`/api/vocabulary/${id}/review`, {

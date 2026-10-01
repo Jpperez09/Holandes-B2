@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { endpoints } from '../api/endpoints';
 import { ApiError } from '../api/client';
@@ -6,6 +6,14 @@ import type { VocabItem } from '../api/types';
 import { useApi } from '../hooks/useApi';
 import { AsyncView, EmptyState } from '../components/ui';
 import { speakDutch, ttsAvailable } from '../lib/tts';
+import {
+  SOON_MINUTES,
+  advance,
+  describeComing,
+  splitComing,
+  startSession,
+  type Session,
+} from '../lib/reviewQueue';
 
 type Phase = 'start' | 'reviewing' | 'done';
 
@@ -34,16 +42,46 @@ function ReviewSession({
 }: {
   initialCards: VocabItem[];
 }): React.JSX.Element {
-  const cards = useMemo(() => initialCards, [initialCards]);
+  // The queue grows during the session: a card graded Again goes to the end of it.
+  const [session, setSession] = useState<Session<VocabItem>>(() => startSession(initialCards));
   const [phase, setPhase] = useState<Phase>('start');
-  const [idx, setIdx] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [submitting, setSubmitting] = useState(false);
-  const [reviewedCount, setReviewedCount] = useState(0);
+  const [reviewedIds, setReviewedIds] = useState<Set<number>>(() => new Set());
   const [saveError, setSaveError] = useState<string | null>(null);
+  // What the server says is due or coming back, asked for when the queue runs out
+  // (null while it is being asked).
+  const [more, setMore] = useState<VocabItem[] | null>(null);
+  const [now, setNow] = useState(() => Date.now());
   const shownAt = useRef<number>(Date.now());
 
+  const cards = session.queue;
+  const idx = session.idx;
   const card = cards[idx];
+
+  const checkComingBack = useCallback(async () => {
+    setMore(null);
+    try {
+      setMore(await endpoints.getDueVocabulary({ withinMinutes: SOON_MINUTES }));
+    } catch {
+      setMore([]); // nothing to offer; the learner can still go back to Today
+    }
+  }, []);
+
+  // On the last screen, keep "vuelven en X min" honest as time passes.
+  useEffect(() => {
+    if (phase !== 'done') return;
+    setNow(Date.now());
+    const timer = setInterval(() => setNow(Date.now()), 15000);
+    return () => clearInterval(timer);
+  }, [phase]);
+
+  function continueWith(next: VocabItem[]): void {
+    setSession(startSession(next));
+    setRevealed(false);
+    setMore(null);
+    setPhase('reviewing');
+  }
 
   const speak = useCallback(() => {
     if (card) speakDutch(card.tts_text || card.lemma);
@@ -68,12 +106,13 @@ function ReviewSession({
       const elapsed = Math.round((Date.now() - shownAt.current) / 1000);
       try {
         await endpoints.reviewVocabulary(card.id, g, elapsed);
-        setReviewedCount((c) => c + 1);
-        if (idx + 1 >= cards.length) {
+        setReviewedIds((ids) => new Set(ids).add(card.id));
+        const next = advance(session, g);
+        setSession({ queue: next.queue, idx: next.idx });
+        setRevealed(false);
+        if (next.finished) {
           setPhase('done');
-        } else {
-          setIdx((i) => i + 1);
-          setRevealed(false);
+          void checkComingBack();
         }
       } catch (err) {
         setSaveError(
@@ -85,7 +124,7 @@ function ReviewSession({
         setSubmitting(false);
       }
     },
-    [card, submitting, idx, cards.length],
+    [card, submitting, session, checkComingBack],
   );
 
   // Keyboard shortcuts: Space reveals, 1-4 grade.
@@ -158,6 +197,9 @@ function ReviewSession({
 
   // --- Done screen ---
   if (phase === 'done') {
+    const reviewedCount = reviewedIds.size;
+    const coming = more ? splitComing(more, now) : null;
+    const comingCount = coming ? coming.ready.length + coming.soon.length : 0;
     return (
       <EmptyState
         icon="🎉"
@@ -166,9 +208,37 @@ function ReviewSession({
         } reviewed today`}
         message="Lovely work. Those words are now scheduled to come back at just the right time."
         action={
-          <Link className="btn btn--primary" to="/today">
-            Back to today
-          </Link>
+          <>
+            {more === null && (
+              <p className="muted">Comprobando si vuelven más tarjetas…</p>
+            )}
+            {coming && comingCount > 0 && (
+              <>
+                <p>
+                  <strong>
+                    {describeComing(
+                      coming.ready.length,
+                      coming.soon.length,
+                      coming.minutesToNext,
+                    )}
+                  </strong>
+                </p>
+                <button
+                  type="button"
+                  className="btn btn--primary btn--big"
+                  onClick={() => continueWith([...coming.ready, ...coming.soon])}
+                >
+                  Continuar
+                </button>{' '}
+              </>
+            )}
+            <Link
+              className={'btn ' + (comingCount > 0 ? 'btn--ghost' : 'btn--primary')}
+              to="/today"
+            >
+              Back to today
+            </Link>
+          </>
         }
       />
     );
