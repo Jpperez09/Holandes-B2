@@ -12,7 +12,7 @@ tags: [vocabulary, seed, A0, A1, generated, MOD-001, MOD-002, MOD-003, MOD-004, 
 
 # Vocabulary Seed — A0/A1 (Levels 1–5)
 
-> **Purpose.** The first 130 lemmas of the curriculum, organized into 10 domains, ready for the app to ingest. Every row carries audio metadata fields per [[../../00_Project/DECISION_REGISTER_V1]] P2-R1 (`audio_path`, `audio_url`, `tts_text` — at least one must be populated; `tts_text` defaults to the Dutch lemma for fallback synthesis).
+> **Purpose.** The first 130 lemmas of the curriculum, organized into 10 domains, ready for the app to ingest. Every row carries audio metadata fields per `00_Project/DECISION_REGISTER_V1` P2-R1 (`audio_path`, `audio_url`, `tts_text` — at least one must be populated; `tts_text` defaults to the Dutch lemma for fallback synthesis).
 >
 > **Selection criteria.** High frequency (top ~1,000 in [SUBTLEX-NL](https://crr.ugent.be/programs-data/subtitle-frequencies/subtlex-nl)), cognate-dense at A0 (~50–60% English-cognate-friendly), no rare/niche items, every noun article-tagged.
 
@@ -42,7 +42,7 @@ Every item below has the following fields. The app's vault indexer parses them a
 | `tts_text` | string | nullable | Fallback text for on-demand TTS. Defaults to `dutch`. |
 | `status` | enum | yes | `new` at seed time. |
 
-> Per [[../../00_Project/DECISION_REGISTER_V1]] D-007 (audio mandatory on every vocab card) and P2-R1 (TTS-compatible metadata first): at least one of `audio_path`, `audio_url`, `tts_text` must be non-null in production. For seed data, `tts_text` is populated for every row so the app can render audio via on-demand TTS until human-recorded audio is available.
+> Per `00_Project/DECISION_REGISTER_V1` D-007 (audio mandatory on every vocab card) and P2-R1 (TTS-compatible metadata first): at least one of `audio_path`, `audio_url`, `tts_text` must be non-null in production. For seed data, `tts_text` is populated for every row so the app can render audio via on-demand TTS until human-recorded audio is available.
 
 ---
 
@@ -252,7 +252,7 @@ Every item below has the following fields. The app's vault indexer parses them a
 
 ## 3. Audio Metadata Defaults
 
-Per P2-R1 in [[../../00_Project/DECISION_REGISTER_V1]]:
+Per P2-R1 in `00_Project/DECISION_REGISTER_V1`:
 
 ```yaml
 default_audio_resolution:
@@ -287,13 +287,13 @@ The app's audio resolver tries them in order. If all three are null on a noun ca
 
 ## 6. Cross-References
 
-- [[../../00_Project/DECISION_REGISTER_V1]] — D-007, D-008, D-009, D-026, P2-R1.
+- `00_Project/DECISION_REGISTER_V1` — D-007, D-008, D-009, D-026, P2-R1.
 - [[../../03_Curriculum/Modules/MOD-001_First_Contact]]
 - [[../../03_Curriculum/Modules/MOD-002_Dutch_Sounds_and_Greetings]]
 - [[../../03_Curriculum/Modules/MOD-003_I_Am_You_Are]]
 - [[../../03_Curriculum/Modules/MOD-004_Nouns_De_Het_and_Core_Objects]]
 - [[../../03_Curriculum/Modules/MOD-005_Basic_Sentences_and_Questions]]
 - [[Grammar_Patterns_A0_A1]] — the grammar registry that complements this vocabulary seed.
-- [[../../02_Methodology/Spaced_Repetition]] §4 — card format expectations.
-- [[../../08_App_Architecture/Database_Schema]] — `vocabulary_items` table.
-- [[../../08_App_Architecture/Markdown_Data_Model]] — vocabulary table parsing contract.
+- `02_Methodology/Spaced_Repetition` §4 — card format expectations.
+- `08_App_Architecture/Database_Schema` — `vocabulary_items` table.
+- `08_App_Architecture/Markdown_Data_Model` — vocabulary table parsing contract.

@@ -14,7 +14,7 @@ tags: [level, A0, foundation, de-het, nouns, hebben]
 
 ## Purpose
 
-Introduce the Dutch noun system. Every Dutch noun lives with its article — **de** (common gender) or **het** (neuter) — and the article must be learned with the noun, never separately (D-008 in [[../../00_Project/DECISION_REGISTER_V1]]). This level is the moment Juanpa stops thinking of *huis* as "house" and starts thinking of it as *het huis*.
+Introduce the Dutch noun system. Every Dutch noun lives with its article — **de** (common gender) or **het** (neuter) — and the article must be learned with the noun, never separately (D-008 in `00_Project/DECISION_REGISTER_V1`). This level is the moment Juanpa stops thinking of *huis* as "house" and starts thinking of it as *het huis*.
 
 Secondary: *hebben* (to have) is introduced, which lets Juanpa say things like *ik heb een hond* ("I have a dog").
 
@@ -76,7 +76,7 @@ Secondary: *hebben* (to have) is introduced, which lets Juanpa say things like *
 ## Real-World Task
 
 > **"Photograph 10 objects in your home, label each one with its Dutch noun + article on the photo (digital sticker, paper label, or comment) and write a 5-sentence description of the scene in Dutch."**
-> Verification: photo(s) + the 5-sentence description posted to [[../../04_Daily_Logs/]].
+> Verification: photo(s) + the 5-sentence description posted to `04_Daily_Logs/`.
 
 ## Review Requirements
 
@@ -110,4 +110,4 @@ notes: >
 - [[Level_003]]
 - [[Level_005]]
 - [[../../05_Exercises/Generated/Grammar_Patterns_A0_A1]]
-- [[../../02_Methodology/Spaced_Repetition]] §4.1 (de/het card-front rule)
+- `02_Methodology/Spaced_Repetition` §4.1 (de/het card-front rule)

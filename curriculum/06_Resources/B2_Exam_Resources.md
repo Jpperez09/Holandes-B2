@@ -32,7 +32,7 @@ Provide the evidence and resources Juanpa needs to (a) decide which B2 Dutch exa
 | Pass mark | 500/700 per component (scaled) | Roughly 60% per skill | Roughly 60% per skill |
 | Best fit for Juanpa | If he plans to move to/study/work in NL | If he wants the cheapest, internationally-sittable B2 certificate from Colombia | If targeting Dutch-speaking workplace |
 
-**Recommendation for Juanpa (Colombia, no current NL residency plan):** target **CNaVT *Educatief Startbekwaam* (B2)**. It is the only realistic option to sit *from Colombia* (or anywhere outside the Netherlands). Confirmation depends on the decision in [[../00_Project/DECISIONS]].
+**Recommendation for Juanpa (Colombia, no current NL residency plan):** target **CNaVT *Educatief Startbekwaam* (B2)**. It is the only realistic option to sit *from Colombia* (or anywhere outside the Netherlands). Confirmation depends on the decision in `00_Project/DECISIONS`.
 
 ---
 
@@ -202,7 +202,7 @@ Use this decision tree:
    - **Personal milestone only** → CNaVT is cheaper and sittable in Colombia/LATAM; still the better choice.
 3. **Default**: **CNaVT *Educatief Startbekwaam*** in the May window of the target year.
 
-Open in [[../00_Project/DECISIONS]] — finalize by Phase 2.
+Open in `00_Project/DECISIONS` — finalize by Phase 2.
 
 ---
 
@@ -252,7 +252,7 @@ Open in [[../00_Project/DECISIONS]] — finalize by Phase 2.
 - [ ] Order or borrow *Op Niveau* + *Examenidioom NT2*.
 - [ ] Subscribe to *De Dag* podcast and one BE source (*VRT NWS* daily).
 - [ ] Bookmark NRC, NOS, Wablieft, NedBox.
-- [ ] Lock the exam-target decision in [[../00_Project/DECISIONS]].
+- [ ] Lock the exam-target decision in `00_Project/DECISIONS`.
 - [ ] Build first mock-exam scaffold for the app (Phase 9 prep).
 
 ---
@@ -275,9 +275,9 @@ Open in [[../00_Project/DECISIONS]] — finalize by Phase 2.
 
 ## Related
 
-- [[../00_Project/DECISIONS]]
-- [[../01_Research/02_dutch_for_english_and_spanish_speakers]]
-- [[../01_Research/04_curriculum_design_from_a0_to_b2]]
+- `00_Project/DECISIONS`
+- `01_Research/02_dutch_for_english_and_spanish_speakers`
+- `01_Research/04_curriculum_design_from_a0_to_b2`
 - [[Dictionaries]]
 - [[Courses]]
 - [[Podcasts]]

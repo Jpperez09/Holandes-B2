@@ -389,7 +389,7 @@ Curated, evaluated catalogue of Dutch dictionaries, corpus tools, frequency list
 
 ## Related
 
-- [[../01_Research/02_dutch_for_english_and_spanish_speakers]]
+- `01_Research/02_dutch_for_english_and_spanish_speakers`
 - [[Courses]]
 - [[B2_Exam_Resources]]
 - [[Books]]

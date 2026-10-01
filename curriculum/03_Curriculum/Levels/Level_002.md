@@ -64,7 +64,7 @@ Juanpa can advance to Level 003 when:
 ## Writing Targets
 
 - Write 4 sentences introducing yourself (name, country, "I speak Spanish/English").
-- Free-form: 2–3 sentences in [[../../04_Daily_Logs/]] in Dutch (with English assists if needed).
+- Free-form: 2–3 sentences in `04_Daily_Logs/` in Dutch (with English assists if needed).
 
 ## Pronunciation Targets
 
@@ -103,4 +103,4 @@ milestone: false
 - [[../Modules/MOD-002_Dutch_Sounds_and_Greetings]]
 - [[Level_001]]
 - [[Level_003]]
-- [[../Level_System]]
+- `03_Curriculum/Level_System`

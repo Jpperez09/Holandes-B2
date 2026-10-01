@@ -60,7 +60,7 @@ Juanpa is exposed to these as fixed chunks, not analyzed structures.
 - Produce his own name in Dutch out loud (recording optional).
 - Repeat 5 greetings after a model. Self-rating only.
 
-> No monologue required at Level 1. See [[../../02_Methodology/Juanpa_Methodology_V1]] for the staged speaking introduction.
+> No monologue required at Level 1. See `02_Methodology/Juanpa_Methodology_V1` for the staged speaking introduction.
 
 ## Reading Targets
 
@@ -84,12 +84,12 @@ Juanpa is exposed to these as fixed chunks, not analyzed structures.
 ## Real-World Task
 
 > **"Tell one Dutch speaker (or one Dutch learner Discord/Tandem/iTalki contact) your name and country in Dutch."**
-> Acceptable verification: a screenshot of the text message, a voice memo, or a self-report in [[../../04_Daily_Logs/]].
+> Acceptable verification: a screenshot of the text message, a voice memo, or a self-report in `04_Daily_Logs/`.
 
 ## Review Requirements
 
 - No review module yet (review modules start at Level 7).
-- The module's vocabulary is automatically added to the SRS deck on completion (see [[../../02_Methodology/Spaced_Repetition]]).
+- The module's vocabulary is automatically added to the SRS deck on completion (see `02_Methodology/Spaced_Repetition`).
 
 ## App Metadata
 
@@ -109,7 +109,7 @@ milestone: false
 
 ## Cross-References
 
-- [[../Module_Template]]
-- [[../Level_System]]
-- [[../A0_A1_Roadmap]]
-- [[../../02_Methodology/Juanpa_Methodology_V1]]
+- `03_Curriculum/Module_Template`
+- `03_Curriculum/Level_System`
+- `03_Curriculum/A0_A1_Roadmap`
+- `02_Methodology/Juanpa_Methodology_V1`

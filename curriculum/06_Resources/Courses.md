@@ -289,7 +289,7 @@ Evaluated catalogue of structured Dutch learning resources (courses, YouTube cha
 - [ ] Schedule **first iTalki lesson for week 13** (start of A2), not earlier.
 - [ ] Register on **NedBox** (free) for A2 onset.
 - [ ] Decide on **paid course budget**: cap at ~€20/month average, with a one-time exam-prep purchase later.
-- [ ] Reconfirm the **exam target** so B1→B2 resources align ([[B2_Exam_Resources]], [[../00_Project/DECISIONS]]).
+- [ ] Reconfirm the **exam target** so B1→B2 resources align ([[B2_Exam_Resources]], `00_Project/DECISIONS`).
 
 ---
 
@@ -322,6 +322,6 @@ Evaluated catalogue of structured Dutch learning resources (courses, YouTube cha
 - [[Podcasts]]
 - [[YouTube_Channels]]
 - [[Music]]
-- [[../01_Research/02_dutch_for_english_and_spanish_speakers]]
-- [[../01_Research/03_daily_study_intensity_models]]
-- [[../01_Research/04_curriculum_design_from_a0_to_b2]]
+- `01_Research/02_dutch_for_english_and_spanish_speakers`
+- `01_Research/03_daily_study_intensity_models`
+- `01_Research/04_curriculum_design_from_a0_to_b2`
