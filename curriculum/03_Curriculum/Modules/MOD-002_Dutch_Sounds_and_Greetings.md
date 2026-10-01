@@ -82,8 +82,8 @@ tags: [module, MOD-002, A0, foundation, sounds, greetings, numbers]
 | Dutch | Article | IPA | English | Cognate |
 |---|---|---|---|---|
 | heten | — | /ˈheːtə(n)/ | to be called | partial |
-| mevrouw | — | /məˈvrʌu/ | madam, Mrs. | — |
-| meneer | — | /məˈneːr/ | sir, Mr. | — |
+| mevrouw | de | /məˈvrʌu/ | madam, Mrs. | — |
+| meneer | de | /məˈneːr/ | sir, Mr. | — |
 | en | — | /ɛn/ | and | EN |
 
 ---

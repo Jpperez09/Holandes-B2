@@ -66,8 +66,8 @@ Every item below has the following fields. The app's vault indexer parses them a
 | voc-A1-012 | dank u wel | — | phrase | /ˈdɑŋkyʋɛl/ | thank you (formal) | gracias (usted) | false | *Dank u wel.* | MOD-002 |
 | voc-A1-013 | ja | — | int | /jaː/ | yes | sí | partial-EN | *Ja, dat klopt.* | MOD-001 |
 | voc-A1-014 | nee | — | int | /neː/ | no | no | partial-EN | *Nee, dat is fout.* | MOD-001 |
-| voc-A1-015 | mevrouw | — | noun-title | /məˈvrʌu/ | madam, Mrs. | señora | false | *Goedemorgen, mevrouw.* | MOD-002 |
-| voc-A1-016 | meneer | — | noun-title | /məˈneːr/ | sir, Mr. | señor | false | *Dank u wel, meneer.* | MOD-002 |
+| voc-A1-015 | mevrouw | de | noun-title | /məˈvrʌu/ | madam, Mrs. | señora | false | *Goedemorgen, mevrouw.* | MOD-002 |
+| voc-A1-016 | meneer | de | noun-title | /məˈneːr/ | sir, Mr. | señor | false | *Dank u wel, meneer.* | MOD-002 |
 
 ### 2.2. Numbers 0–10 (MOD-002)
 
@@ -146,10 +146,10 @@ Every item below has the following fields. The app's vault indexer parses them a
 | voc-A1-067 | Nederlands | het | noun/adj | /ˈneːdərlɑnts/ | Dutch (language/adj.) | *Ik leer Nederlands.* | MOD-001 |
 | voc-A1-068 | Spanje | het | noun-proper | /ˈspɑɲə/ | Spain | *Zij komt uit Spanje.* | MOD-003 |
 | voc-A1-069 | Spanjaard | de | noun | /ˈspɑɲaːrt/ | Spaniard | *Hij is een Spanjaard.* | MOD-003 |
-| voc-A1-070 | Spaans | — | adj | /spaːns/ | Spanish (lang./adj.) | *Ik spreek Spaans.* | MOD-003 |
+| voc-A1-070 | Spaans | het | noun/adj | /spaːns/ | Spanish (lang./adj.) | *Ik spreek Spaans.* | MOD-003 |
 | voc-A1-071 | Engeland | het | noun-proper | /ˈɛŋələnt/ | England | *Engeland is een eiland.* | MOD-003 |
-| voc-A1-072 | Engels | — | adj/noun | /ˈɛŋəls/ | English (lang./adj.) | *Ik spreek Engels.* | MOD-003 |
-| voc-A1-073 | Portugees | — | adj/noun | /pɔrtyˈɣes/ | Portuguese | *Hij spreekt Portugees.* | MOD-003 |
+| voc-A1-072 | Engels | het | noun/adj | /ˈɛŋəls/ | English (lang./adj.) | *Ik spreek Engels.* | MOD-003 |
+| voc-A1-073 | Portugees | het | noun/adj | /pɔrtyˈɣeːs/ | Portuguese | *Hij spreekt Portugees.* | MOD-003 |
 
 ### 2.7. People & Property (MOD-003)
 

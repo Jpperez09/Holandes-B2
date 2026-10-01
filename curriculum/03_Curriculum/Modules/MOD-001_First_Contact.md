@@ -59,7 +59,7 @@ None. This is the entry module.
 | nee | — | /neː/ | no | no | partial-EN | *Nee, dat is fout.* |
 | ik | — | /ɪk/ | I | yo | — | *Ik ben Juan.* |
 | naam | de | /naːm/ | name | nombre | EN | *Mijn naam is Juan.* |
-| Nederland | het | /ˈneːdərlɑnt/ | Netherlands | Holanda | EN | *Ik leer Nederland(s).* |
+| Nederland | het | /ˈneːdərlɑnt/ | Netherlands | Holanda | EN | *Ik woon in Nederland.* |
 | Colombia | — | /koˈlɔmbijaː/ | Colombia | Colombia | EN/ES | *Ik kom uit Colombia.* |
 | Nederlands | het | /ˈneːdərlɑnts/ | Dutch (language) | neerlandés / holandés | EN | *Ik leer Nederlands.* |
 
