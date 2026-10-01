@@ -79,13 +79,13 @@ This level closes the **Foundation micro-block (Levels 1–5)** by tying phonolo
 ## Real-World Task
 
 > **"Have a 4-turn text exchange in Dutch on a language partner app (Tandem, HelloTalk, Discord). Use at least 1 yes/no question and 1 *wh-*question."**
-> Verification: screenshot of the exchange in [[../../04_Daily_Logs/]].
+> Verification: screenshot of the exchange in `04_Daily_Logs/`.
 
 ## Review Requirements
 
 - SRS daily.
 - **Mini consolidation**: at end of Level 005, Juanpa retakes the SRS due queue from Levels 1–4 to confirm retention before the next sub-phase. Not a formal review module, but flagged in the daily plan.
-- No formal review module yet (next at Level 007 per [[../Level_System]] §5).
+- No formal review module yet (next at Level 007 per `03_Curriculum/Level_System` §5).
 
 ## App Metadata
 
@@ -111,5 +111,5 @@ notes: >
 
 - [[../Modules/MOD-005_Basic_Sentences_and_Questions]]
 - [[Level_004]]
-- [[../Level_System]]
+- `03_Curriculum/Level_System`
 - [[../../05_Exercises/Generated/Grammar_Patterns_A0_A1]]

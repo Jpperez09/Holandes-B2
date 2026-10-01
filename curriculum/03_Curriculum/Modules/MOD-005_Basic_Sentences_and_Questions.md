@@ -237,7 +237,7 @@ Must include:
 ## 10. Writing Practice
 
 A 6–8 sentence Dutch dialogue (you + an imagined Dutch interlocutor).
-Save to [[../../04_Daily_Logs/]].
+Save to `04_Daily_Logs/`.
 
 ---
 
@@ -245,7 +245,7 @@ Save to [[../../04_Daily_Logs/]].
 
 > **"Have a 4-turn text exchange in Dutch on Tandem / HelloTalk / Discord. Use at least 1 yes/no question and 1 *wh-*question."**
 
-Verification: chat screenshot in [[../../04_Daily_Logs/]].
+Verification: chat screenshot in `04_Daily_Logs/`.
 
 ---
 
@@ -325,6 +325,6 @@ checkpoint_note: |
 
 - [[../Levels/Level_005]]
 - [[MOD-004_Nouns_De_Het_and_Core_Objects]]
-- [[../A0_A1_Roadmap]]
+- `03_Curriculum/A0_A1_Roadmap`
 - [[../../05_Exercises/Generated/Grammar_Patterns_A0_A1]]
 - [[../../05_Exercises/Generated/Vocabulary_Seed_A0_A1]]

@@ -15,7 +15,7 @@ tags: [grammar, patterns, registry, A0, A1, generated]
 > Single source of truth for grammar pattern slugs used across MOD-001 through MOD-005.
 > Each module references patterns by `slug`; the registry holds the canonical definition.
 >
-> Per [[../../03_Curriculum/Module_Template]] §18 open question and [[../../00_Project/NEXT_PHASE_PLAN]] Step 5: the registry lives here (not per-module).
+> Per `03_Curriculum/Module_Template` §18 open question and `00_Project/NEXT_PHASE_PLAN` Step 5: the registry lives here (not per-module).
 
 ---
 
@@ -272,7 +272,7 @@ Every entry has the following fields. The app's vault indexer parses them as a s
 | **name_en** | Modals: *kunnen* (can) and *willen* (want) |
 | **pienemann_stage** | 3 |
 | **cefr_band** | A0-A1 |
-| **module_introduced** | Previewed in MOD-005; fully drilled in MOD-014 / MOD-015 per [[../../03_Curriculum/A0_A1_Roadmap]]. |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-012_Modal_Verbs]] (previewed in MOD-005; `moeten` and `mogen` are in `Grammar_Patterns_A1`). |
 | **dutch_pattern** | `[Subj] + [modal-fin] + [...] + [infinitive]` (infinitive at clause end) |
 | **english_meaning** | Modal + bare infinitive; the infinitive moves to the end of the clause. |
 | **spanish_contrast** | Spanish *quiero hablar* keeps verbs adjacent. Dutch separates: *Ik wil Nederlands spreken.* |
@@ -289,7 +289,7 @@ Every entry has the following fields. The app's vault indexer parses them as a s
 | **name_en** | Near future with *gaan* + infinitive |
 | **pienemann_stage** | 3 |
 | **cefr_band** | A0-A1 |
-| **module_introduced** | Previewed in MOD-005; fully drilled in MOD-019 per [[../../03_Curriculum/A0_A1_Roadmap]]. |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-018_Making_Plans]] (previewed in MOD-005). |
 | **dutch_pattern** | `[Subj] + [gaan-fin] + [...] + [infinitive]` |
 | **english_meaning** | Near future "going to X". |
 | **spanish_contrast** | Spanish *voy a hablar* uses preposition *a*. Dutch uses no preposition: *Ik ga praten.* |
@@ -323,7 +323,7 @@ Every entry has the following fields. The app's vault indexer parses them as a s
 | **name_en** | Attributive adjectives — the *-e* rule |
 | **pienemann_stage** | 3 |
 | **cefr_band** | A0-A1 |
-| **module_introduced** | Previewed in MOD-004; fully drilled in MOD-017 per [[../../03_Curriculum/A0_A1_Roadmap]]. |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-013_Adjective_Endings]] (previewed in MOD-004). |
 | **dutch_pattern** | `[article/det] + [adj+e] + [N]` — with one exception: `een + [adj-base] + [het-noun]` keeps the adjective uninflected. |
 | **english_meaning** | Most attributive adjectives get *-e* in Dutch. The exception: *een* + adjective + het-noun → no *-e*. |
 | **spanish_contrast** | Spanish agrees gender + number. Dutch agrees only on this one rule. Subtle for L2 learners. |
@@ -360,15 +360,16 @@ Every entry has the following fields. The app's vault indexer parses them as a s
 | MOD-003 | `present-tense-zijn-hebben` (zijn), `ik-kom-uit`, `ik-spreek`, `dit-is-dat-is`, `adjective-predicative` |
 | MOD-004 | `de-het-article`, `present-tense-zijn-hebben` (hebben), `plural-formation`, `noun-phrase-een` |
 | MOD-005 | `v2-main-clause`, `question-yes-no`, `question-word`, `present-tense-regular`, `negation-niet-geen`, `ik-woon-in` |
-| MOD-014 (later) | `modal-kunnen-willen` |
-| MOD-017 (later) | `adjective-attributive` |
-| MOD-019 (later) | `future-gaan-infinitive` |
+| MOD-006 | `negation-niet-geen` (consolidated: *nooit*, *niets*, *niemand*, where *niet* goes) |
+| MOD-012 | `modal-kunnen-willen` (also `modal-moeten-mogen` in `Grammar_Patterns_A1`) |
+| MOD-013 | `adjective-attributive` |
+| MOD-018 | `future-gaan-infinitive` |
 
 ---
 
 ## Schema Mapping to SQLite
 
-The `grammar_topics` table in [[../../08_App_Architecture/Database_Schema]] accommodates this registry without modification:
+The `grammar_topics` table in `08_App_Architecture/Database_Schema` accommodates this registry without modification:
 
 | Registry field | DB column |
 |----------------|-----------|
@@ -386,15 +387,15 @@ Mastery (`grammar_topics.mastery`) is a rolling EMA computed from `activity_atte
 
 - [[../../03_Curriculum/Modules/MOD-001_First_Contact]] through [[../../03_Curriculum/Modules/MOD-005_Basic_Sentences_and_Questions]]
 - [[Vocabulary_Seed_A0_A1]] — vocabulary seed that complements this registry.
-- [[../../03_Curriculum/Module_Template]] §4 — grammar focus section in module files.
-- [[../../03_Curriculum/A0_A1_Roadmap]] — full A0-A1 phase plan.
-- [[../../08_App_Architecture/Database_Schema]] — `grammar_topics` table.
-- [[../../01_Research/04_curriculum_design_from_a0_to_b2]] §11 — Pienemann sequencing principle.
+- `03_Curriculum/Module_Template` §4 — grammar focus section in module files.
+- `03_Curriculum/A0_A1_Roadmap` — full A0-A1 phase plan.
+- `08_App_Architecture/Database_Schema` — `grammar_topics` table.
+- `01_Research/04_curriculum_design_from_a0_to_b2` §11 — Pienemann sequencing principle.
 
 ---
 
 ## Open Items
 
-- [ ] **Patterns 14, 15, 17** are listed here for forward-completeness but their full drilling lives in MOD-014, MOD-017, MOD-019 respectively. Slugs are reserved.
+- [x] **Patterns 14, 15, 17** (`modal-kunnen-willen`, `future-gaan-infinitive`, `adjective-attributive`) are now drilled in MOD-012, MOD-018 and MOD-013 (October 2026); see also `Grammar_Patterns_A1`.
 - [ ] **Numbering A0-A1 patterns 1–18 is suggestive** — slugs are the stable identifier, not numbers.
 - [ ] **Mastery thresholds** for declaring a pattern "controlled" not yet defined; recommend rolling EMA ≥ 0.80 with at least 10 attempts (decision to be made in Phase 3 alongside `grammar_topics.mastery` computation logic).

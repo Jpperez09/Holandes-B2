@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { endpoints } from '../api/endpoints';
+import { ApiError } from '../api/client';
 import type {
   DailyLog,
   ModuleSummary,
@@ -48,6 +49,39 @@ const SKILL_LABELS: Record<string, string> = {
 export function Progress(): React.JSX.Element {
   const { data, error, loading, reload } = useApi(loadProgress, []);
   const [showSkills, setShowSkills] = React.useState(false);
+  const [copying, setCopying] = React.useState(false);
+  const [copyMsg, setCopyMsg] = React.useState<{ ok: boolean; text: string } | null>(null);
+  const [copyFallback, setCopyFallback] = React.useState<string | null>(null);
+
+  async function copyWeeklySummary(): Promise<void> {
+    setCopying(true);
+    setCopyMsg(null);
+    setCopyFallback(null);
+    try {
+      const stats = await endpoints.getWeeklyStats();
+      try {
+        await navigator.clipboard.writeText(stats.text);
+        setCopyMsg({ ok: true, text: 'Copiado. Ya puedes pegarlo en el chat.' });
+      } catch {
+        // Clipboard blocked: show the text so it can be copied by hand.
+        setCopyFallback(stats.text);
+        setCopyMsg({
+          ok: false,
+          text: 'No pude copiarlo solo. Selecciona el texto de abajo y cópialo.',
+        });
+      }
+    } catch (err) {
+      setCopyMsg({
+        ok: false,
+        text:
+          err instanceof ApiError && err.kind === 'offline'
+            ? 'No hay conexión con la app. Revisa que siga corriendo.'
+            : 'No se pudo cargar el resumen. Inténtalo de nuevo.',
+      });
+    } finally {
+      setCopying(false);
+    }
+  }
 
   return (
     <AsyncView loading={loading} error={error} data={data} onRetry={reload}>
@@ -187,6 +221,41 @@ export function Progress(): React.JSX.Element {
                     ))
                   )}
                 </div>
+              )}
+            </div>
+
+            {/* Weekly summary — feeds the Saturday review */}
+            <h2 className="section-title">Resumen semanal</h2>
+            <div className="card">
+              <p className="mt-0 muted">
+                Los últimos 7 días en texto plano: minutos, módulos, repasos y
+                tarjetas. Listo para pegar en un chat.
+              </p>
+              <button
+                type="button"
+                className="btn btn--primary"
+                onClick={() => void copyWeeklySummary()}
+                disabled={copying}
+              >
+                {copying ? 'Copiando…' : 'Copiar resumen semanal'}
+              </button>
+              {copyMsg && (
+                <p
+                  className={
+                    'form-msg ' + (copyMsg.ok ? 'form-msg--ok' : 'form-msg--err')
+                  }
+                >
+                  {copyMsg.text}
+                </p>
+              )}
+              {copyFallback && (
+                <textarea
+                  className="textarea"
+                  readOnly
+                  value={copyFallback}
+                  onFocus={(e) => e.currentTarget.select()}
+                  aria-label="Resumen semanal"
+                />
               )}
             </div>
 

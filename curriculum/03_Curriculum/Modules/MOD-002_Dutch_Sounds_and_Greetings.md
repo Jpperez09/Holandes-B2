@@ -82,8 +82,8 @@ tags: [module, MOD-002, A0, foundation, sounds, greetings, numbers]
 | Dutch | Article | IPA | English | Cognate |
 |---|---|---|---|---|
 | heten | — | /ˈheːtə(n)/ | to be called | partial |
-| mevrouw | — | /məˈvrʌu/ | madam, Mrs. | — |
-| meneer | — | /məˈneːr/ | sir, Mr. | — |
+| mevrouw | de | /məˈvrʌu/ | madam, Mrs. | — |
+| meneer | de | /məˈneːr/ | sir, Mr. | — |
 | en | — | /ɛn/ | and | EN |
 
 ---
@@ -179,13 +179,13 @@ Imagine a Dutch person says *Goedemorgen!* Reply:
 - A thank-you.
 - A goodbye.
 
-Record on your phone. Self-rate per rubric in [[../Module_Template]] §7.3.
+Record on your phone. Self-rate per rubric in `03_Curriculum/Module_Template` §7.3.
 
 ---
 
 ## 10. Writing Practice
 
-Write the following 4 sentences in [[../../04_Daily_Logs/]]:
+Write the following 4 sentences in `04_Daily_Logs/`:
 
 1. A morning greeting addressed to a formal person.
 2. *Ik heet ___.*
@@ -199,7 +199,7 @@ Write the following 4 sentences in [[../../04_Daily_Logs/]]:
 > **"Send a Dutch greeting + a question in Dutch to one person via Tandem, HelloTalk, Discord, or any chat. Wait for their reply."**
 
 Acceptable greeting: *Hallo, ik heet Juan. En jij?*
-Verification: chat screenshot to [[../../04_Daily_Logs/]].
+Verification: chat screenshot to `04_Daily_Logs/`.
 
 ---
 
@@ -268,7 +268,7 @@ A subset becomes **grammar cloze cards** for the `ik-heet` pattern:
 ## 16. Cross-References
 
 - [[../Levels/Level_002]]
-- [[../Module_Template]]
+- `03_Curriculum/Module_Template`
 - [[MOD-001_First_Contact]]
 - [[MOD-003_I_Am_You_Are]]
 - [[../../05_Exercises/Generated/Vocabulary_Seed_A0_A1]]

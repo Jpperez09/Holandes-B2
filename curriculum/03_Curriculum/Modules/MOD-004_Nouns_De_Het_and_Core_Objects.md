@@ -233,7 +233,7 @@ Write 8 sentences. Include:
 
 > **"Photograph 10 objects in your home. Label each with its Dutch noun + article (digital sticker, paper label, or chat comment). Write a 5-sentence Dutch description of the scene."**
 
-Verification: photo + description in [[../../04_Daily_Logs/]].
+Verification: photo + description in `04_Daily_Logs/`.
 
 ---
 
@@ -316,4 +316,4 @@ content_invariant: |
 - [[MOD-005_Basic_Sentences_and_Questions]]
 - [[../../05_Exercises/Generated/Vocabulary_Seed_A0_A1]]
 - [[../../05_Exercises/Generated/Grammar_Patterns_A0_A1]]
-- [[../../02_Methodology/Spaced_Repetition]] §4.1 — de/het on card front
+- `02_Methodology/Spaced_Repetition` §4.1 — de/het on card front

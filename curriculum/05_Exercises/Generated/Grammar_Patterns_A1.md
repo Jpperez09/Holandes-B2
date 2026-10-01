@@ -1,0 +1,300 @@
+---
+title: Grammar Pattern Registry — A1 (October 2026)
+type: grammar-pattern-registry
+status: draft
+cefr_band: A0-A1
+covers_modules: [MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-014, MOD-015, MOD-016, MOD-017]
+created: 2026-09-30
+updated: 2026-09-30
+total_patterns: 15
+tags: [grammar, patterns, registry, A0, A1, october]
+---
+
+# Grammar Pattern Registry — A1 (MOD-006 to MOD-018)
+
+> Second registry file: the patterns drilled in the October 2026 modules. The vault indexer reads every `Grammar_Patterns*.md` file. Patterns that were already reserved in `Grammar_Patterns_A0_A1` (`negation-niet-geen`, `modal-kunnen-willen`, `adjective-attributive`, `future-gaan-infinitive`) are **not** repeated here: a slug may exist in only one registry file, or the second would overwrite the first in the `grammar_topics` table.
+>
+> Same fields as `Grammar_Patterns_A0_A1`. Examples are separated by ` / `, so no example sentence contains a slash.
+
+---
+
+## Patterns
+
+### 1. `numbers-11-100`
+
+| Field | Value |
+|---|---|
+| **slug** | `numbers-11-100` |
+| **name_en** | Numbers 11–100 |
+| **pienemann_stage** | 1 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-007_Numbers_11_100_Age_and_Prices]] |
+| **dutch_pattern** | `elf, twaalf, [unit]+tien` (13–19) · `[tens]+tig` · `[unit] + en + [tens]` (21–99, one word) |
+| **english_meaning** | Counting from 11 to 100. From 21 the unit comes first: "one and twenty". |
+| **spanish_contrast** | Spanish *treinta y uno* puts the tens first; Dutch *eenendertig* puts the unit first. Dutch also writes 21–99 as a single word. |
+| **examples** | elf, twaalf, dertien, veertien / twintig, dertig, veertig / eenentwintig, vijfentwintig, tweeëntwintig / negenennegentig, honderd |
+| **common_mistake** | Mixing up *-tien* and *-tig* (14 and 40), saying the tens first (`*twintigeen`), or forgetting the diaeresis in *tweeëntwintig* and *drieëndertig*. |
+| **practice_activity** | Write 10 numbers between 12 and 99 in words, then read 10 more aloud from digits. |
+| **srs_cloze_candidate** | true |
+
+### 2. `age-and-price`
+
+| Field | Value |
+|---|---|
+| **slug** | `age-and-price` |
+| **name_en** | Saying your age and a price |
+| **pienemann_stage** | 2 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-007_Numbers_11_100_Age_and_Prices]] |
+| **dutch_pattern** | `Hoe oud + [zijn] + [subject]?` → `[subject] + [zijn] + [number] + jaar + oud` · `Hoeveel + [kosten] + [thing]?` → `[thing] + [kosten] + [number] + euro` |
+| **english_meaning** | "How old are you? I am thirty." and "How much does it cost? It costs ten euros." |
+| **spanish_contrast** | Spanish *tengo treinta años* uses *tener*; Dutch uses *zijn*: *Ik ben dertig jaar oud.* (Never `*Ik heb dertig jaar`.) |
+| **examples** | Hoe oud ben je? Ik ben dertig jaar oud. / Hoeveel kost de fiets? De fiets kost honderd euro. / De boeken kosten vijftien euro. |
+| **common_mistake** | Spanish L1: `*Ik heb dertig jaar.` Also *dertig jaren* and *tien euro's* (both stay singular after a number). |
+| **practice_activity** | Answer 8 questions about ages and prices in full sentences (A4). |
+| **srs_cloze_candidate** | true |
+
+### 3. `telling-time`
+
+| Field | Value |
+|---|---|
+| **slug** | `telling-time` |
+| **name_en** | Asking and telling the time |
+| **pienemann_stage** | 2 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-008_Time_Days_and_Months]] |
+| **dutch_pattern** | `Hoe laat is het?` → `Het is [hour] uur` · `kwart over / voor [hour]` · `[n] over / voor [hour]` · `half [next hour]` · `om [time]` |
+| **english_meaning** | "What time is it? It is half past three." *Half* counts towards the next hour. |
+| **spanish_contrast** | Spanish *las tres y media* adds half an hour to three. Dutch *half vier* is half an hour BEFORE four, so 3:30. |
+| **examples** | Hoe laat is het? Het is half vier. / Het is kwart over drie. / Het is tien voor vier. / Ik kom om half negen. |
+| **common_mistake** | Saying *half drie* for 3:30 (it is 2:30), and using *op* instead of *om* with clock times. |
+| **practice_activity** | Write 10 clock times in Dutch, then say 10 more aloud from digits (A3). |
+| **srs_cloze_candidate** | true |
+
+### 4. `days-and-months`
+
+| Field | Value |
+|---|---|
+| **slug** | `days-and-months` |
+| **name_en** | Days of the week and months |
+| **pienemann_stage** | 1 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-008_Time_Days_and_Months]] |
+| **dutch_pattern** | `[day]` lower case, `de`-nouns · `[Day] + [V-fin] + [subject]` (V2) · `op [day]` · `in [month]` |
+| **english_meaning** | Monday to Sunday and January to December, written with a lower-case first letter. |
+| **spanish_contrast** | Spanish also uses lower case, but says *el lunes*; Dutch uses the bare day (*Maandag werk ik.*) or *op maandag*. |
+| **examples** | Vandaag is het maandag. / Zaterdag werk ik niet. / Ik ben in oktober in Nederland. / Het is vandaag negen oktober. |
+| **common_mistake** | English habit: capital letters (`*Maandag`, `*Oktober`) and a Spanish-style article (`*de maandag`). |
+| **practice_activity** | Say what you do on each day of next week, one sentence per day (A7). |
+| **srs_cloze_candidate** | true |
+
+### 5. `possessive-determiners`
+
+| Field | Value |
+|---|---|
+| **slug** | `possessive-determiners` |
+| **name_en** | Possessive determiners |
+| **pienemann_stage** | 2 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-009_Possessives]] |
+| **dutch_pattern** | `mijn / jouw (je) / uw / zijn / haar / ons (+ het) · onze (+ de, plural) / jullie / hun` + `[noun]` · `[Name]` + `-s` + `[noun]` |
+| **english_meaning** | my, your, his, her, our, their: the form depends on the owner; only *ons / onze* changes with the noun. |
+| **spanish_contrast** | Spanish *su* means his, her, their and your (formal); Dutch has four different words. Spanish *nuestro / nuestra* agrees in gender and number; Dutch *ons / onze* agrees with het-words versus de-words and plurals. |
+| **examples** | Mijn oma woont in Colombia. / Haar broer heet Pieter. / Ons huis is groot. / Onze moeder woont in Utrecht. / Anna's moeder werkt in Amsterdam. |
+| **common_mistake** | Using one word for Spanish *su* (`*Zijn moeder` for "her mother"), and `*Onze huis` / `*ons tafel`. |
+| **practice_activity** | 12 gap sentences choosing the right possessive, then 8 phrases to translate (A3 and A4). |
+| **srs_cloze_candidate** | true |
+
+### 6. `verb-stem-spelling`
+
+| Field | Value |
+|---|---|
+| **slug** | `verb-stem-spelling` |
+| **name_en** | Verb stems and spelling rules |
+| **pienemann_stage** | 2 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-010_Verb_Stems_and_Spelling]] |
+| **dutch_pattern** | `stem = infinitive - en` · `ik + stem` · `jij / hij / zij / het + stem + t` · `wij / jullie / zij + infinitive` · spelling: aa/ee/oo/uu, v to f, z to s, double consonant to single |
+| **english_meaning** | The present tense of regular verbs, with the spelling changes that keep the sound the same. |
+| **spanish_contrast** | Spanish changes the ending, not the stem spelling (*vivo, vives*). Dutch keeps the sound and changes the letters: *maken, ik maak*; *leven, ik leef*; *reizen, ik reis*. |
+| **examples** | Ik maak koffie. / Ik leef, jij leeft. / Ik reis, hij reist. / Hij zit en hij praat. / Ik vind, hij vindt. |
+| **common_mistake** | Keeping the infinitive for *ik* (`*Ik maken`), adding a second *t* (`*hij zitt`), writing *z* or *v* at the end of the stem (`*ik reiz`, `*ik leev`) and forgetting the *-dt* of *vindt*. |
+| **practice_activity** | Give the *ik* and *hij* forms of 12 verbs (A3), then fill 8 gaps (A4). |
+| **srs_cloze_candidate** | true |
+
+### 7. `irregular-verbs-gaan-staan-doen-zien`
+
+| Field | Value |
+|---|---|
+| **slug** | `irregular-verbs-gaan-staan-doen-zien` |
+| **name_en** | The present tense of gaan, staan, doen, zien |
+| **pienemann_stage** | 2 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-010_Verb_Stems_and_Spelling]] |
+| **dutch_pattern** | `ik ga / sta / doe / zie` · `jij / hij gaat / staat / doet / ziet` · `wij gaan / staan / doen / zien` |
+| **english_meaning** | go, stand, do, see: short verbs with a short *ik*-form and *-t* in the third person. |
+| **spanish_contrast** | Spanish *voy, vas, va* and *hago* are irregular in the stem; the Dutch four are regular after the short stem. The stem alone is the imperative: *Ga! Kijk!* |
+| **examples** | Ik ga niet. / Hij staat hier. / Wat doe je? / Ik zie een hond. |
+| **common_mistake** | `*Ik gaan`, `*hij gaan`, `*Wat doet je?` (the *-t* drops with *je* in inversion). |
+| **practice_activity** | Complete the table from memory, then 8 short sentences (A4). |
+| **srs_cloze_candidate** | true |
+
+### 8. `demonstratives`
+
+| Field | Value |
+|---|---|
+| **slug** | `demonstratives` |
+| **name_en** | This and that: deze, die, dit, dat |
+| **pienemann_stage** | 2 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-011_This_and_That_Deze_Die_Dit_Dat]] |
+| **dutch_pattern** | `deze / die + [de-word or plural]` · `dit / dat + [het-word]` · near = deze / dit, far = die / dat |
+| **english_meaning** | "this / these" and "that / those": the form depends on whether the noun is de, het or plural. |
+| **spanish_contrast** | Spanish *este / ese / aquel* has three distances and gender; Dutch has two distances (near, far) and chooses by *de* / *het* / plural. *Ese* and *aquel* are both *die / dat*. |
+| **examples** | Deze jas is mooi. / Dit horloge is nieuw. / Die schoenen zijn duur. / Dat glas is klein. |
+| **common_mistake** | Using *dit* with a de-word (`*dit jas`) or with a plural (`*dit schoenen`), and *deze* with a het-word (`*deze huis`). |
+| **practice_activity** | 12 gap sentences choosing deze / die / dit / dat (A3), then 8 sentences to say in Dutch (A4). |
+| **srs_cloze_candidate** | true |
+
+### 9. `modal-moeten-mogen`
+
+| Field | Value |
+|---|---|
+| **slug** | `modal-moeten-mogen` |
+| **name_en** | Modals: moeten (must) and mogen (may) |
+| **pienemann_stage** | 3 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-012_Modal_Verbs]] |
+| **dutch_pattern** | `[Subj] + moet / mag + [...] + [infinitive]` · `Moet / Mag + [subj] + [...] + [infinitive]?` |
+| **english_meaning** | "I must work." "May I cycle?" The finite modal is second; the main verb is an infinitive at the end. |
+| **spanish_contrast** | Spanish *tengo que trabajar* and *puedo / ¿puedo...?* use *tener que* and *poder*. Dutch *moeten* is "must" and *mogen* is "may"; *kunnen* is ability. *Ik moet niet werken* means "I must not", not "I do not have to". |
+| **examples** | Ik moet vandaag werken. / Mag ik een koffie? / Wij mogen hier niet fietsen. / Moet je morgen werken? |
+| **common_mistake** | `*Ik moet niet werken` for "I do not have to work" (it means "I must not"), `*Ik wil te werken` and the infinitive not at the end. |
+| **practice_activity** | Make 8 modal sentences by adding a modal and moving the verb to the end (A4). |
+| **srs_cloze_candidate** | true |
+
+### 10. `polite-requests`
+
+| Field | Value |
+|---|---|
+| **slug** | `polite-requests` |
+| **name_en** | Polite requests: ik wil graag, mag ik |
+| **pienemann_stage** | 3 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-014_At_the_Cafe]] |
+| **dutch_pattern** | `Ik wil graag + [noun]` · `Mag ik + [noun / ... infinitive]?` · `[noun], alstublieft` · `met / zonder + [noun]` · `Ja, graag` / `Nee, dank u wel` |
+| **english_meaning** | Ordering and asking politely: "I would like a coffee", "May I have the bill?", "Yes, please", "No, thank you". |
+| **spanish_contrast** | Spanish uses *quisiera* or *me gustaría*; Dutch softens *ik wil* with *graag* and has no conditional here. *Ik wil graag* is polite, whereas English "I want" is not. |
+| **examples** | Ik wil graag een koffie. / Mag ik de kaart? / Een koffie met melk, zonder suiker. / Ja, graag. |
+| **common_mistake** | `*Ik wil een koffie.` (blunt), `*Ik graag een koffie.` (no verb), and answering an offer with `*Ja, dank u wel`. |
+| **practice_activity** | Fill 12 gaps with graag, mag, met, zonder, nog and alstublieft (A3), then say 8 café sentences (A4). |
+| **srs_cloze_candidate** | true |
+
+### 11. `plural-irregular`
+
+| Field | Value |
+|---|---|
+| **slug** | `plural-irregular` |
+| **name_en** | Irregular plurals |
+| **pienemann_stage** | 2 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-015_Irregular_Plurals_and_Diminutives]] |
+| **dutch_pattern** | `-eren` (ei, blad, lied, kind) · `vowel change or lengthening` (stad - steden, schip - schepen, weg - wegen, glas - glazen) · `diminutive + -s` |
+| **english_meaning** | Plurals that are not simply -en or -s: eieren, bladeren, liederen, steden, schepen, wegen. |
+| **spanish_contrast** | Spanish adds -s / -es and keeps the stem; Dutch changes the vowel (*stad - steden*) or adds *-eren*, which Spanish does not have. |
+| **examples** | het ei, de eieren / de stad, de steden / het schip, de schepen / het blad, de bladeren |
+| **common_mistake** | Regularising the word: `*eien`, `*bladen`, `*stads`, `*schips`. |
+| **practice_activity** | Give the plural of 12 nouns (A3) and say each singular and plural aloud. |
+| **srs_cloze_candidate** | true |
+
+### 12. `diminutive-je`
+
+| Field | Value |
+|---|---|
+| **slug** | `diminutive-je` |
+| **name_en** | Diminutives: -je, -tje, -etje, -pje |
+| **pienemann_stage** | 2 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-015_Irregular_Plurals_and_Diminutives]] |
+| **dutch_pattern** | `[noun] + je / tje / etje / pje` → always `het`, plural `-s` |
+| **english_meaning** | "Small" or "cute" forms: het kopje, het broodje, het tafeltje. Also used for softening and in fixed expressions. |
+| **spanish_contrast** | Spanish *-ito / -ita* keeps the gender; Dutch makes every diminutive a *het*-word with plural *-s*: *de tafel* becomes *het tafeltje*. |
+| **examples** | de kop, het kopje / het brood, het broodje / de tafel, het tafeltje / de boom, het boompje |
+| **common_mistake** | Keeping the old article (`*de kopje`), an adjective ending after *een* (`*een kleine kopje`) and the wrong suffix (`*boomje`). |
+| **practice_activity** | Make the diminutive of 8 nouns (A4). |
+| **srs_cloze_candidate** | true |
+
+### 13. `prepositions-of-place`
+
+| Field | Value |
+|---|---|
+| **slug** | `prepositions-of-place` |
+| **name_en** | Prepositions of place |
+| **pienemann_stage** | 2 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-016_Places_and_Er_Is_Er_Zijn]] |
+| **dutch_pattern** | `[thing] + staat / zit / is + in / op / onder / naast / achter / voor / tussen / boven / bij + de / het + [noun]` |
+| **english_meaning** | Saying where something is: in, on, under, next to, behind, in front of, between, above, at. |
+| **spanish_contrast** | Spanish *en* covers both *in* and *on*; Dutch separates *in* from *op*. Spanish *estar* becomes *staan / zitten / is* according to position. |
+| **examples** | De jas is in de kast. / De fles staat op de tafel. / De kat zit onder de tafel. / De lamp is boven de tafel. |
+| **common_mistake** | `*in de tafel` for "on the table", `*onder van de tafel`, and `*in mijn oma` for "at my grandmother's". |
+| **practice_activity** | Fill 12 gaps with the right preposition (A3) and describe a room aloud (A6). |
+| **srs_cloze_candidate** | true |
+
+### 14. `er-is-er-zijn`
+
+| Field | Value |
+|---|---|
+| **slug** | `er-is-er-zijn` |
+| **name_en** | There is / there are: er is, er zijn |
+| **pienemann_stage** | 3 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-016_Places_and_Er_Is_Er_Zijn]] |
+| **dutch_pattern** | `Er is + [een / geen + singular]` · `Er zijn + [number / plural / geen + plural]` · `Is er ...?` · `Zijn er ...?` |
+| **english_meaning** | "There is a table in the room." "There are two chairs." "Is there a shop?" |
+| **spanish_contrast** | Spanish *hay* is invariable; Dutch *er is* (singular) and *er zijn* (plural) agree with the thing. The negative always uses *geen*. |
+| **examples** | Er is een tafel in de kamer. / Er zijn twee stoelen. / Is er een winkel? / Er zijn geen katten in de tuin. |
+| **common_mistake** | `*Er is twee stoelen` (no agreement), `*Er is niet een lamp` (use *geen*) and `*Er zijn de tafel` (er with a known thing). |
+| **practice_activity** | Say 8 sentences with er is / er zijn, negative and as questions (A4). |
+| **srs_cloze_candidate** | true |
+
+### 15. `separable-verbs`
+
+| Field | Value |
+|---|---|
+| **slug** | `separable-verbs` |
+| **name_en** | Separable verbs |
+| **pienemann_stage** | 3 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-017_Daily_Routine_and_Separable_Verbs]] |
+| **dutch_pattern** | `[subject] + [verb] + [...] + [particle]` · `[subject] + [modal / gaan] + [...] + [particle + verb, together]` |
+| **english_meaning** | "I get up at seven", "I call my mother": the particle goes to the end of the clause; with a modal the verb stays whole. |
+| **spanish_contrast** | Spanish verbs do not split. Dutch separable verbs put the particle at the end, and *opstaan* is not reflexive (Spanish *levantarse*). |
+| **examples** | Ik sta om zeven uur op. / Ik bel mijn moeder op. / Ik moet vroeg opstaan. / Wanneer kom je thuis? |
+| **common_mistake** | Not splitting the verb (`*Ik opsta`), leaving the particle in the middle (`*Ik sta op om zeven uur`) and splitting an inseparable verb (`*Ik ontbijt op`). |
+| **practice_activity** | Write 12 sentences with separable verbs, questions, negatives and a modal (A3), then translate 8 (A4). |
+| **srs_cloze_candidate** | true |
+
+---
+
+## Pattern Index (by Module)
+
+| Module | Patterns drilled |
+|---|---|
+| MOD-007 | `numbers-11-100`, `age-and-price` |
+| MOD-008 | `telling-time`, `days-and-months` |
+| MOD-009 | `possessive-determiners` |
+| MOD-010 | `verb-stem-spelling`, `irregular-verbs-gaan-staan-doen-zien` |
+| MOD-011 | `demonstratives` |
+| MOD-012 | `modal-moeten-mogen` |
+| MOD-014 | `polite-requests` |
+| MOD-015 | `plural-irregular`, `diminutive-je` |
+| MOD-016 | `prepositions-of-place`, `er-is-er-zijn` |
+| MOD-017 | `separable-verbs` |
+
+---
+
+## Cross-References
+
+- [[Grammar_Patterns_A0_A1]] — the original registry (MOD-001 to MOD-005).
+- [[Vocabulary_Seed_A1]] — the vocabulary introduced with these patterns.

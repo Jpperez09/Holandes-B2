@@ -38,4 +38,4 @@ Placeholder. Fill during Phase 1 research.
 - [ ] Research and add recommended channels.
 - [ ] Test each channel for audio quality and clarity.
 - [ ] Tag channels by CEFR level appropriateness.
-- [ ] Link to [[../02_Methodology/Listening_Practice]].
+- [ ] Link to `02_Methodology/Listening_Practice`.

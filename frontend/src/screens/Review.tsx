@@ -201,6 +201,13 @@ function ReviewSession({
           </button>
         </div>
         {card.ipa && <div className="flashcard__ipa">{card.ipa}</div>}
+        {card.forvo_url && (
+          <div className="flashcard__native">
+            <a href={card.forvo_url} target="_blank" rel="noopener noreferrer">
+              Escuchar a nativos
+            </a>
+          </div>
+        )}
 
         {!revealed ? (
           <button
@@ -216,6 +223,12 @@ function ReviewSession({
             <div className="flashcard__answer">
               {card.translation_en ?? '—'}
             </div>
+            {card.plural && (
+              <div className="flashcard__forms">plural: {card.plural}</div>
+            )}
+            {card.forms && (
+              <div className="flashcard__forms">forms: {card.forms}</div>
+            )}
             {card.example && (
               <div className="flashcard__example">"{card.example}"</div>
             )}

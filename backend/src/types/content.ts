@@ -115,6 +115,10 @@ export interface ParsedVocabItem {
   audio_path: string | null;
   audio_url: string | null;
   tts_text: string;
+  /** Plural form of a noun (e.g. "huizen"); optional seed column `plural`. */
+  plural: string | null;
+  /** Verb forms (e.g. "ik ga, hij gaat · ging · gegaan"); optional seed column `forms`. */
+  forms: string | null;
   tags: string[];
   table_section: string;
 }

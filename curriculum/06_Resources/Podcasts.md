@@ -37,4 +37,4 @@ Placeholder. Fill during Phase 1 research.
 - [ ] Research and add recommended podcasts.
 - [ ] Test each for audio quality and CEFR appropriateness.
 - [ ] Identify any Dutch podcasts with transcripts available.
-- [ ] Link to [[../02_Methodology/Listening_Practice]].
+- [ ] Link to `02_Methodology/Listening_Practice`.

@@ -59,7 +59,7 @@ None. This is the entry module.
 | nee | — | /neː/ | no | no | partial-EN | *Nee, dat is fout.* |
 | ik | — | /ɪk/ | I | yo | — | *Ik ben Juan.* |
 | naam | de | /naːm/ | name | nombre | EN | *Mijn naam is Juan.* |
-| Nederland | het | /ˈneːdərlɑnt/ | Netherlands | Holanda | EN | *Ik leer Nederland(s).* |
+| Nederland | het | /ˈneːdərlɑnt/ | Netherlands | Holanda | EN | *Ik woon in Nederland.* |
 | Colombia | — | /koˈlɔmbijaː/ | Colombia | Colombia | EN/ES | *Ik kom uit Colombia.* |
 | Nederlands | het | /ˈneːdərlɑnts/ | Dutch (language) | neerlandés / holandés | EN | *Ik leer Nederlands.* |
 
@@ -108,7 +108,7 @@ The single most important section of Level 1.
 | A3 | vocab | Read each vocabulary card aloud; flip to translation only after attempting recall. | 5 min |
 | A4 | writing | Write your name + country in the daily log: *Mijn naam is ___. Ik kom uit ___.* | 3 min |
 | A5 | speaking | Record (or just say out loud) the 5 phrases below. | 5 min |
-| A6 | freeform | Open [[../../04_Daily_Logs/]] and write 2 sentences about Day 1 in Dutch (with English assists). | 5 min |
+| A6 | freeform | Open `04_Daily_Logs/` and write 2 sentences about Day 1 in Dutch (with English assists). | 5 min |
 | A7 | real-world | Send a Dutch greeting + name to one Dutch speaker or learner. | 5 min |
 
 ### Speaking phrases for A5
@@ -123,7 +123,7 @@ The single most important section of Level 1.
 
 ## 7. Retrieval Practice
 
-Active recall is mandatory from Day 1 (D-010, [[../../00_Project/DECISION_REGISTER_V1]]).
+Active recall is mandatory from Day 1 (D-010, `00_Project/DECISION_REGISTER_V1`).
 
 - After A3 (vocab read-aloud), close the file and write the 10 English glosses from memory.
 - Self-rate on a 1–5 scale (1 = forgot, 5 = instant). Log to the daily log.
@@ -138,7 +138,7 @@ See A1 and A2 in §6. Total listening today: ~10 minutes. No graded podcast yet 
 
 ## 9. Speaking Practice
 
-See A5 in §6. **Recording is optional at Level 1** (mandatory from Level 8 per [[../Module_Template]] §15).
+See A5 in §6. **Recording is optional at Level 1** (mandatory from Level 8 per `03_Curriculum/Module_Template` §15).
 
 ### Self-rubric
 
@@ -164,7 +164,7 @@ See A4 and A6 in §6. Total writing today: ~5 sentences. Save to today's daily l
 
 > **"Send a 1-line Dutch greeting + introduction to one person — a Dutch speaker on Tandem/Discord, a fellow learner, or a Dutch tutor on iTalki. *Hallo, ik ben Juan. Ik kom uit Colombia.* is sufficient."**
 
-Verification: link, screenshot, or self-report in [[../../04_Daily_Logs/]].
+Verification: link, screenshot, or self-report in `04_Daily_Logs/`.
 
 ---
 
@@ -239,15 +239,15 @@ These tags auto-flag if performance is below threshold:
 - `#weak-phoneme-ui` — flagged if `/œy/` ≤ 2.
 - `#weak-phoneme-schwa` — flagged if schwa ≤ 2.
 
-Flagged tags trigger a 1-minute focused drill on the next study day (post-MVP feature; tracked in [[../../08_App_Architecture/Future_Features]]).
+Flagged tags trigger a 1-minute focused drill on the next study day (post-MVP feature; tracked in `08_App_Architecture/Future_Features`).
 
 ---
 
 ## 16. Cross-References
 
 - [[../Levels/Level_001]]
-- [[../Module_Template]]
+- `03_Curriculum/Module_Template`
 - [[../../05_Exercises/Generated/Vocabulary_Seed_A0_A1]]
 - [[../../05_Exercises/Generated/Grammar_Patterns_A0_A1]]
-- [[../../02_Methodology/Spaced_Repetition]]
+- `02_Methodology/Spaced_Repetition`
 - [[MOD-002_Dutch_Sounds_and_Greetings]]

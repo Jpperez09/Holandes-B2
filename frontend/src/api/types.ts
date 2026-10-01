@@ -58,6 +58,12 @@ export interface VocabItem {
   example: string | null;
   audio_path: string | null;
   audio_url: string | null;
+  /** Link to native-speaker recordings on Forvo (single words only). */
+  forvo_url?: string | null;
+  /** Plural of a noun, e.g. "huizen". */
+  plural?: string | null;
+  /** Verb forms, e.g. "ik ga, hij gaat · ging · gegaan". */
+  forms?: string | null;
   tts_text: string | null;
   status: string;
   level_code: string | null;
@@ -151,6 +157,27 @@ export interface ProgressResponse {
   vocabulary: Record<string, number>;
   grammar: GrammarTopic[];
   recentActivity: Array<{ day: string; attempts: number }>;
+}
+
+/** GET /api/stats/weekly — 7 local days ending on `end`. */
+export interface WeeklyStats {
+  start: string;
+  end: string;
+  minutesPerDay: Array<{ date: string; minutes: number }>;
+  totalMinutes: number;
+  modulesCompleted: {
+    count: number;
+    items: Array<{ id: string; title: string; completedOn: string }>;
+  };
+  reviews: {
+    count: number;
+    goodOrBetter: number;
+    percentGoodOrBetter: number | null;
+  };
+  newCardsIntroduced: number;
+  dueCardsPending: number;
+  /** Plain-text summary, ready to paste into a chat. */
+  text: string;
 }
 
 export interface DailyLog {

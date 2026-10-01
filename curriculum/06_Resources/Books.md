@@ -42,4 +42,4 @@ Placeholder. Fill during Phase 1 research.
 - [ ] Research Dutch graded reader series.
 - [ ] Evaluate grammar reference books.
 - [ ] Find accessible Dutch novels for B1-B2 reading.
-- [ ] Link to [[../02_Methodology/Listening_Practice]] and reading methodology.
+- [ ] Link to `02_Methodology/Listening_Practice` and reading methodology.

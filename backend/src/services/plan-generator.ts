@@ -31,7 +31,7 @@ export function generatePlan(): TodayPlan {
   try {
     const row = db
       .prepare(
-        "SELECT COUNT(*) as cnt FROM vocabulary_items WHERE status != 'suspended' AND status != 'archived' AND json_extract(fsrs_state, '$.due') <= datetime('now')"
+        "SELECT COUNT(*) as cnt FROM vocabulary_items WHERE status != 'suspended' AND status != 'archived' AND datetime(json_extract(fsrs_state, '$.due')) <= datetime('now')"
       )
       .get() as { cnt: number };
     dueCount = row.cnt;

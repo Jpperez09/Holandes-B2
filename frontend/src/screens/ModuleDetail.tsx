@@ -13,6 +13,7 @@ import {
   minutesLabel,
   moduleStatus,
 } from '../lib/friendly';
+import { isReviewModule } from '../lib/progression';
 
 interface ModuleData {
   module: ModuleDetailResponse;
@@ -117,7 +118,7 @@ function ModuleView({ data }: { data: ModuleData }): React.JSX.Element {
         </div>
       </div>
       <p className="page-sub">
-        Level {module.sort_order}
+        {isReviewModule(module) ? 'Repaso semanal' : `Level ${module.sort_order}`}
         {module.estimated_minutes
           ? ` · ${minutesLabel(module.estimated_minutes)}`
           : ''}

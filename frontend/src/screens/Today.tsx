@@ -7,6 +7,7 @@ import { useApi } from '../hooks/useApi';
 import { AsyncView, ProgressBar } from '../components/ui';
 import { getTodayDoneSteps, setTodayStep } from '../lib/storage';
 import { num, todayIso } from '../lib/friendly';
+import { firstUnfinishedStandard, standardModules } from '../lib/progression';
 
 interface TodayData {
   today: TodayPlan | null;
@@ -16,9 +17,9 @@ interface TodayData {
 
 async function loadToday(): Promise<TodayData> {
   const modules = await endpoints.getModules();
-  const sorted = [...modules].sort((a, b) => a.sort_order - b.sort_order);
-  const currentModule =
-    sorted.find((m) => m.percent_complete < 1) ?? sorted[0] ?? null;
+  // Weekly reviews are never "the module up next".
+  const standards = standardModules(modules);
+  const currentModule = firstUnfinishedStandard(modules) ?? standards[0] ?? null;
 
   let today: TodayPlan | null = null;
   try {

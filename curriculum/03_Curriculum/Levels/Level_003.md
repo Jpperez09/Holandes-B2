@@ -64,7 +64,7 @@ First real Dutch grammar: the present tense of *zijn* (to be). After Level 003, 
 ## Writing Targets
 
 - Write your own profile (5–8 sentences) using `ik ben`, `mijn naam is`, `ik kom uit`, `ik spreek`.
-- Save to [[../../04_Daily_Logs/]].
+- Save to `04_Daily_Logs/`.
 
 ## Pronunciation Targets
 
@@ -75,7 +75,7 @@ First real Dutch grammar: the present tense of *zijn* (to be). After Level 003, 
 ## Real-World Task
 
 > **"Write a 5-sentence Dutch profile of yourself and post it to a language exchange app, Tandem, or a Dutch-learning subreddit."**
-> Verification: screenshot or message link in [[../../04_Daily_Logs/]].
+> Verification: screenshot or message link in `04_Daily_Logs/`.
 
 ## Review Requirements
 

@@ -74,13 +74,13 @@ tags: [module, MOD-003, A0, foundation, grammar, zijn, identity]
 
 ### 3.3. Languages and verbs (5)
 
-| Dutch | IPA | English | Cognate |
-|---|---|---|---|
-| Spaans | /spaːns/ | Spanish (language) | EN |
-| Engels | /ˈɛŋəls/ | English (language) | EN |
-| Portugees | /pɔrtyˈɣes/ | Portuguese (language) | EN |
-| komen | /ˈkoːmə(n)/ | to come | EN |
-| spreken | /ˈspreːkə(n)/ | to speak | EN |
+| Dutch | Article | IPA | English | Cognate |
+|---|---|---|---|---|
+| Spaans | het | /spaːns/ | Spanish (language) | EN |
+| Engels | het | /ˈɛŋəls/ | English (language) | EN |
+| Portugees | het | /pɔrtyˈɣeːs/ | Portuguese (language) | EN |
+| komen | — | /ˈkoːmə(n)/ | to come | EN |
+| spreken | — | /ˈspreːkə(n)/ | to speak | EN |
 
 ### 3.4. Basic property words (4)
 
@@ -218,13 +218,13 @@ Cover at least:
 - *Ik spreek ___ en ___.*
 - *Mijn moeder/vader is ___.*
 
-Self-rate per [[../Module_Template]] §7.3.
+Self-rate per `03_Curriculum/Module_Template` §7.3.
 
 ---
 
 ## 10. Writing Practice
 
-Write a 5–8 sentence Dutch profile in today's [[../../04_Daily_Logs/]].
+Write a 5–8 sentence Dutch profile in today's `04_Daily_Logs/`.
 
 ---
 
