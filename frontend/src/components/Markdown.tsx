@@ -1,9 +1,11 @@
 import React from 'react';
+import { headingAnchor } from '../lib/moduleBody';
 
 // A small, dependency-free Markdown renderer.
-// Handles headings, paragraphs, lists, tables, blockquotes, rules, and inline
-// formatting — enough for the curriculum module sections we display. Kept
-// in-house deliberately to avoid adding a Markdown library dependency.
+// Handles headings, paragraphs, lists, tables, blockquotes, rules, fenced code
+// blocks, and inline formatting — enough for the curriculum module sections we
+// display. Kept in-house deliberately to avoid adding a Markdown library
+// dependency.
 
 function splitRow(line: string): string[] {
   let s = line.trim();
@@ -21,17 +23,23 @@ function isTableStart(lines: string[], idx: number): boolean {
   return lines[idx]?.includes('|') === true && isTableSeparator(lines[idx + 1]);
 }
 
+const FENCE = /^\s*```(.*)$/;
+const isFenceStart = (line: string | undefined): boolean => line !== undefined && FENCE.test(line);
+
 let inlineKey = 0;
+
+// `_italic_` only when the underscores hug the text and are not part of a word:
+// the exercises are full of blanks ("Mijn ___ is niet ___") that must stay as written.
+const INLINE =
+  /(`[^`]+`|\*\*[^*]+\*\*|\*[^*\n]+\*|(?<![\w_])_(?![\s_])[^_\n]*[^_\s]_(?![\w_])|\[\[[^\]]+\]\]|\[[^\]]+\]\([^)]+\))/;
 
 /** Parse inline formatting into React nodes. */
 function renderInline(text: string): React.ReactNode[] {
   const nodes: React.ReactNode[] = [];
-  const pattern =
-    /(`[^`]+`|\*\*[^*]+\*\*|\*[^*\n]+\*|_[^_\n]+_|\[\[[^\]]+\]\]|\[[^\]]+\]\([^)]+\))/;
   let rest = text;
 
   while (rest.length > 0) {
-    const m = rest.match(pattern);
+    const m = rest.match(INLINE);
     if (!m || m.index === undefined) {
       nodes.push(rest);
       break;
@@ -83,7 +91,16 @@ function renderInline(text: string): React.ReactNode[] {
   return nodes;
 }
 
-export function Markdown({ source }: { source: string }): React.JSX.Element {
+export interface MarkdownProps {
+  source: string;
+  /**
+   * How to draw a fenced code block (``` … ```). The module dialogues come this
+   * way, so screens can swap the plain box for one with a play button.
+   */
+  renderCode?: (code: string, info: string) => React.ReactNode;
+}
+
+export function Markdown({ source, renderCode }: MarkdownProps): React.JSX.Element {
   const lines = source.replace(/\r\n/g, '\n').split('\n');
   const blocks: React.ReactNode[] = [];
   let i = 0;
@@ -98,12 +115,42 @@ export function Markdown({ source }: { source: string }): React.JSX.Element {
       continue;
     }
 
+    // Fenced code block: everything up to the closing ``` is literal text.
+    const fence = line.match(FENCE);
+    if (fence) {
+      const info = fence[1].trim();
+      const buf: string[] = [];
+      i++;
+      while (i < lines.length && !/^\s*```\s*$/.test(lines[i])) {
+        buf.push(lines[i]);
+        i++;
+      }
+      i++; // the closing fence (or past the end when it is missing)
+      const code = buf.join('\n');
+      blocks.push(
+        <React.Fragment key={nk()}>
+          {renderCode ? (
+            renderCode(code, info)
+          ) : (
+            <pre className="md-code">
+              <code>{code}</code>
+            </pre>
+          )}
+        </React.Fragment>,
+      );
+      continue;
+    }
+
     // Heading
     const h = line.match(/^(#{1,6})\s+(.*)$/);
     if (h) {
       const level = Math.min(h[1].length, 4);
       const Tag = `h${level}` as 'h1' | 'h2' | 'h3' | 'h4';
-      blocks.push(<Tag key={nk()}>{renderInline(h[2])}</Tag>);
+      blocks.push(
+        <Tag key={nk()} id={headingAnchor(h[2])}>
+          {renderInline(h[2])}
+        </Tag>,
+      );
       i++;
       continue;
     }
@@ -204,6 +251,7 @@ export function Markdown({ source }: { source: string }): React.JSX.Element {
       !/^\s*[-*+]\s+/.test(lines[i]) &&
       !/^\s*\d+\.\s+/.test(lines[i]) &&
       !/^(-{3,}|\*{3,}|_{3,})\s*$/.test(lines[i]) &&
+      !isFenceStart(lines[i]) &&
       !isTableStart(lines, i)
     ) {
       para.push(lines[i]);
@@ -230,7 +278,13 @@ export function extractSection(
   const lines = body.replace(/\r\n/g, '\n').split('\n');
   let start = -1;
   let level = 0;
+  let inFence = false;
   for (let i = 0; i < lines.length; i++) {
+    if (isFenceStart(lines[i])) {
+      inFence = !inFence;
+      continue;
+    }
+    if (inFence) continue;
     const m = lines[i].match(/^(#{1,6})\s+(.*)$/);
     if (m && matcher.test(m[2])) {
       start = i;
@@ -240,7 +294,13 @@ export function extractSection(
   }
   if (start === -1) return null;
   let end = lines.length;
+  inFence = false;
   for (let i = start + 1; i < lines.length; i++) {
+    if (isFenceStart(lines[i])) {
+      inFence = !inFence;
+      continue;
+    }
+    if (inFence) continue;
     const m = lines[i].match(/^(#{1,6})\s+/);
     if (m && m[1].length <= level) {
       end = i;

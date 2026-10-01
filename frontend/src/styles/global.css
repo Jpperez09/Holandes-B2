@@ -463,6 +463,30 @@ a { color: var(--primary); }
 }
 .md th { background: var(--surface-soft); font-weight: 700; }
 
+/* Fenced code blocks — the module dialogues. Meant to be read, so body font. */
+.md-code {
+  margin: 10px 0; padding: 12px 14px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: inherit; font-size: 0.95rem; line-height: 1.65;
+  white-space: pre-wrap; overflow-wrap: anywhere;
+}
+.md-code code { background: none; padding: 0; font-size: inherit; }
+
+/* Answer keys stay folded until asked for. */
+.answer-key { margin: 12px 0; }
+.answer-key .md h3 { margin: 12px 0 8px; }
+
+/* "Ir a §8.1" chips under an activity. */
+.check-row__refs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.ref-chip {
+  border: 1px solid var(--border-strong); background: var(--surface);
+  border-radius: 999px; padding: 2px 10px;
+  font-size: 0.78rem; color: var(--primary); cursor: pointer;
+}
+.ref-chip:hover { background: var(--surface-tint); }
+
 /* ---------- Forms ---------- */
 .field { margin-bottom: 16px; }
 .field label {
