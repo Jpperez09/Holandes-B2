@@ -373,6 +373,7 @@ a { color: var(--primary); }
 }
 .flashcard__word { font-size: 2.3rem; font-weight: 700; }
 .flashcard__ipa { color: var(--text-soft); font-size: 1rem; margin-top: 4px; }
+.flashcard__native { font-size: 0.85rem; margin-top: 6px; }
 .flashcard__divider { border: none; border-top: 1px solid var(--border); margin: 22px 0; }
 .flashcard__answer { font-size: 1.5rem; font-weight: 700; color: var(--primary-dark); }
 .flashcard__example { color: var(--text-soft); font-style: italic; margin-top: 10px; }

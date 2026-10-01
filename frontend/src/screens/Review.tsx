@@ -201,6 +201,13 @@ function ReviewSession({
           </button>
         </div>
         {card.ipa && <div className="flashcard__ipa">{card.ipa}</div>}
+        {card.forvo_url && (
+          <div className="flashcard__native">
+            <a href={card.forvo_url} target="_blank" rel="noopener noreferrer">
+              Escuchar a nativos
+            </a>
+          </div>
+        )}
 
         {!revealed ? (
           <button

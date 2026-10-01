@@ -58,6 +58,8 @@ export interface VocabItem {
   example: string | null;
   audio_path: string | null;
   audio_url: string | null;
+  /** Link to native-speaker recordings on Forvo (single words only). */
+  forvo_url?: string | null;
   tts_text: string | null;
   status: string;
   level_code: string | null;
