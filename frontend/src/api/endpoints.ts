@@ -41,6 +41,9 @@ export const endpoints = {
   // activities
   markActivityComplete: (activityId: number) =>
     api.post<ActivityAttempt>(`/api/activities/${activityId}/attempts`, {}),
+  /** Undoes "mark done" (a tick by mistake). */
+  unmarkActivityComplete: (activityId: number) =>
+    api.delete<{ activity_id: number; removed: number }>(`/api/activities/${activityId}/attempts`),
 
   // vocabulary
   /** Due and new cards; with withinMinutes, also the ones that come due within that many minutes. */

@@ -7,7 +7,7 @@ import { useApi } from '../hooks/useApi';
 import { AsyncView, ProgressBar } from '../components/ui';
 import { Markdown, extractSection } from '../components/Markdown';
 import { Dialogue } from '../components/Dialogue';
-import { getCompletedActivities, markActivityDone } from '../lib/storage';
+import { getCompletedActivities, markActivityDone, unmarkActivityDone } from '../lib/storage';
 import {
   activityIcon,
   activityKind,
@@ -186,6 +186,31 @@ function ModuleView({ data }: { data: ModuleData }): React.JSX.Element {
     }
   }
 
+  /** Undo a tick by mistake: the activity counts as not done again. */
+  async function uncomplete(activity: Activity): Promise<void> {
+    if (!checked.has(activity.id)) return;
+    setBusyId(activity.id);
+    try {
+      await endpoints.unmarkActivityComplete(activity.id);
+      unmarkActivityDone(activity.id);
+      setChecked((prev) => {
+        const next = new Set(prev);
+        next.delete(activity.id);
+        return next;
+      });
+      try {
+        const fresh = await endpoints.getModule(module.module_id);
+        setPercent(fresh.percent_complete);
+      } catch {
+        /* keep optimistic state */
+      }
+    } catch {
+      alert('No pude desmarcarla. Inténtalo de nuevo.');
+    } finally {
+      setBusyId(null);
+    }
+  }
+
   const objectives = body ? extractSection(body, /learning objective/i) : null;
   const grammar = body ? extractSection(body, /grammar/i) : null;
   const realWorld = body
@@ -331,9 +356,10 @@ function ModuleView({ data }: { data: ModuleData }): React.JSX.Element {
                 <button
                   type="button"
                   className={'check-box' + (isDone ? ' is-done' : '')}
-                  onClick={() => void complete(a)}
-                  disabled={isDone || busyId === a.id}
-                  aria-label={isDone ? 'Completed' : 'Mark complete'}
+                  onClick={() => void (isDone ? uncomplete(a) : complete(a))}
+                  disabled={busyId === a.id}
+                  aria-label={isDone ? 'Completed — click to undo' : 'Mark complete'}
+                  title={isDone ? 'Desmarcar' : undefined}
                 >
                   {isDone ? '✓' : ''}
                 </button>
@@ -364,7 +390,16 @@ function ModuleView({ data }: { data: ModuleData }): React.JSX.Element {
                     </div>
                   )}
                 </div>
-                {!isDone && (
+                {isDone ? (
+                  <button
+                    type="button"
+                    className="btn btn--ghost"
+                    onClick={() => void uncomplete(a)}
+                    disabled={busyId === a.id}
+                  >
+                    {busyId === a.id ? 'Guardando…' : 'Desmarcar'}
+                  </button>
+                ) : (
                   <button
                     type="button"
                     className="btn btn--ghost"
