@@ -1,9 +1,14 @@
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 
+// The curriculum bundled in this repo — the single source of truth, so a clean
+// clone runs the whole suite with no environment variables.
+const REPO_CURRICULUM = path.resolve(__dirname, '../../../curriculum');
+
 const CANDIDATE_PATHS = [
   process.env.VAULT_PATH,
-  // The real vault on Juanpa's machine.
+  REPO_CURRICULUM,
+  // Legacy location of the external vault on Juanpa's machine.
   'D:/Obsidian/Juanpa-Holandes-B2',
   'D:\\Obsidian\\Juanpa-Holandes-B2',
 ];
