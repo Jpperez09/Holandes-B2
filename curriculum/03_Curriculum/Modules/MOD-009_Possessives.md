@@ -196,7 +196,7 @@ Write the Dutch for each phrase.
 
 ## 8. Listening Practice
 
-### 8.1. Dialogue for shadowing (a family photo, about 124 words, 60–90 seconds)
+### 8.1. Dialogue for shadowing (a family photo, about 156 words, 60–90 seconds)
 
 Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
@@ -214,7 +214,10 @@ Juan: Dit is mijn familie. Mijn oom en mijn tante wonen in Bogotá.
 Anna: En hun kinderen? Wonen zij ook daar?
 Juan: Ja, hun zoon en hun dochter wonen daar.
 Anna: Dat is een mooi gezin!
-Juan: Dank je wel, Anna! Tot ziens!
+Juan: Ja, onze familie is groot, maar ons gezin is klein.
+Anna: Mijn opa en mijn oma wonen in Utrecht. Hun huis is groot.
+Juan: Mijn oma woont in Colombia. Haar huis is klein.
+Anna: Mooi! Dank je wel, Juan! Tot ziens!
 ```
 
 ### 8.2. English
@@ -234,7 +237,10 @@ Juan: Dank je wel, Anna! Tot ziens!
 | Anna | En hun kinderen? Wonen zij ook daar? | And their children? Do they live there too? |
 | Juan | Ja, hun zoon en hun dochter wonen daar. | Yes, their son and their daughter live there. |
 | Anna | Dat is een mooi gezin! | That is a lovely family! |
-| Juan | Dank je wel, Anna! Tot ziens! | Thank you, Anna! Goodbye! |
+| Juan | Ja, onze familie is groot, maar ons gezin is klein. | Yes, our family is big, but our household is small. |
+| Anna | Mijn opa en mijn oma wonen in Utrecht. Hun huis is groot. | My grandfather and my grandmother live in Utrecht. Their house is big. |
+| Juan | Mijn oma woont in Colombia. Haar huis is klein. | My grandmother lives in Colombia. Her house is small. |
+| Anna | Mooi! Dank je wel, Juan! Tot ziens! | Lovely! Thank you, Juan! Goodbye! |
 
 ### 8.3. Check
 

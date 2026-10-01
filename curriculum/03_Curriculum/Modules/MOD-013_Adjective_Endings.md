@@ -202,7 +202,7 @@ Write the Dutch for each phrase.
 
 ## 8. Listening Practice
 
-### 8.1. Dialogue for shadowing (who is who, about 114 words, 60–90 seconds)
+### 8.1. Dialogue for shadowing (who is who, about 152 words, 60–90 seconds)
 
 Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
@@ -219,7 +219,10 @@ Anna: Nee, ik heb een groene fiets en een groot huis.
 Juan: Een groot huis! Mijn huis is klein, maar het is een mooi huis.
 Anna: De jongen daar heeft een wit horloge.
 Juan: Het witte horloge is duur!
-Anna: Dank je wel, Juan! Tot ziens!
+Anna: De vrouw daar heeft een lange jas. Haar jas is zwart en warm.
+Juan: Ja, het is koud en de jongen heeft een zwarte trui.
+Anna: Ik heb een blauwe jas en een gele trui. Mijn jas is niet nieuw.
+Juan: Dank je wel, Anna! Tot ziens!
 ```
 
 ### 8.2. English
@@ -238,7 +241,10 @@ Anna: Dank je wel, Juan! Tot ziens!
 | Juan | Een groot huis! Mijn huis is klein, maar het is een mooi huis. | A big house! My house is small, but it is a nice house. |
 | Anna | De jongen daar heeft een wit horloge. | The boy there has a white watch. |
 | Juan | Het witte horloge is duur! | The white watch is expensive! |
-| Anna | Dank je wel, Juan! Tot ziens! | Thank you, Juan! Goodbye! |
+| Anna | De vrouw daar heeft een lange jas. Haar jas is zwart en warm. | The woman there has a long coat. Her coat is black and warm. |
+| Juan | Ja, het is koud en de jongen heeft een zwarte trui. | Yes, it is cold and the boy has a black sweater. |
+| Anna | Ik heb een blauwe jas en een gele trui. Mijn jas is niet nieuw. | I have a blue coat and a yellow sweater. My coat is not new. |
+| Juan | Dank je wel, Anna! Tot ziens! | Thank you, Anna! Goodbye! |
 
 ### 8.3. Check
 

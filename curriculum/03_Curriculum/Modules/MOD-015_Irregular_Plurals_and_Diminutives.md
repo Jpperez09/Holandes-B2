@@ -216,7 +216,7 @@ Write the diminutive with its article (always *het*).
 
 ## 8. Listening Practice
 
-### 8.1. Dialogue for shadowing (a day in the city, about 106 words, 60–90 seconds)
+### 8.1. Dialogue for shadowing (a day in the city, about 135 words, 60–90 seconds)
 
 Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
@@ -232,7 +232,10 @@ Juan: Een ei? Eieren zijn lekker!
 Anna: Ja, ik eet graag eieren. Mijn been is moe, ik wil zitten.
 Juan: Mag ik hier zitten? Het meisje en het jongetje spelen daar.
 Anna: Dit lied is mooi. Ik spreek een beetje Nederlands, maar ik begrijp het lied niet.
-Juan: Dank je wel, Anna! Tot ziens!
+Juan: Hoeveel kost een kopje koffie hier?
+Anna: Een kopje koffie kost twee euro. Een broodje kost drie euro.
+Juan: Dat is goed. Ik wil een kopje koffie en een broodje.
+Anna: Goed! Dank je wel, Juan! Tot ziens!
 ```
 
 ### 8.2. English
@@ -250,7 +253,10 @@ Juan: Dank je wel, Anna! Tot ziens!
 | Anna | Ja, ik eet graag eieren. Mijn been is moe, ik wil zitten. | Yes, I like eating eggs. My leg is tired, I want to sit. |
 | Juan | Mag ik hier zitten? Het meisje en het jongetje spelen daar. | May I sit here? The girl and the little boy are playing there. |
 | Anna | Dit lied is mooi. Ik spreek een beetje Nederlands, maar ik begrijp het lied niet. | This song is nice. I speak a little Dutch, but I do not understand the song. |
-| Juan | Dank je wel, Anna! Tot ziens! | Thank you, Anna! Goodbye! |
+| Juan | Hoeveel kost een kopje koffie hier? | How much does a cup of coffee cost here? |
+| Anna | Een kopje koffie kost twee euro. Een broodje kost drie euro. | A cup of coffee costs two euros. A roll costs three euros. |
+| Juan | Dat is goed. Ik wil een kopje koffie en een broodje. | That is fine. I would like a cup of coffee and a roll. |
+| Anna | Goed! Dank je wel, Juan! Tot ziens! | Good! Thank you, Juan! Goodbye! |
 
 ### 8.3. Check
 

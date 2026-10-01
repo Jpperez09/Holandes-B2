@@ -228,7 +228,7 @@ Answer in a full Dutch sentence. Use the number in brackets.
 
 ## 8. Listening Practice
 
-### 8.1. Dialogue for shadowing (ages and prices, about 112 words, 60–90 seconds)
+### 8.1. Dialogue for shadowing (ages and prices, about 142 words, 60–90 seconds)
 
 Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
@@ -244,12 +244,16 @@ Juan: Mooi! Hoeveel kost de fiets?
 Anna: De fiets kost honderd euro.
 Juan: En de tas?
 Anna: De tas kost twintig euro. En het boek kost vijftien euro.
-Juan: Dat is goed. En jouw telefoon? Hoeveel kost je telefoon?
+Juan: Dat is goed. En je telefoon? Hoeveel kost je telefoon?
 Anna: Mijn telefoon kost tachtig euro.
 Juan: Tachtig euro? Dat is goed, Anna!
 Anna: Hoeveel kosten de schoenen?
 Juan: De schoenen kosten negenenzestig euro vijftig.
-Anna: Dank je wel, Juan! Tot ziens!
+Anna: Hoeveel kost je boek, Juan?
+Juan: Mijn boek kost drieëntwintig euro. Het boek is mooi.
+Anna: Mijn boek kost negenentwintig euro vijftig. Ik heb honderd euro.
+Juan: En ik heb vijftig euro. Dank je wel, Anna!
+Anna: Tot ziens, Juan!
 ```
 
 ### 8.2. English
@@ -267,12 +271,16 @@ Anna: Dank je wel, Juan! Tot ziens!
 | Anna | De fiets kost honderd euro. | The bike costs a hundred euros. |
 | Juan | En de tas? | And the bag? |
 | Anna | De tas kost twintig euro. En het boek kost vijftien euro. | The bag costs twenty euros. And the book costs fifteen euros. |
-| Juan | Dat is goed. En jouw telefoon? Hoeveel kost je telefoon? | That is good. And your phone? How much does your phone cost? |
+| Juan | Dat is goed. En je telefoon? Hoeveel kost je telefoon? | That is good. And your phone? How much does your phone cost? |
 | Anna | Mijn telefoon kost tachtig euro. | My phone costs eighty euros. |
 | Juan | Tachtig euro? Dat is goed, Anna! | Eighty euros? That is good, Anna! |
 | Anna | Hoeveel kosten de schoenen? | How much do the shoes cost? |
 | Juan | De schoenen kosten negenenzestig euro vijftig. | The shoes cost sixty-nine euros fifty. |
-| Anna | Dank je wel, Juan! Tot ziens! | Thank you, Juan! Goodbye! |
+| Anna | Hoeveel kost je boek, Juan? | How much does your book cost, Juan? |
+| Juan | Mijn boek kost drieëntwintig euro. Het boek is mooi. | My book costs twenty-three euros. The book is nice. |
+| Anna | Mijn boek kost negenentwintig euro vijftig. Ik heb honderd euro. | My book costs twenty-nine euros fifty. I have a hundred euros. |
+| Juan | En ik heb vijftig euro. Dank je wel, Anna! | And I have fifty euros. Thank you, Anna! |
+| Anna | Tot ziens, Juan! | Goodbye, Juan! |
 
 ### 8.3. Check
 
@@ -282,9 +290,9 @@ Anna: Dank je wel, Juan! Tot ziens!
 
 ### 8.4. Reading text
 
-> Dit is mijn familie. Mijn vader is zestig jaar oud en mijn moeder is achtenvijftig. Mijn broer is eenendertig en mijn zus is zesentwintig. Ik ben tweeëntwintig. Mijn fiets kost honderd euro. Mijn tas kost vijfentwintig euro.
+> Dit zijn mijn ouders, mijn broer en mijn zus. Mijn vader is zestig jaar oud en mijn moeder is achtenvijftig. Mijn broer is eenendertig en mijn zus is zesentwintig. Ik ben tweeëntwintig. Mijn fiets kost honderd euro. Mijn tas kost vijfentwintig euro.
 
-*This is my family. My father is sixty years old and my mother is fifty-eight. My brother is thirty-one and my sister is twenty-six. I am twenty-two. My bike costs a hundred euros. My bag costs twenty-five euros.*
+*These are my parents, my brother and my sister. My father is sixty years old and my mother is fifty-eight. My brother is thirty-one and my sister is twenty-six. I am twenty-two. My bike costs a hundred euros. My bag costs twenty-five euros.*
 
 - Write the six numbers you find as digits. (60, 58, 31, 26, 22, 100, 25)
 - Who is the youngest? Who is the oldest?

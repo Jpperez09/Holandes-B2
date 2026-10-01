@@ -195,7 +195,7 @@ Say each sentence in Dutch. Write the ones you miss.
 
 ## 8. Listening Practice
 
-### 8.1. Dialogue for shadowing (in a clothes shop, about 106 words, 60–90 seconds)
+### 8.1. Dialogue for shadowing (in a clothes shop, about 130 words, 60–90 seconds)
 
 Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
@@ -208,11 +208,13 @@ Juan: Mooi! En deze broek en die trui?
 Mevrouw: Deze broek kost vijfendertig euro en die trui kost dertig euro.
 Juan: Ik koop die jas en die trui. Dit horloge is mooi, maar het is duur.
 Mevrouw: Ja, dit horloge is nieuw. Het kost honderd euro.
+Juan: Deze schoenen zijn mooi. Hoeveel kosten die schoenen daar?
+Mevrouw: Die schoenen kosten negentig euro. Dat is duur, maar ze zijn nieuw.
 Juan: Nee, dank u wel. Ik zie mijn bril niet. Waar is mijn bril?
 Mevrouw: Uw bril is daar, meneer.
 Juan: Dank u wel, mevrouw. Hoeveel kost het?
 Mevrouw: Dat is zeventig euro, alstublieft.
-Juan: Alstublieft. Tot ziens, mevrouw!
+Juan: Alstublieft. Dank u wel, mevrouw. Tot ziens!
 Mevrouw: Tot ziens, meneer!
 ```
 
@@ -228,11 +230,13 @@ Mevrouw: Tot ziens, meneer!
 | Mevrouw | Deze broek kost vijfendertig euro en die trui kost dertig euro. | These trousers cost thirty-five euros and that sweater costs thirty euros. |
 | Juan | Ik koop die jas en die trui. Dit horloge is mooi, maar het is duur. | I am buying that jacket and that sweater. This watch is nice, but it is expensive. |
 | Mevrouw | Ja, dit horloge is nieuw. Het kost honderd euro. | Yes, this watch is new. It costs a hundred euros. |
+| Juan | Deze schoenen zijn mooi. Hoeveel kosten die schoenen daar? | These shoes are nice. How much do those shoes over there cost? |
+| Mevrouw | Die schoenen kosten negentig euro. Dat is duur, maar ze zijn nieuw. | Those shoes cost ninety euros. That is expensive, but they are new. |
 | Juan | Nee, dank u wel. Ik zie mijn bril niet. Waar is mijn bril? | No, thank you. I cannot see my glasses. Where are my glasses? |
 | Mevrouw | Uw bril is daar, meneer. | Your glasses are there, sir. |
 | Juan | Dank u wel, mevrouw. Hoeveel kost het? | Thank you, madam. How much is it? |
 | Mevrouw | Dat is zeventig euro, alstublieft. | That is seventy euros, please. |
-| Juan | Alstublieft. Tot ziens, mevrouw! | Here you are. Goodbye, madam! |
+| Juan | Alstublieft. Dank u wel, mevrouw. Tot ziens! | Here you are. Thank you, madam. Goodbye! |
 | Mevrouw | Tot ziens, meneer! | Goodbye, sir! |
 
 ### 8.3. Check

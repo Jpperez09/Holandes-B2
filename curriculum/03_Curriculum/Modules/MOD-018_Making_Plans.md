@@ -192,7 +192,7 @@ Write the Dutch for each sentence.
 
 ## 8. Listening Practice
 
-### 8.1. Dialogue for shadowing (plans for the weekend, about 122 words, 60–90 seconds)
+### 8.1. Dialogue for shadowing (plans for the weekend, about 144 words, 60–90 seconds)
 
 Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
@@ -211,7 +211,9 @@ Anna: Een feest! Ga je naar het feest?
 Juan: Misschien. Binnenkort ga ik op vakantie naar Colombia.
 Anna: Mooi! Wat is je plan?
 Juan: Ik ga mijn oma en mijn opa bezoeken.
-Anna: Dank je wel, Juan! Tot ziens!
+Anna: Ik ga ook op vakantie. In oktober ga ik naar Spanje.
+Juan: Ga je je vriendin bezoeken?
+Anna: Ja, ik ga mijn vriendin bezoeken. Dank je wel, Juan! Tot ziens!
 ```
 
 ### 8.2. English
@@ -232,7 +234,9 @@ Anna: Dank je wel, Juan! Tot ziens!
 | Juan | Misschien. Binnenkort ga ik op vakantie naar Colombia. | Maybe. Soon I am going on holiday to Colombia. |
 | Anna | Mooi! Wat is je plan? | Lovely! What is your plan? |
 | Juan | Ik ga mijn oma en mijn opa bezoeken. | I am going to visit my grandmother and my grandfather. |
-| Anna | Dank je wel, Juan! Tot ziens! | Thank you, Juan! Goodbye! |
+| Anna | Ik ga ook op vakantie. In oktober ga ik naar Spanje. | I am going on holiday too. In October I am going to Spain. |
+| Juan | Ga je je vriendin bezoeken? | Are you going to visit your friend? |
+| Anna | Ja, ik ga mijn vriendin bezoeken. Dank je wel, Juan! Tot ziens! | Yes, I am going to visit my friend. Thank you, Juan! Goodbye! |
 
 ### 8.3. Check
 

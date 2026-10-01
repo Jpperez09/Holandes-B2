@@ -113,12 +113,12 @@ describe('standard modules from MOD-006', () => {
     }
   });
 
-  it('include a written dialogue for shadowing (60-90 s) in section 8.1', () => {
+  it('include a written dialogue for shadowing (60-90 s, about 130-220 words at a slow pace) in section 8.1', () => {
     for (const m of newStandards()) {
       const block = source(m).match(/### 8\.1\.[^\n]*\n[\s\S]*?```\n([\s\S]*?)```/);
       expect(block, `${m.module_id} has no 8.1 code block`).not.toBeNull();
       const words = block![1].replace(/^[^:\n]+:\s*/gm, '').split(/\s+/).filter(Boolean).length;
-      expect(words, `${m.module_id} dialogue words`).toBeGreaterThanOrEqual(100);
+      expect(words, `${m.module_id} dialogue words`).toBeGreaterThanOrEqual(130);
       expect(words, `${m.module_id} dialogue words`).toBeLessThanOrEqual(220);
     }
   });

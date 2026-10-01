@@ -217,7 +217,7 @@ Write the right form of the verb in brackets.
 
 ## 8. Listening Practice
 
-### 8.1. Dialogue for shadowing (at home on a Sunday, about 102 words, 60–90 seconds)
+### 8.1. Dialogue for shadowing (at home on a Sunday, about 130 words, 60–90 seconds)
 
 Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
@@ -235,6 +235,10 @@ Juan: Ja, ik schrijf in mijn kamer. Daar staat mijn tafel.
 Anna: Kijk, daar komt mijn zus!
 Juan: Hallo! Wat maak je?
 Anna: Zij maakt koffie en wij praten Nederlands.
+Juan: Waar slaap jij?
+Anna: Ik slaap in mijn kamer. Mijn bed staat daar.
+Juan: Ik koop koffie en jij koopt brood.
+Anna: Goed! Ik zit hier en ik lees mijn boek.
 Juan: Ik praat ook Nederlands! Tot ziens!
 ```
 
@@ -255,6 +259,10 @@ Juan: Ik praat ook Nederlands! Tot ziens!
 | Anna | Kijk, daar komt mijn zus! | Look, there comes my sister! |
 | Juan | Hallo! Wat maak je? | Hello! What are you making? |
 | Anna | Zij maakt koffie en wij praten Nederlands. | She is making coffee and we are speaking Dutch. |
+| Juan | Waar slaap jij? | Where do you sleep? |
+| Anna | Ik slaap in mijn kamer. Mijn bed staat daar. | I sleep in my room. My bed is there. |
+| Juan | Ik koop koffie en jij koopt brood. | I buy coffee and you buy bread. |
+| Anna | Goed! Ik zit hier en ik lees mijn boek. | Good! I sit here and I read my book. |
 | Juan | Ik praat ook Nederlands! Tot ziens! | I speak Dutch too! Goodbye! |
 
 ### 8.3. Check

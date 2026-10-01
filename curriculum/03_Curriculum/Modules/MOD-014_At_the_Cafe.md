@@ -202,7 +202,7 @@ Say each sentence in Dutch. Write the ones you miss.
 
 ## 8. Listening Practice
 
-### 8.1. Dialogue for shadowing (at a café, about 107 words, 60–90 seconds)
+### 8.1. Dialogue for shadowing (at a café, about 135 words, 60–90 seconds)
 
 Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
@@ -218,11 +218,13 @@ Anna: Ik wil graag een limonade. Mag ik de kaart?
 Ober: Alstublieft. De appeltaart is lekker.
 Anna: Hoeveel kost de appeltaart?
 Ober: De appeltaart kost vier euro vijftig.
-Anna: Ja, graag! Een appeltaart, alstublieft.
-Anna: Mag ik ook een glas water?
+Anna: Ja, graag! Een appeltaart, alstublieft. Mag ik ook een glas water?
 Ober: Ja, mevrouw. Alstublieft.
 Juan: Ik wil ook een appeltaart, en nog een koffie.
-Ober: Goed. Wilt u ook wijn?
+Anna: De appeltaart is heel lekker, Juan!
+Juan: Ja, en de koffie is warm en goed. Wil jij nog een limonade?
+Anna: Ja, graag! Ober, nog een limonade, alstublieft.
+Ober: Ja, mevrouw. Goed. Wilt u ook wijn?
 Juan: Nee, dank u wel. Mag ik de rekening, alstublieft?
 Ober: Ja, meneer. Dat is zeventien euro vijftig.
 Juan: Alstublieft. Dank u wel!
@@ -244,11 +246,13 @@ Ober: Tot ziens, meneer en mevrouw!
 | Ober | Alstublieft. De appeltaart is lekker. | Here you are. The apple pie is delicious. |
 | Anna | Hoeveel kost de appeltaart? | How much does the apple pie cost? |
 | Ober | De appeltaart kost vier euro vijftig. | The apple pie costs four euros fifty. |
-| Anna | Ja, graag! Een appeltaart, alstublieft. | Yes, please! An apple pie, please. |
-| Anna | Mag ik ook een glas water? | May I also have a glass of water? |
+| Anna | Ja, graag! Een appeltaart, alstublieft. Mag ik ook een glas water? | Yes, please! An apple pie, please. May I also have a glass of water? |
 | Ober | Ja, mevrouw. Alstublieft. | Yes, madam. Here you are. |
 | Juan | Ik wil ook een appeltaart, en nog een koffie. | I would like an apple pie too, and another coffee. |
-| Ober | Goed. Wilt u ook wijn? | Good. Would you like wine too? |
+| Anna | De appeltaart is heel lekker, Juan! | The apple pie is very tasty, Juan! |
+| Juan | Ja, en de koffie is warm en goed. Wil jij nog een limonade? | Yes, and the coffee is hot and good. Do you want another lemonade? |
+| Anna | Ja, graag! Ober, nog een limonade, alstublieft. | Yes, please! Waiter, another lemonade, please. |
+| Ober | Ja, mevrouw. Goed. Wilt u ook wijn? | Yes, madam. Good. Would you like wine too? |
 | Juan | Nee, dank u wel. Mag ik de rekening, alstublieft? | No, thank you. May I have the bill, please? |
 | Ober | Ja, meneer. Dat is zeventien euro vijftig. | Yes, sir. That is seventeen euros fifty. |
 | Juan | Alstublieft. Dank u wel! | Here you are. Thank you! |

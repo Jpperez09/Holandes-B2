@@ -215,7 +215,7 @@ Say each sentence in Dutch. Write the ones you miss.
 
 ## 8. Listening Practice
 
-### 8.1. Dialogue for shadowing (describing a room, about 127 words, 60–90 seconds)
+### 8.1. Dialogue for shadowing (describing a room, about 142 words, 60–90 seconds)
 
 Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
@@ -232,6 +232,8 @@ Juan: En de kat? Waar zit de kat?
 Anna: De kat zit onder de tafel! Er is ook een tuin achter het huis.
 Juan: Mooi! Is er een winkel bij jullie huis?
 Anna: Ja, er is een supermarkt naast het café, bij ons huis.
+Juan: En de supermarkt, is die groot?
+Anna: Ja, de supermarkt is groot. De winkel is klein.
 Juan: Dank je wel, Anna! Tot ziens!
 ```
 
@@ -251,6 +253,8 @@ Juan: Dank je wel, Anna! Tot ziens!
 | Anna | De kat zit onder de tafel! Er is ook een tuin achter het huis. | The cat is under the table! There is also a garden behind the house. |
 | Juan | Mooi! Is er een winkel bij jullie huis? | Lovely! Is there a shop near your house? |
 | Anna | Ja, er is een supermarkt naast het café, bij ons huis. | Yes, there is a supermarket next to the café, near our house. |
+| Juan | En de supermarkt, is die groot? | And the supermarket, is it big? |
+| Anna | Ja, de supermarkt is groot. De winkel is klein. | Yes, the supermarket is big. The shop is small. |
 | Juan | Dank je wel, Anna! Tot ziens! | Thank you, Anna! Goodbye! |
 
 ### 8.3. Check

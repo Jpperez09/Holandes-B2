@@ -211,7 +211,7 @@ Say each sentence in Dutch, using the negator in brackets. Write the ones you mi
 
 ## 8. Listening Practice
 
-### 8.1. Dialogue for shadowing (a lost bag, about 109 words, 60–90 seconds)
+### 8.1. Dialogue for shadowing (a lost bag, about 142 words, 60–90 seconds)
 
 Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
@@ -230,7 +230,9 @@ Anna: Is je tas in je kamer?
 Juan: Nee, mijn tas is niet in mijn kamer.
 Anna: Wie heeft je tas? Niemand?
 Juan: Ik weet het niet. Ik ben nooit moe!
-Anna: Daar is je tas, Juan!
+Anna: Heb je een hond?
+Juan: Nee, ik heb geen hond. Ik heb een kat, maar de kat is niet in mijn tas.
+Anna: Nee, de kat is niet in je tas. Dat weet ik! Maar daar is je tas, Juan!
 Juan: Dank je wel, Anna! Tot ziens!
 ```
 
@@ -252,7 +254,9 @@ Juan: Dank je wel, Anna! Tot ziens!
 | Juan | Nee, mijn tas is niet in mijn kamer. | No, my bag is not in my room. |
 | Anna | Wie heeft je tas? Niemand? | Who has your bag? Nobody? |
 | Juan | Ik weet het niet. Ik ben nooit moe! | I don't know. I'm never tired! |
-| Anna | Daar is je tas, Juan! | There is your bag, Juan! |
+| Anna | Heb je een hond? | Do you have a dog? |
+| Juan | Nee, ik heb geen hond. Ik heb een kat, maar de kat is niet in mijn tas. | No, I do not have a dog. I have a cat, but the cat is not in my bag. |
+| Anna | Nee, de kat is niet in je tas. Dat weet ik! Maar daar is je tas, Juan! | No, the cat is not in your bag. I know that! But there is your bag, Juan! |
 | Juan | Dank je wel, Anna! Tot ziens! | Thank you, Anna! Goodbye! |
 
 ### 8.3. Check

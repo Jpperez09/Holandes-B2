@@ -220,7 +220,7 @@ Rewrite with the modal in brackets. The main verb goes to the end.
 
 ## 8. Listening Practice
 
-### 8.1. Dialogue for shadowing (plans for Saturday, about 103 words, 60–90 seconds)
+### 8.1. Dialogue for shadowing (plans for Saturday, about 138 words, 60–90 seconds)
 
 Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
@@ -237,7 +237,13 @@ Anna: Ja, je mag koken. Ik moet mijn moeder bellen. Wij moeten hier wachten.
 Juan: Goed! Wat willen jullie drinken?
 Anna: Wij willen koffie drinken, alsjeblieft.
 Juan: Wil je ook betalen?
-Anna: Nee, jij mag betalen! Dank je wel, Juan. Tot zaterdag!
+Anna: Nee, jij mag betalen!
+Juan: Goed! Kun jij dansen?
+Anna: Ja, ik kan goed dansen. Wij kunnen zaterdag samen dansen.
+Juan: Ik kan niet dansen, maar ik wil het leren.
+Anna: Dat kan! Mag ik je helpen?
+Juan: Ja, goed! Dank je wel, Anna. Tot zaterdag!
+Anna: Tot zaterdag, Juan! Doei!
 ```
 
 ### 8.2. English
@@ -256,7 +262,13 @@ Anna: Nee, jij mag betalen! Dank je wel, Juan. Tot zaterdag!
 | Juan | Goed! Wat willen jullie drinken? | Good! What do you want to drink? |
 | Anna | Wij willen koffie drinken, alsjeblieft. | We want to drink coffee, please. |
 | Juan | Wil je ook betalen? | Do you want to pay too? |
-| Anna | Nee, jij mag betalen! Dank je wel, Juan. Tot zaterdag! | No, you may pay! Thank you, Juan. See you on Saturday! |
+| Anna | Nee, jij mag betalen! | No, you may pay! |
+| Juan | Goed! Kun jij dansen? | Fine! Can you dance? |
+| Anna | Ja, ik kan goed dansen. Wij kunnen zaterdag samen dansen. | Yes, I can dance well. We can dance together on Saturday. |
+| Juan | Ik kan niet dansen, maar ik wil het leren. | I cannot dance, but I want to learn it. |
+| Anna | Dat kan! Mag ik je helpen? | That is possible! May I help you? |
+| Juan | Ja, goed! Dank je wel, Anna. Tot zaterdag! | Yes, fine! Thank you, Anna. See you on Saturday! |
+| Anna | Tot zaterdag, Juan! Doei! | See you on Saturday, Juan! Bye! |
 
 ### 8.3. Check
 

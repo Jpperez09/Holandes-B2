@@ -198,7 +198,7 @@ Write the Dutch for each sentence.
 
 ## 8. Listening Practice
 
-### 8.1. Dialogue for shadowing (a normal day, about 100 words, 60–90 seconds)
+### 8.1. Dialogue for shadowing (a normal day, about 147 words, 60–90 seconds)
 
 Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
@@ -213,8 +213,12 @@ Anna: Wat doe je in de avond?
 Juan: Ik ruim de kamer op, ik was af en ik bel mijn moeder op.
 Anna: Ga je zaterdag uit?
 Juan: Ja, zaterdag ga ik uit. Zondag mag ik laat opstaan.
+Anna: En wat doe je zaterdag in de middag?
+Juan: In de middag ga ik uit. Ik kom om elf uur thuis.
 Anna: Mooi! Ik moet zaterdag werken. Ik kom om zes uur thuis.
-Juan: Dank je wel, Anna! Tot ziens!
+Juan: En jij? Ga je zondag uit?
+Anna: Nee, zondag ruim ik op en ik was af. In de avond kook ik. De maaltijd is om zes uur.
+Juan: Lekker! Dank je wel, Anna! Tot ziens!
 ```
 
 ### 8.2. English
@@ -231,8 +235,12 @@ Juan: Dank je wel, Anna! Tot ziens!
 | Juan | Ik ruim de kamer op, ik was af en ik bel mijn moeder op. | I tidy up the room, I wash the dishes and I call my mother. |
 | Anna | Ga je zaterdag uit? | Are you going out on Saturday? |
 | Juan | Ja, zaterdag ga ik uit. Zondag mag ik laat opstaan. | Yes, on Saturday I am going out. On Sunday I may get up late. |
+| Anna | En wat doe je zaterdag in de middag? | And what do you do on Saturday afternoon? |
+| Juan | In de middag ga ik uit. Ik kom om elf uur thuis. | In the afternoon I go out. I come home at eleven. |
 | Anna | Mooi! Ik moet zaterdag werken. Ik kom om zes uur thuis. | Lovely! I have to work on Saturday. I come home at six. |
-| Juan | Dank je wel, Anna! Tot ziens! | Thank you, Anna! Goodbye! |
+| Juan | En jij? Ga je zondag uit? | And you? Are you going out on Sunday? |
+| Anna | Nee, zondag ruim ik op en ik was af. In de avond kook ik. De maaltijd is om zes uur. | No, on Sunday I tidy up and I wash the dishes. In the evening I cook. The meal is at six. |
+| Juan | Lekker! Dank je wel, Anna! Tot ziens! | Delicious! Thank you, Anna! Goodbye! |
 
 ### 8.3. Check
 

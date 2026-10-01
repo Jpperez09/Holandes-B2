@@ -221,7 +221,7 @@ Say each sentence in Dutch. Write the ones you miss.
 
 ## 8. Listening Practice
 
-### 8.1. Dialogue for shadowing (planning the week, about 107 words, 60–90 seconds)
+### 8.1. Dialogue for shadowing (planning the week, about 135 words, 60–90 seconds)
 
 Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
@@ -240,8 +240,11 @@ Anna: Hoe laat werk je vrijdag?
 Juan: Om negen uur.
 Anna: Negen uur is vroeg!
 Juan: Ja, het is vroeg, maar ik ben niet moe.
-Anna: Dank je wel, Juan. Tot zaterdag!
-Juan: Tot zaterdag, Anna! Doei!
+Anna: Hoe laat is het nu, Juan?
+Juan: Het is tien voor half drie. Ben ik laat?
+Anna: Nee, je bent vroeg. Het is vandaag donderdag en je broer komt zaterdag.
+Juan: Dank je wel, Anna. Tot zaterdag!
+Anna: Tot zaterdag, Juan! Doei!
 ```
 
 ### 8.2. English
@@ -262,8 +265,11 @@ Juan: Tot zaterdag, Anna! Doei!
 | Juan | Om negen uur. | At nine o'clock. |
 | Anna | Negen uur is vroeg! | Nine o'clock is early! |
 | Juan | Ja, het is vroeg, maar ik ben niet moe. | Yes, it is early, but I am not tired. |
-| Anna | Dank je wel, Juan. Tot zaterdag! | Thank you, Juan. See you on Saturday! |
-| Juan | Tot zaterdag, Anna! Doei! | See you on Saturday, Anna! Bye! |
+| Anna | Hoe laat is het nu, Juan? | What time is it now, Juan? |
+| Juan | Het is tien voor half drie. Ben ik laat? | It is twenty past two. Am I late? |
+| Anna | Nee, je bent vroeg. Het is vandaag donderdag en je broer komt zaterdag. | No, you are early. Today is Thursday and your brother is coming on Saturday. |
+| Juan | Dank je wel, Anna. Tot zaterdag! | Thank you, Anna. See you on Saturday! |
+| Anna | Tot zaterdag, Juan! Doei! | See you on Saturday, Juan! Bye! |
 
 ### 8.3. Check
 
