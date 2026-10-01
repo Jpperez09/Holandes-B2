@@ -289,7 +289,7 @@ Every entry has the following fields. The app's vault indexer parses them as a s
 | **name_en** | Near future with *gaan* + infinitive |
 | **pienemann_stage** | 3 |
 | **cefr_band** | A0-A1 |
-| **module_introduced** | Previewed in MOD-005; fully drilled in MOD-019 per `03_Curriculum/A0_A1_Roadmap`. |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-018_Making_Plans]] (previewed in MOD-005). |
 | **dutch_pattern** | `[Subj] + [gaan-fin] + [...] + [infinitive]` |
 | **english_meaning** | Near future "going to X". |
 | **spanish_contrast** | Spanish *voy a hablar* uses preposition *a*. Dutch uses no preposition: *Ik ga praten.* |
@@ -363,7 +363,7 @@ Every entry has the following fields. The app's vault indexer parses them as a s
 | MOD-006 | `negation-niet-geen` (consolidated: *nooit*, *niets*, *niemand*, where *niet* goes) |
 | MOD-012 | `modal-kunnen-willen` (also `modal-moeten-mogen` in `Grammar_Patterns_A1`) |
 | MOD-013 | `adjective-attributive` |
-| MOD-019 (later) | `future-gaan-infinitive` |
+| MOD-018 | `future-gaan-infinitive` |
 
 ---
 
@@ -396,6 +396,6 @@ Mastery (`grammar_topics.mastery`) is a rolling EMA computed from `activity_atte
 
 ## Open Items
 
-- [ ] **Patterns 14, 15, 17** are listed here for forward-completeness but their full drilling lives in MOD-014, MOD-017, MOD-019 respectively. Slugs are reserved.
+- [x] **Patterns 14, 15, 17** (`modal-kunnen-willen`, `future-gaan-infinitive`, `adjective-attributive`) are now drilled in MOD-012, MOD-018 and MOD-013 (October 2026); see also `Grammar_Patterns_A1`.
 - [ ] **Numbering A0-A1 patterns 1–18 is suggestive** — slugs are the stable identifier, not numbers.
 - [ ] **Mastery thresholds** for declaring a pattern "controlled" not yet defined; recommend rolling EMA ≥ 0.80 with at least 10 attempts (decision to be made in Phase 3 alongside `grammar_topics.mastery` computation logic).

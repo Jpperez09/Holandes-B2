@@ -3,11 +3,11 @@ title: Vocabulary Seed — A1 (October 2026)
 type: vocabulary-seed
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013, MOD-014, MOD-015, MOD-016, MOD-017]
+covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013, MOD-014, MOD-015, MOD-016, MOD-017, MOD-018]
 created: 2026-09-30
 updated: 2026-09-30
-total_items: 168
-tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013, MOD-014, MOD-015, MOD-016, MOD-017]
+total_items: 180
+tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013, MOD-014, MOD-015, MOD-016, MOD-017, MOD-018]
 ---
 
 # Vocabulary Seed — A1 (MOD-006 to MOD-018)
@@ -260,3 +260,20 @@ Same as `Vocabulary_Seed_A0_A1`, plus two optional columns:
 | voc-A1-296 | ochtend | de | noun | ochtenden | — | /ˈɔxtənt/ | morning | mañana (parte del día) | false | *In de ochtend werk ik.* | MOD-017 |
 | voc-A1-297 | middag | de | noun | middagen | — | /ˈmɪdɑx/ | afternoon | tarde | false | *In de middag fiets ik.* | MOD-017 |
 | voc-A1-298 | avond | de | noun | avonden | — | /ˈaːvɔnt/ | evening | tarde-noche, noche | false | *In de avond kook ik.* | MOD-017 |
+
+### 2.13. Plans, visits and travel (MOD-018)
+
+| id | dutch | article | pos | plural | forms | ipa | gloss_en | gloss_es | cognate_en | example_nl | module_id |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| voc-A1-299 | plan | het | noun | plannen | — | /plɑn/ | plan | plan | true | *Wat is je plan voor zaterdag?* | MOD-018 |
+| voc-A1-300 | weekend | het | noun | weekenden | — | /ˈʋikɛnt/ | weekend | fin de semana | true | *Dit weekend ga ik naar Utrecht.* | MOD-018 |
+| voc-A1-301 | vakantie | de | noun | vakanties | — | /vaːˈkɑnsi/ | holiday, vacation | vacaciones | partial | *In de vakantie ga ik naar Colombia.* | MOD-018 |
+| voc-A1-302 | feest | het | noun | feesten | — | /feːst/ | party, celebration | fiesta | partial | *Zaterdag is er een feest.* | MOD-018 |
+| voc-A1-303 | trein | de | noun | treinen | — | /trɛin/ | train | tren | partial | *De trein komt om vijf uur.* | MOD-018 |
+| voc-A1-304 | naar | — | prep | — | — | /naːr/ | to, towards | a, hacia | false | *Ik ga naar huis.* | MOD-018 |
+| voc-A1-305 | bezoeken | — | verb | — | ik bezoek, hij bezoekt · bezocht · bezocht | /bəˈzukə(n)/ | to visit | visitar | false | *Wij gaan mijn oma bezoeken.* | MOD-018 |
+| voc-A1-306 | ontmoeten | — | verb | — | ik ontmoet, hij ontmoet · ontmoette · ontmoet | /ɔntˈmutə(n)/ | to meet (someone) | conocer, encontrarse con | false | *Ik ga zaterdag een vriend ontmoeten.* | MOD-018 |
+| voc-A1-307 | blijven | — | verb | — | ik blijf, hij blijft · bleef · is gebleven | /ˈblɛivə(n)/ | to stay, to remain | quedarse | false | *Ik blijf thuis.* | MOD-018 |
+| voc-A1-308 | afspreken | — | verb | — | ik spreek af, hij spreekt af · sprak af · afgesproken | /ˈɑfspreːkə(n)/ | to arrange to meet | quedar | false | *Wij spreken zaterdag af.* | MOD-018 |
+| voc-A1-309 | binnenkort | — | adv | — | — | /ˈbɪnənkɔrt/ | soon, shortly | pronto, en breve | false | *Binnenkort ga ik op vakantie.* | MOD-018 |
+| voc-A1-310 | misschien | — | adv | — | — | /mɪsˈxin/ | maybe, perhaps | quizás, tal vez | false | *Misschien ga ik naar het feest.* | MOD-018 |
