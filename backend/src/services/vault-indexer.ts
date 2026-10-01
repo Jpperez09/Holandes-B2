@@ -265,8 +265,9 @@ function upsertVocabulary(db: Database.Database, items: ParsedVocabItem[], sourc
     `INSERT INTO vocabulary_items
        (lemma, article, language, pos, translation_es, translation_en, ipa,
         example, cognate_en, cognate_note, source_id, source_path, module_id,
-        level_code, tags, audio_path, audio_url, tts_text, forvo_url, status, updated_at)
-     VALUES (?, ?, 'nl', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'new', datetime('now'))
+        level_code, tags, audio_path, audio_url, tts_text, forvo_url, plural, forms,
+        status, updated_at)
+     VALUES (?, ?, 'nl', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'new', datetime('now'))
      ON CONFLICT(lemma, language) DO UPDATE SET
        article         = excluded.article,
        pos             = excluded.pos,
@@ -285,6 +286,8 @@ function upsertVocabulary(db: Database.Database, items: ParsedVocabItem[], sourc
        audio_url       = excluded.audio_url,
        tts_text        = excluded.tts_text,
        forvo_url       = excluded.forvo_url,
+       plural          = excluded.plural,
+       forms           = excluded.forms,
        updated_at      = excluded.updated_at`,
   );
   for (const item of items) {
@@ -308,6 +311,8 @@ function upsertVocabulary(db: Database.Database, items: ParsedVocabItem[], sourc
       item.audio_url,
       item.tts_text,
       forvoUrl(item.lemma, item.pos),
+      item.plural,
+      item.forms,
     );
   }
   return items.length;

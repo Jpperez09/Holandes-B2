@@ -223,6 +223,12 @@ function ReviewSession({
             <div className="flashcard__answer">
               {card.translation_en ?? '—'}
             </div>
+            {card.plural && (
+              <div className="flashcard__forms">plural: {card.plural}</div>
+            )}
+            {card.forms && (
+              <div className="flashcard__forms">forms: {card.forms}</div>
+            )}
             {card.example && (
               <div className="flashcard__example">"{card.example}"</div>
             )}

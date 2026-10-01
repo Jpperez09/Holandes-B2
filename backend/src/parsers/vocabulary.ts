@@ -224,6 +224,8 @@ export function parseVocabularySeed(
           audio_path: cellOrNull(row['audio_path']),
           audio_url: cellOrNull(row['audio_url']),
           tts_text: cellOrNull(row['tts_text']) ?? lemma,
+          plural: cellOrNull(row['plural']),
+          forms: cellOrNull(row['forms']),
           tags: parseTagsCell(row['tags']),
           table_section: section.title,
         };

@@ -60,6 +60,10 @@ export interface VocabItem {
   audio_url: string | null;
   /** Link to native-speaker recordings on Forvo (single words only). */
   forvo_url?: string | null;
+  /** Plural of a noun, e.g. "huizen". */
+  plural?: string | null;
+  /** Verb forms, e.g. "ik ga, hij gaat · ging · gegaan". */
+  forms?: string | null;
   tts_text: string | null;
   status: string;
   level_code: string | null;
