@@ -3,11 +3,11 @@ title: Vocabulary Seed — A1 (October 2026)
 type: vocabulary-seed
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013, MOD-014, MOD-015, MOD-016]
+covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013, MOD-014, MOD-015, MOD-016, MOD-017]
 created: 2026-09-30
 updated: 2026-09-30
-total_items: 154
-tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013, MOD-014, MOD-015, MOD-016]
+total_items: 168
+tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-013, MOD-014, MOD-015, MOD-016, MOD-017]
 ---
 
 # Vocabulary Seed — A1 (MOD-006 to MOD-018)
@@ -241,3 +241,22 @@ Same as `Vocabulary_Seed_A0_A1`, plus two optional columns:
 | voc-A1-282 | tuin | de | noun | tuinen | — | /tœyn/ | garden | jardín | false | *Onze tuin is groot.* | MOD-016 |
 | voc-A1-283 | winkel | de | noun | winkels | — | /ˈʋɪŋkəl/ | shop, store | tienda | false | *De winkel is naast het café.* | MOD-016 |
 | voc-A1-284 | supermarkt | de | noun | supermarkten | — | /ˈsypərmɑrkt/ | supermarket | supermercado | true | *Ik ben in de supermarkt.* | MOD-016 |
+
+### 2.12. Daily routine and separable verbs (MOD-017)
+
+| id | dutch | article | pos | plural | forms | ipa | gloss_en | gloss_es | cognate_en | example_nl | module_id |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| voc-A1-285 | opstaan | — | verb | — | ik sta op, hij staat op · stond op · is opgestaan | /ˈɔpstaːn/ | to get up | levantarse | false | *Ik sta om zeven uur op.* | MOD-017 |
+| voc-A1-286 | opbellen | — | verb | — | ik bel op, hij belt op · belde op · opgebeld | /ˈɔpbɛlə(n)/ | to call, to phone | llamar por teléfono | false | *Ik bel mijn moeder op.* | MOD-017 |
+| voc-A1-287 | thuiskomen | — | verb | — | ik kom thuis, hij komt thuis · kwam thuis · is thuisgekomen | /ˈtœyskoːmə(n)/ | to come home | llegar a casa | false | *Ik kom om zes uur thuis.* | MOD-017 |
+| voc-A1-288 | opruimen | — | verb | — | ik ruim op, hij ruimt op · ruimde op · opgeruimd | /ˈɔprœymə(n)/ | to tidy up | ordenar, recoger | false | *Wij ruimen de kamer op.* | MOD-017 |
+| voc-A1-289 | afwassen | — | verb | — | ik was af, hij wast af · waste af · afgewassen | /ˈɑfʋɑsə(n)/ | to wash the dishes | lavar los platos | false | *Mijn zus wast af.* | MOD-017 |
+| voc-A1-290 | uitgaan | — | verb | — | ik ga uit, hij gaat uit · ging uit · is uitgegaan | /ˈœytxaːn/ | to go out | salir | false | *Zaterdag ga ik uit.* | MOD-017 |
+| voc-A1-291 | douchen | — | verb | — | ik douche, hij doucht · douchte · gedoucht | /ˈduʃə(n)/ | to shower | ducharse | partial | *Ik douche om half acht.* | MOD-017 |
+| voc-A1-292 | ontbijten | — | verb | — | ik ontbijt, hij ontbijt · ontbeet · ontbeten | /ɔmˈbɛitə(n)/ | to have breakfast | desayunar | false | *Wij ontbijten om acht uur.* | MOD-017 |
+| voc-A1-293 | ontbijt | het | noun | ontbijten | — | /ɔmˈbɛit/ | breakfast | desayuno | false | *Het ontbijt is lekker.* | MOD-017 |
+| voc-A1-294 | lunch | de | noun | lunches | — | /lʏnʃ/ | lunch | almuerzo | true | *De lunch is om twaalf uur.* | MOD-017 |
+| voc-A1-295 | maaltijd | de | noun | maaltijden | — | /ˈmaːltɛit/ | meal | comida | false | *De maaltijd is om zes uur.* | MOD-017 |
+| voc-A1-296 | ochtend | de | noun | ochtenden | — | /ˈɔxtənt/ | morning | mañana (parte del día) | false | *In de ochtend werk ik.* | MOD-017 |
+| voc-A1-297 | middag | de | noun | middagen | — | /ˈmɪdɑx/ | afternoon | tarde | false | *In de middag fiets ik.* | MOD-017 |
+| voc-A1-298 | avond | de | noun | avonden | — | /ˈaːvɔnt/ | evening | tarde-noche, noche | false | *In de avond kook ik.* | MOD-017 |

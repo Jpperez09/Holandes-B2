@@ -3,10 +3,10 @@ title: Grammar Pattern Registry — A1 (October 2026)
 type: grammar-pattern-registry
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-014, MOD-015, MOD-016]
+covers_modules: [MOD-007, MOD-008, MOD-009, MOD-010, MOD-011, MOD-012, MOD-014, MOD-015, MOD-016, MOD-017]
 created: 2026-09-30
 updated: 2026-09-30
-total_patterns: 14
+total_patterns: 15
 tags: [grammar, patterns, registry, A0, A1, october]
 ---
 
@@ -258,6 +258,23 @@ tags: [grammar, patterns, registry, A0, A1, october]
 | **practice_activity** | Say 8 sentences with er is / er zijn, negative and as questions (A4). |
 | **srs_cloze_candidate** | true |
 
+### 15. `separable-verbs`
+
+| Field | Value |
+|---|---|
+| **slug** | `separable-verbs` |
+| **name_en** | Separable verbs |
+| **pienemann_stage** | 3 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-017_Daily_Routine_and_Separable_Verbs]] |
+| **dutch_pattern** | `[subject] + [verb] + [...] + [particle]` · `[subject] + [modal / gaan] + [...] + [particle + verb, together]` |
+| **english_meaning** | "I get up at seven", "I call my mother": the particle goes to the end of the clause; with a modal the verb stays whole. |
+| **spanish_contrast** | Spanish verbs do not split. Dutch separable verbs put the particle at the end, and *opstaan* is not reflexive (Spanish *levantarse*). |
+| **examples** | Ik sta om zeven uur op. / Ik bel mijn moeder op. / Ik moet vroeg opstaan. / Wanneer kom je thuis? |
+| **common_mistake** | Not splitting the verb (`*Ik opsta`), leaving the particle in the middle (`*Ik sta op om zeven uur`) and splitting an inseparable verb (`*Ik ontbijt op`). |
+| **practice_activity** | Write 12 sentences with separable verbs, questions, negatives and a modal (A3), then translate 8 (A4). |
+| **srs_cloze_candidate** | true |
+
 ---
 
 ## Pattern Index (by Module)
@@ -273,6 +290,7 @@ tags: [grammar, patterns, registry, A0, A1, october]
 | MOD-014 | `polite-requests` |
 | MOD-015 | `plural-irregular`, `diminutive-je` |
 | MOD-016 | `prepositions-of-place`, `er-is-er-zijn` |
+| MOD-017 | `separable-verbs` |
 
 ---
 
