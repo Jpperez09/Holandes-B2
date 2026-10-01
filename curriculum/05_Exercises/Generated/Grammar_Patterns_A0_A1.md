@@ -360,6 +360,7 @@ Every entry has the following fields. The app's vault indexer parses them as a s
 | MOD-003 | `present-tense-zijn-hebben` (zijn), `ik-kom-uit`, `ik-spreek`, `dit-is-dat-is`, `adjective-predicative` |
 | MOD-004 | `de-het-article`, `present-tense-zijn-hebben` (hebben), `plural-formation`, `noun-phrase-een` |
 | MOD-005 | `v2-main-clause`, `question-yes-no`, `question-word`, `present-tense-regular`, `negation-niet-geen`, `ik-woon-in` |
+| MOD-006 | `negation-niet-geen` (consolidated: *nooit*, *niets*, *niemand*, where *niet* goes) |
 | MOD-014 (later) | `modal-kunnen-willen` |
 | MOD-017 (later) | `adjective-attributive` |
 | MOD-019 (later) | `future-gaan-infinitive` |

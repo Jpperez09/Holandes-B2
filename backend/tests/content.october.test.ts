@@ -104,9 +104,58 @@ describe('standard modules from MOD-006', () => {
     }
   });
 
+  it('include their practice exercises in section 6, each with a matching answer key', () => {
+    for (const m of newStandards()) {
+      const text = source(m);
+      const section = text.split('\n## 6. Activities\n')[1]?.split('\n---\n')[0] ?? '';
+      const exercises = [...section.matchAll(/### 6\.\d+\. (A\d+) [^\n]*\n\n[^\n]*\n\n((?:\d+\. [^\n]*\n?)+)/g)];
+      expect(exercises.length, `${m.module_id} exercises`).toBeGreaterThanOrEqual(2);
+      for (const [, slug, items] of exercises) {
+        const prompts = items.trim().split('\n').length;
+        const prefix = `**${slug}:** `;
+        const keyLine = section.split('\n').find((l) => l.startsWith(prefix));
+        expect(keyLine, `${m.module_id} ${slug} has an answer key`).toBeDefined();
+        expect(keyLine!.slice(prefix.length).split(' · ').length, `${m.module_id} ${slug} key length`).toBe(prompts);
+      }
+    }
+  });
+
   it('end with a real-world task', () => {
     for (const m of newStandards()) {
       expect(source(m), m.module_id).toMatch(/## 11\. Mini Real-World Task/);
+    }
+  });
+});
+
+describe('new vocabulary (MOD-006 onwards)', () => {
+  const added = () => reader.vocabularyItems().filter((i) => num(i.module_id ?? 'MOD-000') >= FIRST_NEW_STANDARD);
+
+  it('gives every common noun an article and a plural', () => {
+    const bad = added()
+      .filter((i) => i.pos.startsWith('noun') && i.pos !== 'noun-proper')
+      .filter((i) => !i.article || !i.plural)
+      .map((i) => i.lemma);
+    expect(bad).toEqual([]);
+  });
+
+  it('gives every verb its forms (present, past, participle)', () => {
+    const bad = added()
+      .filter((i) => i.pos === 'verb' && !(i.forms && i.forms.includes('·')))
+      .map((i) => i.lemma);
+    expect(bad).toEqual([]);
+  });
+
+  it('gives every lemma IPA, an English and a Spanish gloss and a Dutch example', () => {
+    const bad = added()
+      .filter((i) => !i.ipa || !i.translation_en || !i.translation_es || !i.example)
+      .map((i) => i.lemma);
+    expect(bad).toEqual([]);
+  });
+
+  it('writes IPA between slashes and examples as complete sentences', () => {
+    for (const i of added()) {
+      expect(i.ipa, i.lemma).toMatch(/^\/.+\/$/);
+      expect(i.example, i.lemma).toMatch(/[.!?]$/);
     }
   });
 });
