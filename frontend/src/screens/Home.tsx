@@ -6,6 +6,7 @@ import { useApi } from '../hooks/useApi';
 import { AsyncView } from '../components/ui';
 import { INSIGHTS } from '../data/insights';
 import { bandLabel, greeting, moduleStatus, num, todayIso } from '../lib/friendly';
+import { bySortOrder, firstUnfinishedStandard, standardModules } from '../lib/progression';
 
 interface HomeData {
   settings: SettingsMap;
@@ -54,16 +55,13 @@ export function Home(): React.JSX.Element {
     <AsyncView loading={loading} error={error} data={data} onRetry={reload}>
       {(d) => {
         const name = d.settings['user_name'] || 'there';
-        const sortedModules = [...d.modules].sort(
-          (a, b) => a.sort_order - b.sort_order,
-        );
+        const sortedModules = bySortOrder(d.modules);
+        // Weekly reviews are never "the module up next" nor block "all done".
+        const standards = standardModules(d.modules);
         const currentModule =
-          sortedModules.find((m) => m.percent_complete < 1) ??
-          sortedModules[sortedModules.length - 1] ??
-          null;
+          firstUnfinishedStandard(d.modules) ?? standards[standards.length - 1] ?? null;
         const allDone =
-          sortedModules.length > 0 &&
-          sortedModules.every((m) => m.percent_complete >= 1);
+          standards.length > 0 && standards.every((m) => m.percent_complete >= 1);
         const levelNum = parseInt(d.settings['current_level'] || '1', 10) || 1;
         const dueCards = d.dueCount;
         const streak = num(d.today?.streak);

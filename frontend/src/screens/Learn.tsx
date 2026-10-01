@@ -11,6 +11,10 @@ import {
   statusLabel,
   statusPillClass,
 } from '../lib/friendly';
+import { bySortOrder, computeUnlocked, isReviewModule } from '../lib/progression';
+
+// Weekly review modules get their own group, after the standard path.
+const REVIEW_GROUP = 'weekly-review';
 
 export function Learn(): React.JSX.Element {
   const navigate = useNavigate();
@@ -32,12 +36,12 @@ export function Learn(): React.JSX.Element {
           );
         }
 
-        const sorted = [...modules].sort((a, b) => a.sort_order - b.sort_order);
+        const sorted = bySortOrder(modules);
 
-        // Group by CEFR band, preserving order.
+        // Group by CEFR band, preserving order; weekly reviews form their own group.
         const groups: { band: string; modules: ModuleSummary[] }[] = [];
         for (const m of sorted) {
-          const band = m.cefr_band ?? 'Other';
+          const band = isReviewModule(m) ? REVIEW_GROUP : (m.cefr_band ?? 'Other');
           let g = groups.find((x) => x.band === band);
           if (!g) {
             g = { band, modules: [] };
@@ -46,19 +50,9 @@ export function Learn(): React.JSX.Element {
           g.modules.push(m);
         }
 
-        // Linear unlock: a module is open if it's the first, the previous one is
-        // done, or it has been started/finished already (you can always revisit
-        // a module you've touched — a done module must never read as locked).
-        const unlocked = new Set<number>();
-        sorted.forEach((m, i) => {
-          if (
-            i === 0 ||
-            sorted[i - 1].percent_complete >= 1 ||
-            m.percent_complete > 0
-          ) {
-            unlocked.add(m.id);
-          }
-        });
+        // Linear unlock over the standard modules (see lib/progression.ts):
+        // weekly reviews never block the chain and are always open.
+        const unlocked = computeUnlocked(sorted);
 
         return (
           <>
@@ -69,7 +63,9 @@ export function Learn(): React.JSX.Element {
 
             {groups.map((g) => (
               <section key={g.band}>
-                <h2 className="section-title">{bandLabel(g.band)}</h2>
+                <h2 className="section-title">
+                  {g.band === REVIEW_GROUP ? 'Repasos semanales' : bandLabel(g.band)}
+                </h2>
                 <div className="card-grid card-grid--2">
                   {g.modules.map((m) => {
                     const status = moduleStatus(m.percent_complete);
@@ -99,7 +95,7 @@ export function Learn(): React.JSX.Element {
                         </div>
                         <div className="tile__title">{m.title}</div>
                         <div className="tile__meta">
-                          Level {m.sort_order}
+                          {isReviewModule(m) ? 'Repaso semanal' : `Level ${m.sort_order}`}
                           {m.estimated_minutes
                             ? ` · ${minutesLabel(m.estimated_minutes)}`
                             : ''}
