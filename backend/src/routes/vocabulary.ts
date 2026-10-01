@@ -2,6 +2,7 @@ import { Router, Request, Response } from 'express';
 import { getDb } from '../db/connection';
 import { requireVault } from '../middleware/require-vault';
 import { scheduleReview, cardToJson, jsonToCard, initializeCard } from '../services/srs-fsrs';
+import { getDueCards } from '../services/due-cards';
 import { logger } from '../config/logger';
 
 const router = Router();
@@ -28,19 +29,9 @@ router.get('/', requireVault, (req: Request, res: Response) => {
 
 // GET /api/vocabulary/due
 router.get('/due', requireVault, (_req: Request, res: Response) => {
-  const db = getDb();
-  // v_due_cards filters by FSRS due timestamp. Brand-new cards (`fsrs_state` NULL)
-  // are due immediately; the view doesn't include them, so union with status='new'.
-  const cards = db
-    .prepare(
-      `SELECT * FROM v_due_cards
-       UNION ALL
-       SELECT * FROM vocabulary_items
-        WHERE status = 'new' AND fsrs_state IS NULL
-       LIMIT 50`,
-    )
-    .all();
-  res.json(cards);
+  // Overdue cards, then new cards from started modules within the daily
+  // new_cards_per_day budget — see services/due-cards.ts.
+  res.json(getDueCards());
 });
 
 // GET /api/vocabulary/stats

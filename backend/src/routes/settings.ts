@@ -49,6 +49,22 @@ async function handleUpdateSettings(req: Request, res: Response): Promise<void> 
     }
   }
 
+  // Validate new_cards_per_day
+  if ('new_cards_per_day' in stringUpdates) {
+    const raw = stringUpdates['new_cards_per_day'].trim();
+    const cap = Number(raw);
+    if (raw === '' || !Number.isInteger(cap) || cap < 0 || cap > 100) {
+      res.status(422).json({
+        type: 'https://datatracker.ietf.org/doc/html/rfc7807',
+        title: 'Validation Error',
+        status: 422,
+        detail: 'new_cards_per_day must be a whole number between 0 and 100.',
+      });
+      return;
+    }
+    stringUpdates['new_cards_per_day'] = String(cap);
+  }
+
   // Validate target_level
   if ('target_level' in stringUpdates) {
     const level = parseInt(stringUpdates['target_level'], 10);

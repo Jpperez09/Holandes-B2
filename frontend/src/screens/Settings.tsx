@@ -31,6 +31,7 @@ async function loadSettings(): Promise<SettingsData> {
 }
 
 const GOAL_OPTIONS = [15, 30, 45, 60, 90];
+const NEW_CARD_OPTIONS = [5, 10, 15, 20, 30];
 const LEVEL_OPTIONS = [
   { label: 'A1 — basic phrases', value: 20 },
   { label: 'A2 — everyday survival', value: 40 },
@@ -59,6 +60,7 @@ function SettingsForm({
 
   const [name, setName] = useState(settings['user_name'] ?? '');
   const [goal, setGoal] = useState(settings['daily_goal_minutes'] ?? '60');
+  const [newCards, setNewCards] = useState(settings['new_cards_per_day'] ?? '10');
   const [target, setTarget] = useState(settings['target_level'] ?? '100');
   const [vaultPath, setVaultPath] = useState(settings['vault_path'] ?? '');
 
@@ -80,6 +82,7 @@ function SettingsForm({
       await endpoints.updateSettings({
         user_name: name.trim() || 'Juanpa',
         daily_goal_minutes: goal,
+        new_cards_per_day: newCards,
         target_level: target,
       });
       setMainMsg({ ok: true, text: 'Saved 👍' });
@@ -160,6 +163,29 @@ function SettingsForm({
                 {m} minutes a day
               </option>
             ))}
+          </select>
+        </div>
+        <div className="field">
+          <label htmlFor="set-newcards">
+            New words per day{' '}
+            <span className="hint">
+              (from the modules you have started)
+            </span>
+          </label>
+          <select
+            id="set-newcards"
+            className="select"
+            value={newCards}
+            onChange={(e) => setNewCards(e.target.value)}
+          >
+            {NEW_CARD_OPTIONS.map((n) => (
+              <option key={n} value={n}>
+                {n} new words a day
+              </option>
+            ))}
+            {!NEW_CARD_OPTIONS.some((n) => String(n) === newCards) && (
+              <option value={newCards}>{newCards} new words a day</option>
+            )}
           </select>
         </div>
         <div className="field">
