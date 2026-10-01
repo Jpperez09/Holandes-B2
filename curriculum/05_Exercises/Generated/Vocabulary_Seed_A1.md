@@ -3,11 +3,11 @@ title: Vocabulary Seed — A1 (October 2026)
 type: vocabulary-seed
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009, MOD-010]
+covers_modules: [MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011]
 created: 2026-09-30
 updated: 2026-09-30
-total_items: 70
-tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009, MOD-010]
+total_items: 84
+tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008, MOD-009, MOD-010, MOD-011]
 ---
 
 # Vocabulary Seed — A1 (MOD-006 to MOD-018)
@@ -127,3 +127,22 @@ Same as `Vocabulary_Seed_A0_A1`, plus two optional columns:
 | voc-A1-198 | vinden | — | verb | — | ik vind, hij vindt · vond · gevonden | /ˈvɪndə(n)/ | to find; to think (an opinion) | encontrar; opinar | true | *Ik vind Nederlands niet moeilijk.* | MOD-010 |
 | voc-A1-199 | kijken | — | verb | — | ik kijk, hij kijkt · keek · gekeken | /ˈkɛikə(n)/ | to look, to watch | mirar | false | *Kijk, daar is je tas!* | MOD-010 |
 | voc-A1-200 | staan | — | verb | — | ik sta, hij staat · stond · gestaan | /staːn/ | to stand; to be (upright) | estar de pie | true | *De fiets staat hier.* | MOD-010 |
+
+### 2.6. Demonstratives, clothes and objects (MOD-011)
+
+| id | dutch | article | pos | plural | forms | ipa | gloss_en | gloss_es | cognate_en | example_nl | module_id |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| voc-A1-201 | deze | — | det | — | — | /ˈdeːzə/ | this, these (de-word or plural) | este, esta, estos, estas | false | *Deze jas is mooi.* | MOD-011 |
+| voc-A1-202 | die | — | det | — | — | /di/ | that, those (de-word or plural) | ese, esa, aquel, esos | false | *Die schoenen zijn duur.* | MOD-011 |
+| voc-A1-203 | jas | de | noun | jassen | — | /jɑs/ | coat, jacket | abrigo, chaqueta | false | *Deze jas is nieuw.* | MOD-011 |
+| voc-A1-204 | broek | de | noun | broeken | — | /bruk/ | trousers, pants | pantalón | false | *Die broek is goedkoop.* | MOD-011 |
+| voc-A1-205 | schoen | de | noun | schoenen | — | /sxun/ | shoe | zapato | partial | *Deze schoenen zijn duur.* | MOD-011 |
+| voc-A1-206 | trui | de | noun | truien | — | /trœy/ | sweater, jumper | suéter, jersey | false | *Die trui is nieuw.* | MOD-011 |
+| voc-A1-207 | bril | de | noun | brillen | — | /brɪl/ | glasses | gafas | false | *Mijn bril is groot.* | MOD-011 |
+| voc-A1-208 | fles | de | noun | flessen | — | /flɛs/ | bottle | botella | partial | *Die fles kost twee euro.* | MOD-011 |
+| voc-A1-209 | glas | het | noun | glazen | — | /ɣlɑs/ | glass | vaso, copa | true | *Dat glas is klein.* | MOD-011 |
+| voc-A1-210 | horloge | het | noun | horloges | — | /hɔrˈloːʒə/ | watch | reloj de pulsera | false | *Dit horloge is mooi.* | MOD-011 |
+| voc-A1-211 | pen | de | noun | pennen | — | /pɛn/ | pen | bolígrafo | true | *Dit is mijn pen.* | MOD-011 |
+| voc-A1-212 | nieuw | — | adj | — | — | /niu/ | new | nuevo | partial | *Mijn fiets is nieuw.* | MOD-011 |
+| voc-A1-213 | duur | — | adj | — | — | /dyr/ | expensive | caro | false | *Die jas is duur.* | MOD-011 |
+| voc-A1-214 | goedkoop | — | adj | — | — | /ɣutˈkoːp/ | cheap | barato | partial | *Deze broek is goedkoop.* | MOD-011 |

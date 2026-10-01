@@ -3,10 +3,10 @@ title: Grammar Pattern Registry — A1 (October 2026)
 type: grammar-pattern-registry
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-007, MOD-008, MOD-009, MOD-010]
+covers_modules: [MOD-007, MOD-008, MOD-009, MOD-010, MOD-011]
 created: 2026-09-30
 updated: 2026-09-30
-total_patterns: 7
+total_patterns: 8
 tags: [grammar, patterns, registry, A0, A1, october]
 ---
 
@@ -139,6 +139,23 @@ tags: [grammar, patterns, registry, A0, A1, october]
 | **practice_activity** | Complete the table from memory, then 8 short sentences (A4). |
 | **srs_cloze_candidate** | true |
 
+### 8. `demonstratives`
+
+| Field | Value |
+|---|---|
+| **slug** | `demonstratives` |
+| **name_en** | This and that: deze, die, dit, dat |
+| **pienemann_stage** | 2 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-011_This_and_That_Deze_Die_Dit_Dat]] |
+| **dutch_pattern** | `deze / die + [de-word or plural]` · `dit / dat + [het-word]` · near = deze / dit, far = die / dat |
+| **english_meaning** | "this / these" and "that / those": the form depends on whether the noun is de, het or plural. |
+| **spanish_contrast** | Spanish *este / ese / aquel* has three distances and gender; Dutch has two distances (near, far) and chooses by *de* / *het* / plural. *Ese* and *aquel* are both *die / dat*. |
+| **examples** | Deze jas is mooi. / Dit horloge is nieuw. / Die schoenen zijn duur. / Dat glas is klein. |
+| **common_mistake** | Using *dit* with a de-word (`*dit jas`) or with a plural (`*dit schoenen`), and *deze* with a het-word (`*deze huis`). |
+| **practice_activity** | 12 gap sentences choosing deze / die / dit / dat (A3), then 8 sentences to say in Dutch (A4). |
+| **srs_cloze_candidate** | true |
+
 ---
 
 ## Pattern Index (by Module)
@@ -149,6 +166,7 @@ tags: [grammar, patterns, registry, A0, A1, october]
 | MOD-008 | `telling-time`, `days-and-months` |
 | MOD-009 | `possessive-determiners` |
 | MOD-010 | `verb-stem-spelling`, `irregular-verbs-gaan-staan-doen-zien` |
+| MOD-011 | `demonstratives` |
 
 ---
 
