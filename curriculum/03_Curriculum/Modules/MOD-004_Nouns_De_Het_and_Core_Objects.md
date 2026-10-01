@@ -5,7 +5,7 @@ subtype: standard
 level: 4
 cefr_band: A0-A1
 topic: "Nouns: De / Het and Core Objects"
-vocabulary_count: 30
+vocabulary_count: 39
 grammar_focus: [de-het-article, present-tense-zijn-hebben, plural-formation, noun-phrase-een]
 pronunciation_focus: ["consonant-clusters", "au-ou", "de-vs-dé"]
 estimated_minutes: 50
@@ -44,7 +44,7 @@ tags: [module, MOD-004, A0, foundation, de-het, nouns, hebben, plurals]
 
 ## 3. Vocabulary
 
-> 30 new lemmas from [[../../05_Exercises/Generated/Vocabulary_Seed_A0_A1]] with `module: MOD-004`. **Every noun row has its article on the front.**
+> 39 lemmas in [[../../05_Exercises/Generated/Vocabulary_Seed_A0_A1]] carry `module: MOD-004` and all become SRS cards. The tables below teach 30 core words; *hebben, drinken, eten, ouders, groot, klein, mooi, raam, boek, bier* are in the seed too and appear in the grammar and the examples. (*een* is the word already met as a number in MOD-002.) **Every noun row has its article on the front.**
 
 ### 3.1. Home objects (10)
 
@@ -181,7 +181,7 @@ This module introduces the basic pattern. Edge cases drilled across Levels 5–1
 
 | # | Type | Activity | Estimated time |
 |---|---|---|---|
-| A1 | listening | Two 60–90s clips describing a home/room. Identify 5 nouns + articles. | 8 min |
+| A1 | listening | Listen to the 3 short dialogues in §8.1 (a house, a family, a kitchen; 60–90 s in total) once without reading, then shadow each one. Identify 5 nouns + articles (§8.3). | 8 min |
 | A2 | vocab | Active recall on 30 vocabulary items (article on the front, both directions). | 10 min |
 | A3 | grammar | Conjugation drill: *hebben* (all 6 forms, recorded). | 5 min |
 | A4 | grammar | Article-assignment drill: 30 nouns shown without article; pick de/het. | 7 min |
@@ -201,8 +201,85 @@ This module introduces the basic pattern. Edge cases drilled across Levels 5–1
 
 ## 8. Listening Practice
 
-A1 dialogues. Suggested sources: Bart de Pau A1 home-description video, *Heb je zin?* episode on home, any *Dutch with Kim* room-tour clip.
+- A1 is the three short dialogues below, built only from the words and patterns of MOD-001 to MOD-004.
+- Each dialogue is a separate block: listen to one at a time, then shadow it.
 
+### 8.1. Dialogues for shadowing (a house, a family, a kitchen; about 140 words, 60–90 seconds in total)
+
+In the app, press ▶ (the whole text, or one line at a time). Outside the app, paste the Dutch below into your system voice. Listen once without reading, then read it aloud *with* the voice (shadowing) two times. While you listen, note every noun and its article (*de* or *het*).
+
+**Dialogue 1 — my house**
+
+```
+Anna: Hallo Juan! Heb je een huis?
+Juan: Ja, ik heb een huis. Het huis is groot. Dit is de woonkamer.
+Anna: Mooi! Dat is de keuken, ja?
+Juan: Ja, dat is de keuken. De keuken is klein.
+Anna: Heb je een slaapkamer en een badkamer?
+Juan: Ja, ik heb een slaapkamer en een badkamer. Ik heb een bed, een stoel en een boek.
+Anna: Mooi! Het raam is groot. En de deur is mooi.
+```
+
+**Dialogue 2 — my family**
+
+```
+Anna: Heb je een broer?
+Juan: Ja, ik heb een broer en een zus. Mijn broer heet Daniel. Mijn zus heet Laura.
+Anna: Heeft Laura een kind?
+Juan: Ja, zij heeft een kind. Mijn moeder en mijn vader hebben een groot huis.
+Anna: Mooi, Juan!
+```
+
+**Dialogue 3 — in the kitchen**
+
+```
+Laura: Hallo Juan! Heb je koffie?
+Juan: Nee, ik heb thee en melk. Heb jij brood?
+Laura: Ja, ik heb brood en kaas. Alsjeblieft, Juan!
+Juan: Dank je wel, Laura! Heeft Daniel water?
+Laura: Ja, hij heeft water en bier.
+```
+
+### 8.2. English
+
+**Dialogue 1**
+
+| Speaker | Dutch | English |
+|---|---|---|
+| Anna | Hallo Juan! Heb je een huis? | Hello Juan! Do you have a house? |
+| Juan | Ja, ik heb een huis. Het huis is groot. Dit is de woonkamer. | Yes, I have a house. The house is big. This is the living room. |
+| Anna | Mooi! Dat is de keuken, ja? | Nice! That is the kitchen, right? |
+| Juan | Ja, dat is de keuken. De keuken is klein. | Yes, that is the kitchen. The kitchen is small. |
+| Anna | Heb je een slaapkamer en een badkamer? | Do you have a bedroom and a bathroom? |
+| Juan | Ja, ik heb een slaapkamer en een badkamer. Ik heb een bed, een stoel en een boek. | Yes, I have a bedroom and a bathroom. I have a bed, a chair and a book. |
+| Anna | Mooi! Het raam is groot. En de deur is mooi. | Nice! The window is big. And the door is beautiful. |
+
+**Dialogue 2**
+
+| Speaker | Dutch | English |
+|---|---|---|
+| Anna | Heb je een broer? | Do you have a brother? |
+| Juan | Ja, ik heb een broer en een zus. Mijn broer heet Daniel. Mijn zus heet Laura. | Yes, I have a brother and a sister. My brother is called Daniel. My sister is called Laura. |
+| Anna | Heeft Laura een kind? | Does Laura have a child? |
+| Juan | Ja, zij heeft een kind. Mijn moeder en mijn vader hebben een groot huis. | Yes, she has a child. My mother and my father have a big house. |
+| Anna | Mooi, Juan! | Lovely, Juan! |
+
+**Dialogue 3**
+
+| Speaker | Dutch | English |
+|---|---|---|
+| Laura | Hallo Juan! Heb je koffie? | Hello Juan! Do you have coffee? |
+| Juan | Nee, ik heb thee en melk. Heb jij brood? | No, I have tea and milk. Do you have bread? |
+| Laura | Ja, ik heb brood en kaas. Alsjeblieft, Juan! | Yes, I have bread and cheese. Here you go, Juan! |
+| Juan | Dank je wel, Laura! Heeft Daniel water? | Thank you, Laura! Does Daniel have water? |
+| Laura | Ja, hij heeft water en bier. | Yes, he has water and beer. |
+
+### 8.3. Check
+
+- Write down 5 nouns with their article (for example *het huis*, *de keuken*). Which of them are *het*-words? (*het huis*, *het raam*, *het bed*, *het boek*, *het kind*)
+- Which form of *hebben* goes with *ik*, *jij*, *zij* and *wij / jullie / zij* (plural)? Find one of each (*heb*, *heb jij*, *heeft*, *hebben*).
+- In Dialogue 1, which two rooms are *groot* and *klein*? (*het huis* is groot, *de keuken* is klein)
+- Which drinks and foods does Laura have? (*brood*, *kaas*; Daniel has *water* and *bier*)
 ---
 
 ## 9. Speaking Practice

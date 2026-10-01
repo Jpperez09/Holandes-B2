@@ -1,6 +1,6 @@
 ---
 title: Dutch Books and Reading Materials
-status: placeholder
+status: replaced
 type: resources
 created: 2026-05-19
 updated: 2026-05-19
@@ -15,7 +15,7 @@ Catalog Dutch graded readers, grammar reference books, and authentic texts for r
 
 ## Status
 
-Placeholder. Fill during Phase 1 research.
+Replaced by the app's Resources Hub (the Resources screen). It is not going to be filled in here.
 
 ## Grammar Reference Books
 

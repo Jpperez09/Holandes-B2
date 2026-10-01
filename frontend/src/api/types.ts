@@ -163,7 +163,8 @@ export interface ProgressResponse {
 export interface WeeklyStats {
   start: string;
   end: string;
-  minutesPerDay: Array<{ date: string; minutes: number }>;
+  /** `unregistered`: reviews or completed activities that day, but 0 minutes logged. */
+  minutesPerDay: Array<{ date: string; minutes: number; unregistered: boolean }>;
   totalMinutes: number;
   modulesCompleted: {
     count: number;
@@ -172,8 +173,11 @@ export interface WeeklyStats {
   reviews: {
     count: number;
     goodOrBetter: number;
+    /** Good/Easy share of ALL reviews, first exposures included. */
     percentGoodOrBetter: number | null;
   };
+  /** Real retention: reviews of cards already in the Review state, Hard or better counts. */
+  retention: { count: number; correct: number; percent: number | null };
   newCardsIntroduced: number;
   dueCardsPending: number;
   /** Plain-text summary, ready to paste into a chat. */

@@ -230,7 +230,7 @@ Answer in a full Dutch sentence. Use the number in brackets.
 
 ### 8.1. Dialogue for shadowing (ages and prices, about 142 words, 60–90 seconds)
 
-Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
+In the app, press ▶ (the whole text, or one line at a time). Outside the app, paste the Dutch below into your system voice. Listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
 ```
 Anna: Hoe oud ben je, Juan?

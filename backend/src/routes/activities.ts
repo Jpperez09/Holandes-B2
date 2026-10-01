@@ -107,4 +107,40 @@ router.post('/:id/attempts', requireVault, (req: Request, res: Response) => {
   res.status(201).json(attempt);
 });
 
+// DELETE /api/activities/:id/attempts
+// Undoes "mark done": removes the completed attempts of this activity. A tick by
+// mistake on a module you have not studied releases its words to the SRS; with the
+// activity unticked (and no other one done) the module is not started again and its
+// words stop being served as new cards. Words that were already reviewed keep their
+// schedule and history: a review cannot be taken back. Idempotent.
+router.delete('/:id/attempts', requireVault, (req: Request, res: Response) => {
+  const db = getDb();
+  const activityId = parseInt(req.params['id'], 10);
+
+  if (isNaN(activityId)) {
+    return res.status(400).json({
+      type: 'https://datatracker.ietf.org/doc/html/rfc7807',
+      title: 'Bad Request',
+      status: 400,
+      detail: 'Activity id must be a number.',
+    });
+  }
+
+  const activity = db.prepare('SELECT id FROM activities WHERE id = ?').get(activityId);
+  if (!activity) {
+    return res.status(404).json({
+      type: 'https://datatracker.ietf.org/doc/html/rfc7807',
+      title: 'Not Found',
+      status: 404,
+      detail: `Activity not found: ${activityId}`,
+    });
+  }
+
+  const removed = db
+    .prepare('DELETE FROM activity_attempts WHERE activity_id = ? AND completed_at IS NOT NULL')
+    .run(activityId).changes;
+
+  res.json({ activity_id: activityId, removed });
+});
+
 export default router;

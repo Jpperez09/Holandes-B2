@@ -64,7 +64,7 @@ tags: [module, MOD-014, A0, foundation, cafe, requests, politeness]
 | Dutch | Article | Plural / forms | IPA | English | Español | Example |
 |---|---|---|---|---|---|---|
 | café | het | cafés | /kɑˈfeː/ | café, bar | cafetería, bar | *Het café is klein, maar mooi.* |
-| ober | de | obers | /ˈoːbər/ | waiter | camarero | *Ober, mag ik de rekening?* |
+| ober | de | obers | /ˈoːbər/ | waiter | camarero | *De ober komt met de kaart.* |
 | kaart | de | kaarten | /kaːrt/ | menu; card; map | carta; tarjeta; mapa | *Mag ik de kaart, alstublieft?* |
 | rekening | de | rekeningen | /ˈreːkənɪŋ/ | bill, check | cuenta | *Mag ik de rekening?* |
 
@@ -74,7 +74,7 @@ tags: [module, MOD-014, A0, foundation, cafe, requests, politeness]
 |---|---|---|---|---|---|---|
 | wijn | de | wijnen | /ʋɛin/ | wine | vino | *Mijn opa drinkt graag wijn.* |
 | appeltaart | de | appeltaarten | /ˈɑpəltaːrt/ | apple pie | tarta de manzana | *De appeltaart is lekker.* |
-| suiker | de | suikers | /ˈsœykər/ | sugar | azúcar | *Koffie zonder suiker, alstublieft.* |
+| suiker | de | suikers (rare) | /ˈsœykər/ | sugar | azúcar | *Koffie zonder suiker, alstublieft.* |
 | limonade | de | limonades | /limoˈnaːdə/ | lemonade, soft drink | limonada, refresco | *Mijn zoon wil graag limonade.* |
 
 ---
@@ -204,7 +204,7 @@ Say each sentence in Dutch. Write the ones you miss.
 
 ### 8.1. Dialogue for shadowing (at a café, about 135 words, 60–90 seconds)
 
-Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
+In the app, press ▶ (the whole text, or one line at a time). Outside the app, paste the Dutch below into your system voice. Listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
 ```
 Ober: Goedemiddag!
@@ -223,7 +223,7 @@ Ober: Ja, mevrouw. Alstublieft.
 Juan: Ik wil ook een appeltaart, en nog een koffie.
 Anna: De appeltaart is heel lekker, Juan!
 Juan: Ja, en de koffie is warm en goed. Wil jij nog een limonade?
-Anna: Ja, graag! Ober, nog een limonade, alstublieft.
+Anna: Ja, graag! Pardon, mag ik nog een limonade?
 Ober: Ja, mevrouw. Goed. Wilt u ook wijn?
 Juan: Nee, dank u wel. Mag ik de rekening, alstublieft?
 Ober: Ja, meneer. Dat is zeventien euro vijftig.
@@ -251,7 +251,7 @@ Ober: Tot ziens, meneer en mevrouw!
 | Juan | Ik wil ook een appeltaart, en nog een koffie. | I would like an apple pie too, and another coffee. |
 | Anna | De appeltaart is heel lekker, Juan! | The apple pie is very tasty, Juan! |
 | Juan | Ja, en de koffie is warm en goed. Wil jij nog een limonade? | Yes, and the coffee is hot and good. Do you want another lemonade? |
-| Anna | Ja, graag! Ober, nog een limonade, alstublieft. | Yes, please! Waiter, another lemonade, please. |
+| Anna | Ja, graag! Pardon, mag ik nog een limonade? | Yes, please! Excuse me, may I have another lemonade? |
 | Ober | Ja, mevrouw. Goed. Wilt u ook wijn? | Yes, madam. Good. Would you like wine too? |
 | Juan | Nee, dank u wel. Mag ik de rekening, alstublieft? | No, thank you. May I have the bill, please? |
 | Ober | Ja, meneer. Dat is zeventien euro vijftig. | Yes, sir. That is seventeen euros fifty. |

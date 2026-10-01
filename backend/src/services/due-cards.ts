@@ -57,11 +57,51 @@ function getNewCards(db: Database.Database, limit: number): VocabularyItem[] {
     .all(limit) as VocabularyItem[];
 }
 
+/** Largest "coming back soon" window a client may ask for. */
+export const MAX_SOON_MINUTES = 120;
+
+/**
+ * Cards that are not due yet but will be within `minutes`, soonest first. FSRS
+ * (short-term on) brings "Again" back after about a minute and "Good" on a new
+ * card after about ten, so Review asks for these when its queue runs out.
+ */
+function getSoonCards(db: Database.Database, minutes: number, limit: number): VocabularyItem[] {
+  return db
+    .prepare(
+      `SELECT * FROM vocabulary_items
+        WHERE status != 'suspended'
+          AND status != 'archived'
+          AND datetime(json_extract(fsrs_state, '$.due')) >  datetime('now')
+          AND datetime(json_extract(fsrs_state, '$.due')) <= datetime('now', ?)
+        ORDER BY datetime(json_extract(fsrs_state, '$.due')), id
+        LIMIT ?`,
+    )
+    .all(`+${minutes} minutes`, limit) as VocabularyItem[];
+}
+
+export interface DueOptions {
+  /** Also return the cards that come due within this many minutes (after the due and new ones). */
+  withinMinutes?: number;
+}
+
 /**
  * The review queue: overdue cards first (oldest due first), then new cards up
- * to whatever is left of today's new_cards_per_day budget.
+ * to whatever is left of today's new_cards_per_day budget, then (only when
+ * asked for) the cards that come due within `withinMinutes`.
  */
-export function getDueCards(db: Database.Database = getDb()): VocabularyItem[] {
+export function getDueCards(
+  db: Database.Database = getDb(),
+  options: DueOptions = {},
+): VocabularyItem[] {
+  const queue = getDueNowCards(db);
+  const minutes = Math.floor(options.withinMinutes ?? 0);
+  if (!(minutes > 0)) return queue;
+  const room = MAX_QUEUE_SIZE - queue.length;
+  if (room <= 0) return queue;
+  return [...queue, ...getSoonCards(db, Math.min(minutes, MAX_SOON_MINUTES), room)];
+}
+
+function getDueNowCards(db: Database.Database): VocabularyItem[] {
   const due = db
     .prepare(
       `SELECT * FROM v_due_cards

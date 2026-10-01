@@ -76,7 +76,7 @@ Same as `Vocabulary_Seed_A0_A1`, plus two optional columns:
 | id | dutch | article | pos | plural | forms | ipa | gloss_en | gloss_es | cognate_en | example_nl | module_id |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | voc-A1-159 | maandag | de | noun | maandagen | — | /ˈmaːndɑx/ | Monday | lunes | false | *Vandaag is het maandag.* | MOD-008 |
-| voc-A1-160 | dinsdag | de | noun | dinsdagen | — | /ˈdinzdɑx/ | Tuesday | martes | false | *Morgen is het dinsdag.* | MOD-008 |
+| voc-A1-160 | dinsdag | de | noun | dinsdagen | — | /ˈdɪnzdɑx/ | Tuesday | martes | false | *Morgen is het dinsdag.* | MOD-008 |
 | voc-A1-161 | woensdag | de | noun | woensdagen | — | /ˈʋunzdɑx/ | Wednesday | miércoles | false | *Woensdag werk ik niet.* | MOD-008 |
 | voc-A1-162 | donderdag | de | noun | donderdagen | — | /ˈdɔndərdɑx/ | Thursday | jueves | partial | *Donderdag werk ik in Amsterdam.* | MOD-008 |
 | voc-A1-163 | vrijdag | de | noun | vrijdagen | — | /ˈvrɛidɑx/ | Friday | viernes | false | *Vrijdag ben ik moe.* | MOD-008 |
@@ -122,7 +122,7 @@ Same as `Vocabulary_Seed_A0_A1`, plus two optional columns:
 | voc-A1-193 | schrijven | — | verb | — | ik schrijf, hij schrijft · schreef · geschreven | /ˈsxrɛivə(n)/ | to write | escribir | false | *Ik schrijf een boek.* | MOD-010 |
 | voc-A1-194 | lezen | — | verb | — | ik lees, hij leest · las · gelezen | /ˈleːzə(n)/ | to read | leer | false | *Ik lees mijn boek.* | MOD-010 |
 | voc-A1-195 | spelen | — | verb | — | ik speel, hij speelt · speelde · gespeeld | /ˈspeːlə(n)/ | to play | jugar, tocar | false | *Mijn zoon speelt in zijn kamer.* | MOD-010 |
-| voc-A1-196 | praten | — | verb | — | ik praat, hij praat · praatte · gepraat | /ˈpraːtə(n)/ | to talk, to chat | hablar, charlar | partial | *Wij praten Nederlands.* | MOD-010 |
+| voc-A1-196 | praten | — | verb | — | ik praat, hij praat · praatte · gepraat | /ˈpraːtə(n)/ | to talk, to chat | hablar, charlar | partial | *Mijn broer en ik praten in de keuken.* | MOD-010 |
 | voc-A1-197 | zitten | — | verb | — | ik zit, hij zit · zat · gezeten | /ˈzɪtə(n)/ | to sit, to be sitting | estar sentado | true | *Hij zit in zijn kamer.* | MOD-010 |
 | voc-A1-198 | vinden | — | verb | — | ik vind, hij vindt · vond · gevonden | /ˈvɪndə(n)/ | to find; to think (an opinion) | encontrar; opinar | true | *Ik vind Nederlands niet moeilijk.* | MOD-010 |
 | voc-A1-199 | kijken | — | verb | — | ik kijk, hij kijkt · keek · gekeken | /ˈkɛikə(n)/ | to look, to watch | mirar | false | *Kijk, daar is je tas!* | MOD-010 |
@@ -196,12 +196,12 @@ Same as `Vocabulary_Seed_A0_A1`, plus two optional columns:
 | voc-A1-247 | zonder | — | prep | — | — | /ˈzɔndər/ | without | sin | partial | *Ik drink koffie zonder suiker.* | MOD-014 |
 | voc-A1-248 | lekker | — | adj | — | — | /ˈlɛkər/ | tasty, delicious; nice | rico, sabroso | false | *De appeltaart is lekker.* | MOD-014 |
 | voc-A1-249 | café | het | noun | cafés | — | /kɑˈfeː/ | café, bar | cafetería, bar | true | *Het café is klein, maar mooi.* | MOD-014 |
-| voc-A1-250 | ober | de | noun | obers | — | /ˈoːbər/ | waiter | camarero | false | *Ober, mag ik de rekening?* | MOD-014 |
+| voc-A1-250 | ober | de | noun | obers | — | /ˈoːbər/ | waiter | camarero | false | *De ober komt met de kaart.* | MOD-014 |
 | voc-A1-251 | kaart | de | noun | kaarten | — | /kaːrt/ | menu; card; map | carta; tarjeta; mapa | partial | *Mag ik de kaart, alstublieft?* | MOD-014 |
 | voc-A1-252 | rekening | de | noun | rekeningen | — | /ˈreːkənɪŋ/ | bill, check | cuenta | false | *Mag ik de rekening?* | MOD-014 |
 | voc-A1-253 | wijn | de | noun | wijnen | — | /ʋɛin/ | wine | vino | true | *Mijn opa drinkt graag wijn.* | MOD-014 |
 | voc-A1-254 | appeltaart | de | noun | appeltaarten | — | /ˈɑpəltaːrt/ | apple pie | tarta de manzana | partial | *De appeltaart is lekker.* | MOD-014 |
-| voc-A1-255 | suiker | de | noun | suikers | — | /ˈsœykər/ | sugar | azúcar | partial | *Koffie zonder suiker, alstublieft.* | MOD-014 |
+| voc-A1-255 | suiker | de | noun | suikers (rare) | — | /ˈsœykər/ | sugar | azúcar | partial | *Koffie zonder suiker, alstublieft.* | MOD-014 |
 | voc-A1-256 | limonade | de | noun | limonades | — | /limoˈnaːdə/ | lemonade, soft drink | limonada, refresco | true | *Mijn zoon wil graag limonade.* | MOD-014 |
 
 ### 2.10. Irregular plurals and diminutives (MOD-015)
@@ -213,7 +213,7 @@ Same as `Vocabulary_Seed_A0_A1`, plus two optional columns:
 | voc-A1-259 | schip | het | noun | schepen | — | /sxɪp/ | ship, boat | barco | partial | *Het schip is groot.* | MOD-015 |
 | voc-A1-260 | blad | het | noun | bladeren | — | /blɑt/ | leaf; sheet of paper | hoja | false | *Dit blad is groen.* | MOD-015 |
 | voc-A1-261 | weg | de | noun | wegen | — | /ʋɛx/ | road, way | camino, carretera | partial | *De weg is lang.* | MOD-015 |
-| voc-A1-262 | been | het | noun | benen | — | /beːn/ | leg (also: bone, in some words) | pierna | false | *Mijn been is moe.* | MOD-015 |
+| voc-A1-262 | been | het | noun | benen | — | /beːn/ | leg (also: bone, in some words) | pierna | false | *Mijn benen zijn moe.* | MOD-015 |
 | voc-A1-263 | lied | het | noun | liederen | — | /lit/ | song | canción | false | *Dit lied is mooi.* | MOD-015 |
 | voc-A1-264 | kop | de | noun | koppen | — | /kɔp/ | head (informal); cup, mug | cabeza; taza | partial | *Ik heb een kop koffie.* | MOD-015 |
 | voc-A1-265 | meisje | het | noun | meisjes | — | /ˈmɛiʃə/ | girl | niña, chica | false | *Het meisje heeft een rode fiets.* | MOD-015 |
@@ -221,7 +221,7 @@ Same as `Vocabulary_Seed_A0_A1`, plus two optional columns:
 | voc-A1-267 | kopje | het | noun | kopjes | — | /ˈkɔpjə/ | cup | taza | false | *Ik wil graag een kopje koffie.* | MOD-015 |
 | voc-A1-268 | broodje | het | noun | broodjes | — | /ˈbroːtjə/ | bread roll, sandwich | panecillo, bocadillo | false | *Mag ik een broodje kaas?* | MOD-015 |
 | voc-A1-269 | kaartje | het | noun | kaartjes | — | /ˈkaːrtjə/ | ticket; small card | billete, entrada; tarjetita | false | *Hoeveel kost het kaartje?* | MOD-015 |
-| voc-A1-270 | beetje | het | noun | beetjes | — | /ˈbeːtjə/ | little bit | poquito | false | *Ik spreek een beetje Nederlands.* | MOD-015 |
+| voc-A1-270 | beetje | het | noun | beetjes (rare) | — | /ˈbeːtjə/ | little bit | poquito | false | *Ik spreek een beetje Nederlands.* | MOD-015 |
 
 ### 2.11. Places and prepositions (MOD-016)
 

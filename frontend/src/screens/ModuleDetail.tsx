@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { endpoints } from '../api/endpoints';
 import { ApiError } from '../api/client';
@@ -6,7 +6,8 @@ import type { Activity, ModuleDetailResponse, VaultModuleRaw } from '../api/type
 import { useApi } from '../hooks/useApi';
 import { AsyncView, ProgressBar } from '../components/ui';
 import { Markdown, extractSection } from '../components/Markdown';
-import { getCompletedActivities, markActivityDone } from '../lib/storage';
+import { Dialogue } from '../components/Dialogue';
+import { getCompletedActivities, markActivityDone, unmarkActivityDone } from '../lib/storage';
 import {
   activityIcon,
   activityKind,
@@ -14,6 +15,15 @@ import {
   moduleStatus,
 } from '../lib/friendly';
 import { isReviewModule } from '../lib/progression';
+import {
+  activityRefs,
+  isMetadataSection,
+  isStudySection,
+  sectionAnchor,
+  splitModuleBody,
+  type StudyItem,
+  type StudySection,
+} from '../lib/moduleBody';
 
 interface ModuleData {
   module: ModuleDetailResponse;
@@ -34,6 +44,82 @@ function loadModule(slug: string): () => Promise<ModuleData> {
     }
     return { module, body };
   };
+}
+
+function scrollToSection(num: string): void {
+  document
+    .getElementById(sectionAnchor(num))
+    ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/** An answer key, folded until the learner asks for it. */
+function AnswerKey({
+  item,
+}: {
+  item: Extract<StudyItem, { kind: 'answers' }>;
+}): React.JSX.Element {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="answer-key">
+      <div className="md">
+        <h3 id={item.number ? sectionAnchor(item.number) : undefined}>
+          {item.heading}
+        </h3>
+      </div>
+      <div className="collapse">
+        <button
+          type="button"
+          className="collapse__head"
+          aria-expanded={open}
+          onClick={() => setOpen((o) => !o)}
+        >
+          {open ? '▾ Ocultar respuestas' : '▸ Ver respuestas'}
+        </button>
+        {open && (
+          <div className="collapse__body">
+            <Markdown source={item.markdown} />
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/** What is inside one "##" section of the module body, answer keys folded. */
+function StudyBody({ section }: { section: StudySection }): React.JSX.Element {
+  // The code blocks of the listening section are the dialogues: give them audio.
+  const renderCode = /listening/i.test(section.title)
+    ? (code: string) => <Dialogue code={code} />
+    : undefined;
+  return (
+    <>
+      {section.intro && <Markdown source={section.intro} renderCode={renderCode} />}
+      {section.items.map((item, i) =>
+        item.kind === 'md' ? (
+          <Markdown key={i} source={item.markdown} renderCode={renderCode} />
+        ) : (
+          <AnswerKey key={i} item={item} />
+        ),
+      )}
+    </>
+  );
+}
+
+function StudyBlock({ section }: { section: StudySection }): React.JSX.Element {
+  return (
+    <section
+      className="detail-section"
+      id={section.number ? sectionAnchor(section.number) : undefined}
+    >
+      <h2 className="section-title mt-0">
+        {section.number && <span className="faint">§{section.number} </span>}
+        {section.title}
+      </h2>
+      <div className="card">
+        <StudyBody section={section} />
+      </div>
+    </section>
+  );
 }
 
 export function ModuleDetail(): React.JSX.Element {
@@ -100,11 +186,56 @@ function ModuleView({ data }: { data: ModuleData }): React.JSX.Element {
     }
   }
 
+  /** Undo a tick by mistake: the activity counts as not done again. */
+  async function uncomplete(activity: Activity): Promise<void> {
+    if (!checked.has(activity.id)) return;
+    setBusyId(activity.id);
+    try {
+      await endpoints.unmarkActivityComplete(activity.id);
+      unmarkActivityDone(activity.id);
+      setChecked((prev) => {
+        const next = new Set(prev);
+        next.delete(activity.id);
+        return next;
+      });
+      try {
+        const fresh = await endpoints.getModule(module.module_id);
+        setPercent(fresh.percent_complete);
+      } catch {
+        /* keep optimistic state */
+      }
+    } catch {
+      alert('No pude desmarcarla. Inténtalo de nuevo.');
+    } finally {
+      setBusyId(null);
+    }
+  }
+
   const objectives = body ? extractSection(body, /learning objective/i) : null;
   const grammar = body ? extractSection(body, /grammar/i) : null;
   const realWorld = body
     ? extractSection(body, /real.?world task/i)
     : null;
+
+  // The rest of the module, in the module's own order: what comes before the
+  // activities (pronunciation), the exercises that belong to them (6.1, 6.2,
+  // answer keys), and what comes after (retrieval, listening, speaking, writing).
+  const allSections = useMemo(() => (body ? splitModuleBody(body) : []), [body]);
+  const sections = useMemo(() => allSections.filter(isStudySection), [allSections]);
+  const activitiesAt = sections.findIndex((s) => s.isActivities);
+  const before = activitiesAt >= 0 ? sections.slice(0, activitiesAt) : sections;
+  const exercises = activitiesAt >= 0 ? sections[activitiesAt] : null;
+  const after = activitiesAt >= 0 ? sections.slice(activitiesAt + 1) : [];
+  // Every "§N" an activity may point at that the page really shows. Objectives,
+  // words, grammar and the real-world task have their own cards, so they count too.
+  const knownRefs = useMemo(
+    () => new Set(allSections.filter((s) => !isMetadataSection(s)).flatMap((s) => s.refs)),
+    [allSections],
+  );
+  const anchorOf = (title: RegExp): string | undefined => {
+    const n = allSections.find((s) => title.test(s.title))?.number;
+    return n ? sectionAnchor(n) : undefined;
+  };
 
   const status = moduleStatus(percent);
   const doneCount = checked.size;
@@ -139,7 +270,7 @@ function ModuleView({ data }: { data: ModuleData }): React.JSX.Element {
 
       {/* What you'll learn */}
       {objectives && (
-        <section className="detail-section">
+        <section className="detail-section" id={anchorOf(/learning objective/i)}>
           <h2 className="section-title mt-0">What you'll learn</h2>
           <div className="card">
             <Markdown source={objectives} />
@@ -161,7 +292,7 @@ function ModuleView({ data }: { data: ModuleData }): React.JSX.Element {
 
       {/* Vocabulary */}
       {module.vocabulary.length > 0 && (
-        <section className="detail-section">
+        <section className="detail-section" id={anchorOf(/vocabulary/i)}>
           <div className="spread">
             <h2 className="section-title mt-0">Words in this module</h2>
             <Link className="btn btn--ghost" to="/review">
@@ -186,7 +317,7 @@ function ModuleView({ data }: { data: ModuleData }): React.JSX.Element {
 
       {/* Grammar */}
       {grammar && (
-        <section className="detail-section">
+        <section className="detail-section" id={anchorOf(/grammar/i)}>
           <h2 className="section-title mt-0">The grammar idea</h2>
           <div className="card">
             <Markdown source={grammar} />
@@ -194,8 +325,16 @@ function ModuleView({ data }: { data: ModuleData }): React.JSX.Element {
         </section>
       )}
 
-      {/* Activities */}
-      <section className="detail-section">
+      {/* Pronunciation, and anything else that comes before the activities */}
+      {before.map((s) => (
+        <StudyBlock key={s.title} section={s} />
+      ))}
+
+      {/* Activities, with the exercises they point at */}
+      <section
+        className="detail-section"
+        id={exercises?.number ? sectionAnchor(exercises.number) : undefined}
+      >
         <h2 className="section-title mt-0">Your activities</h2>
         <p className="muted" style={{ marginTop: 0 }}>
           Work through these, then tick each one off.
@@ -208,6 +347,7 @@ function ModuleView({ data }: { data: ModuleData }): React.JSX.Element {
           )}
           {activities.map((a) => {
             const isDone = checked.has(a.id);
+            const refs = activityRefs(a.title).filter((r) => knownRefs.has(r));
             return (
               <div
                 key={a.id}
@@ -216,9 +356,10 @@ function ModuleView({ data }: { data: ModuleData }): React.JSX.Element {
                 <button
                   type="button"
                   className={'check-box' + (isDone ? ' is-done' : '')}
-                  onClick={() => void complete(a)}
-                  disabled={isDone || busyId === a.id}
-                  aria-label={isDone ? 'Completed' : 'Mark complete'}
+                  onClick={() => void (isDone ? uncomplete(a) : complete(a))}
+                  disabled={busyId === a.id}
+                  aria-label={isDone ? 'Completed — click to undo' : 'Mark complete'}
+                  title={isDone ? 'Desmarcar' : undefined}
                 >
                   {isDone ? '✓' : ''}
                 </button>
@@ -234,8 +375,31 @@ function ModuleView({ data }: { data: ModuleData }): React.JSX.Element {
                       : ''}
                     {isDone ? ' · completed' : ''}
                   </div>
+                  {refs.length > 0 && (
+                    <div className="check-row__refs">
+                      {refs.map((r) => (
+                        <button
+                          key={r}
+                          type="button"
+                          className="ref-chip"
+                          onClick={() => scrollToSection(r)}
+                        >
+                          Ir a §{r}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
-                {!isDone && (
+                {isDone ? (
+                  <button
+                    type="button"
+                    className="btn btn--ghost"
+                    onClick={() => void uncomplete(a)}
+                    disabled={busyId === a.id}
+                  >
+                    {busyId === a.id ? 'Guardando…' : 'Desmarcar'}
+                  </button>
+                ) : (
                   <button
                     type="button"
                     className="btn btn--ghost"
@@ -249,11 +413,21 @@ function ModuleView({ data }: { data: ModuleData }): React.JSX.Element {
             );
           })}
         </div>
+        {exercises && (exercises.intro || exercises.items.length > 0) && (
+          <div className="card mt-m">
+            <StudyBody section={exercises} />
+          </div>
+        )}
       </section>
+
+      {/* Retrieval, listening, speaking, writing */}
+      {after.map((s) => (
+        <StudyBlock key={s.title} section={s} />
+      ))}
 
       {/* Real-world task */}
       {realWorld && (
-        <section className="detail-section">
+        <section className="detail-section" id={anchorOf(/real.?world/i)}>
           <h2 className="section-title mt-0">One real thing to do 🌍</h2>
           <div className="card card--accent">
             <Markdown source={realWorld} />

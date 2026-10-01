@@ -166,7 +166,7 @@ Provide the evidence and resources Juanpa needs to (a) decide which B2 Dutch exa
 
 ### Apps & online courses for exam prep
 
-- **NedBox** (CTO / KU Leuven) — free online practice with Dutch news and exercises: https://www.nedbox.be — explicit B1–B2 track that aligns with CNaVT.
+- **NedBox** (CTO / KU Leuven, Belgian / Flemish source) — free online practice with Dutch news and exercises: https://www.nedbox.be — explicit B1–B2 track that aligns with CNaVT.
 - **NT2 Taalmenu** (free) — https://nt2taalmenu.nl — large pool of NT2-style exercises.
 - **Naar Nederland** (free state-funded) — integration-level, below B2 — useful only as warm-up.
 - **Taalblokken** (Boom) — paid, online B1/B2 modules with NT2-aligned tasks.
@@ -266,9 +266,9 @@ Open in `00_Project/DECISIONS` — finalize by Phase 2.
 - Council of Europe (2020). *CEFR Companion Volume*.
 - Boom NT2 publisher catalogue: https://www.boomnt2.nl
 - Coutinho publisher: https://www.coutinho.nl
-- NedBox (CTO, KU Leuven): https://www.nedbox.be
+- NedBox (CTO, KU Leuven; Belgian / Flemish source): https://www.nedbox.be
 - NT2 Taalmenu: https://nt2taalmenu.nl
-- Wablieft (easy-Dutch newspaper, BE): https://www.wablieft.be
+- Wablieft (easy-Dutch newspaper; Belgian / Flemish source): https://www.wablieft.be
 - *Learn Dutch with Bart de Pau*: https://www.learndutch.org
 
 ---

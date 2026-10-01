@@ -19,7 +19,7 @@ vocabulary review, module browser, progress overview, and a daily learning journ
 | Content | Obsidian Markdown vault — the Dutch curriculum |
 | Spaced repetition | FSRS algorithm (`ts-fsrs`) |
 
-There are **seven screens**: Home, Today, Learn, Review, Progress, Library, Settings.
+There are **eight screens**: Home, Today, Learn, Review, Progress, Library, Resources, Settings.
 
 ## Who it is for
 
@@ -85,7 +85,7 @@ To stop the app, press **Ctrl+C** in the terminal.
 | `npm run dev:backend` | Start only the backend |
 | `npm run dev:frontend` | Start only the frontend |
 | `npm run build` | Production build of both |
-| `npm test` | Run the backend test suite |
+| `npm test` | Run the test suite (275 tests; it also covers the frontend logic, see below) |
 
 ## The curriculum (no setup needed)
 
@@ -110,6 +110,62 @@ Any curriculum folder just needs `03_Curriculum/`, `05_Exercises/` and
 4. Work through the module activities and tick them off.
 5. Open **Review** to study vocabulary flashcards (spaced repetition).
 6. End the day on **Today** by writing a short daily log.
+
+---
+
+## The daily study flow
+
+- **Today follows a weekly calendar** (setting `study_calendar`). By default Monday, Tuesday,
+  Thursday and Friday propose the next standard module; **Saturday** proposes that week's review
+  module (MOD-101 on 3 Oct 2026, MOD-102 a week later, and so on); **Wednesday and Sunday** have no
+  new module, only the word review and the line "Hoy toca portugués".
+- **A module opens in full inside the app**: pronunciation, the exercises, the dialogue, the reading
+  text, speaking and writing. Answer keys stay folded behind **Ver respuestas**. Each activity has an
+  "Ir a §8.1"-style button that jumps to the section it points at. An activity ticked by mistake
+  can be **unticked** (click the box, or *Desmarcar*): the module's new words go back to waiting.
+  Words you already reviewed keep their history, since a review cannot be taken back.
+- **Review** brings a card you fail (**Again**) back at the end of the same session. When the queue
+  ends it asks again, and if cards come due within 20 minutes it says "N tarjetas vuelven en X min"
+  with a **Continuar** button.
+- **Study timer** on Today (start / pause / finish): finishing adds the whole minutes to the day's log
+  without touching your notes. A running timer survives a page reload.
+
+### Settings that shape the plan
+
+| Setting | Where | Default | What it does |
+|---|---|---|---|
+| `new_cards_per_day` | Settings → *New words per day* | 10 (0–100) | How many brand-new words Review introduces each day. They come only from modules you have started (one activity ticked). |
+| `study_calendar` | `PATCH /api/settings` (JSON text) | see below | What Today proposes on each weekday. |
+
+`study_calendar` is a JSON object. A day is `"module"` (next standard module), `"weekly-review"`
+(this week's review) or `"review-only"`; days you leave out keep the default.
+
+```json
+{"mon":"module","tue":"module","wed":"review-only","thu":"module","fri":"module","sat":"weekly-review","sun":"review-only","review_only_note":"Hoy toca portugués","weekly_review_start":"2026-10-03"}
+```
+
+`weekly_review_start` is the Saturday that gets MOD-101; each following week gets the next review.
+Before that date, or after the last review, a Saturday is an ordinary study day.
+
+### The weekly summary
+
+**Progress → Copiar resumen semanal** copies a plain-text summary of the last 7 days, ready to paste
+into a chat: minutes per day (a day with reviews or activities but 0 minutes is marked *minutos sin
+registrar*), modules completed, reviews, new cards and cards pending. It reports two different
+percentages, on purpose:
+
+- **Calificaciones Good/Easy, todas las tarjetas**: the share of all reviews graded Good or Easy, first
+  exposures of new cards included. Ten new cards graded Good read 100%, so this is not retention.
+- **Retención real**: only reviews of cards that were already in the Review state, where Hard or better
+  counts as remembered.
+
+### Audio and the Dutch voice
+
+Every dialogue has **▶ Escuchar todo**, a ▶ on each line, and a **0.8× / 1×** speed switch. The app
+reads Dutch with your browser's voices and prefers **nl-NL** (inside it, voices named *Natural* or
+*Online*); a Flemish **nl-BE** voice is used only when no nl-NL voice is installed. **Settings → Voz
+neerlandesa** lists the Dutch voices of this browser and has a **Probar** button; the choice is kept
+in this browser. If only nl-BE voices exist, install an nl-NL voice in your system settings.
 
 ---
 
@@ -167,7 +223,7 @@ and delete `progress.sqlite` — it is recreated empty on the next start.
 | `better-sqlite3` blocked by antivirus | Add an exception for the `better-sqlite3` file under `node_modules`. |
 | Vault edits don't show up | Click **Settings → Re-scan vault for content**. |
 | Wrong Node version | `nvm install 22 && nvm use 22`, then re-run `npm run install:all`. |
-| Vocabulary audio is silent or sounds non-Dutch | The app uses your browser/OS voices; install a Dutch (`nl-NL`) voice in your system settings for best results. The app still works without it. |
+| Audio is silent or sounds non-Dutch (or Flemish) | The app uses your browser/OS voices. Open **Settings → Voz neerlandesa** and press **Probar**; install a Dutch (`nl-NL`) voice in your system settings if only `nl-BE` or none is listed. The app still works without it. |
 
 ---
 
@@ -179,10 +235,10 @@ This is a working MVP. Known limitations, none of which block daily learning:
   a stub, so the Today screen assembles your checklist from modules + due cards itself.
 - **Activity checkmarks are remembered per-browser.** The progress *bar* is always
   accurate (server-calculated); the individual ticks are stored in the browser.
-- **Vocabulary review shows up to 50 cards per session.**
+- **Vocabulary review shows up to 50 cards per round**; when a round ends it offers the next one if cards are due or coming back within 20 minutes.
 - **Audio uses your browser's built-in speech voices** — quality depends on your
   operating system.
-- **No automated frontend tests yet** (the backend has 45 passing tests).
+- **The frontend has no test runner of its own.** The suite (275 tests) runs from the backend's `vitest`, which also exercises the frontend's logic: the Markdown renderer, the voice choice, the review queue, the study timer and the study calendar. Screens themselves are checked by hand.
 - Speaking / real-world activities are shown with a generic icon.
 
 ## Documentation

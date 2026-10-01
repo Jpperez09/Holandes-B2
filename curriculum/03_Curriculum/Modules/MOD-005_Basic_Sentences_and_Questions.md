@@ -5,7 +5,7 @@ subtype: standard
 level: 5
 cefr_band: A0-A1
 topic: "Basic Sentences and Questions"
-vocabulary_count: 25
+vocabulary_count: 24
 grammar_focus: [v2-main-clause, question-yes-no, question-word, present-tense-regular]
 pronunciation_focus: ["question-intonation", "short-vs-long-vowel-preview"]
 estimated_minutes: 60
@@ -45,7 +45,7 @@ tags: [module, MOD-005, A0, foundation, V2, questions, sentence-building]
 
 ## 3. Vocabulary
 
-> 25 new lemmas from [[../../05_Exercises/Generated/Vocabulary_Seed_A0_A1]] with `module: MOD-005`.
+> 24 new lemmas from [[../../05_Exercises/Generated/Vocabulary_Seed_A0_A1]] carry `module: MOD-005`. The last table also lists *en*, which is already in the seed under MOD-003.
 
 ### 3.1. Question words (7)
 
@@ -186,7 +186,7 @@ tags: [module, MOD-005, A0, foundation, V2, questions, sentence-building]
 
 | # | Type | Activity | Estimated time |
 |---|---|---|---|
-| A1 | listening | 3 dialogues (60–90s) — count adverb-fronted statements and questions. | 10 min |
+| A1 | listening | Listen to the 3 short dialogues in §8.1 (60–90 s in total) once without reading, then shadow each one. Count the adverb-fronted statements and the questions (§8.3). | 10 min |
 | A2 | vocab | Active recall on 25 vocabulary items. | 7 min |
 | A3 | grammar | V2 transformation drill: rewrite 10 SV statements with adverb fronting. | 7 min |
 | A4 | grammar | Yes/no question formation: convert 10 statements. | 5 min |
@@ -207,8 +207,87 @@ tags: [module, MOD-005, A0, foundation, V2, questions, sentence-building]
 
 ## 8. Listening Practice
 
-A1 dialogues. Suggested sources: Bart de Pau A1, *Heb je zin?*, *Dutch with Kim*, or any "everyday Dutch conversations A1" YouTube playlist.
+- A1 is the three short dialogues below, built only from the words and patterns of MOD-001 to MOD-005.
+- Each dialogue is a separate block: listen to one at a time, then shadow it.
 
+### 8.1. Dialogues for shadowing (meeting, asking, planning; about 135 words, 60–90 seconds in total)
+
+In the app, press ▶ (the whole text, or one line at a time). Outside the app, paste the Dutch below into your system voice. Listen once without reading, then read it aloud *with* the voice (shadowing) two times. While you listen, count the statements that start with an adverb (*vandaag*, *morgen*, *nu*) and the questions.
+
+**Dialogue 1 — at a party**
+
+```
+Anna: Hallo! Wie ben jij?
+Juan: Ik ben Juan. Ik kom uit Colombia. Waar woon jij?
+Anna: Ik woon in Amsterdam. En jij? Woon je hier?
+Juan: Nee, ik woon in Bogotá. Vandaag ben ik hier.
+Anna: Werk je hier?
+Juan: Ja, vandaag werk ik hier. Morgen werk ik daar.
+```
+
+**Dialogue 2 — questions between friends**
+
+```
+Pieter: Hallo Juan! Hoe gaat het?
+Juan: Goed, dank je wel! En jij?
+Pieter: Ook goed. Waarom leer je Nederlands?
+Juan: Ik ken Anna. Zij woont in Nederland. Nu leer ik Nederlands.
+Pieter: Mooi! Hoeveel broers heb jij?
+Juan: Ik heb een broer. Hij woont in Spanje. Hij werkt niet in Colombia.
+```
+
+**Dialogue 3 — today and tomorrow**
+
+```
+Anna: Wat doe je vandaag?
+Juan: Vandaag werk ik. Morgen werk ik niet. En jij?
+Anna: Ik werk altijd! Wanneer ben je hier?
+Juan: Morgen ben ik hier. Ken je Pieter?
+Anna: Ja, ik ken Pieter. Daar is hij! Zie je Pieter?
+Juan: Ja, ik zie Pieter! Hij is heel groot.
+```
+
+### 8.2. English
+
+**Dialogue 1**
+
+| Speaker | Dutch | English |
+|---|---|---|
+| Anna | Hallo! Wie ben jij? | Hello! Who are you? |
+| Juan | Ik ben Juan. Ik kom uit Colombia. Waar woon jij? | I am Juan. I come from Colombia. Where do you live? |
+| Anna | Ik woon in Amsterdam. En jij? Woon je hier? | I live in Amsterdam. And you? Do you live here? |
+| Juan | Nee, ik woon in Bogotá. Vandaag ben ik hier. | No, I live in Bogotá. Today I am here. |
+| Anna | Werk je hier? | Do you work here? |
+| Juan | Ja, vandaag werk ik hier. Morgen werk ik daar. | Yes, today I work here. Tomorrow I work there. |
+
+**Dialogue 2**
+
+| Speaker | Dutch | English |
+|---|---|---|
+| Pieter | Hallo Juan! Hoe gaat het? | Hello Juan! How are you? |
+| Juan | Goed, dank je wel! En jij? | Fine, thank you! And you? |
+| Pieter | Ook goed. Waarom leer je Nederlands? | Fine too. Why are you learning Dutch? |
+| Juan | Ik ken Anna. Zij woont in Nederland. Nu leer ik Nederlands. | I know Anna. She lives in the Netherlands. Now I am learning Dutch. |
+| Pieter | Mooi! Hoeveel broers heb jij? | Nice! How many brothers do you have? |
+| Juan | Ik heb een broer. Hij woont in Spanje. Hij werkt niet in Colombia. | I have one brother. He lives in Spain. He does not work in Colombia. |
+
+**Dialogue 3**
+
+| Speaker | Dutch | English |
+|---|---|---|
+| Anna | Wat doe je vandaag? | What are you doing today? |
+| Juan | Vandaag werk ik. Morgen werk ik niet. En jij? | Today I work. Tomorrow I do not work. And you? |
+| Anna | Ik werk altijd! Wanneer ben je hier? | I always work! When are you here? |
+| Juan | Morgen ben ik hier. Ken je Pieter? | Tomorrow I am here. Do you know Pieter? |
+| Anna | Ja, ik ken Pieter. Daar is hij! Zie je Pieter? | Yes, I know Pieter. There he is! Do you see Pieter? |
+| Juan | Ja, ik zie Pieter! Hij is heel groot. | Yes, I see Pieter! He is very big. |
+
+### 8.3. Check
+
+- Count the statements that start with an adverb, with the verb in second place and the subject after it (*Vandaag werk ik*). There are 7: *Vandaag ben ik hier*, *vandaag werk ik hier*, *Morgen werk ik daar*, *Nu leer ik Nederlands*, *Vandaag werk ik*, *Morgen werk ik niet*, *Morgen ben ik hier*.
+- Write down the 7 question words you hear (*wie*, *waar*, *hoe*, *waarom*, *hoeveel*, *wat*, *wanneer*).
+- Find two yes/no questions that start with the verb (*Woon je hier?*, *Werk je hier?*, *Ken je Pieter?*, *Zie je Pieter?*). Why is it *woon je*, not *woont je*?
+- Where do Juan, Anna and Juan's brother live? (*Bogotá*, *Amsterdam*, *Spanje*)
 ---
 
 ## 9. Speaking Practice

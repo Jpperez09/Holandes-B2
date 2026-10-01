@@ -86,6 +86,14 @@ export function Resources(): React.JSX.Element {
                         {b.replace('-', '–')}
                       </span>
                     ))}
+                    {r.region === 'flemish' && (
+                      <span
+                        className="chip chip--flemish"
+                        title="Neerlandés de Flandes, no de los Países Bajos"
+                      >
+                        🇧🇪 Flamenco (Bélgica)
+                      </span>
+                    )}
                   </div>
                   <a
                     className="btn btn--ghost"

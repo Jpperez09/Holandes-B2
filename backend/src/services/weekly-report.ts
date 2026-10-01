@@ -9,6 +9,8 @@ import { getDb } from '../db/connection';
 export interface WeeklyMinutesDay {
   date: string;
   minutes: number;
+  /** Reviews or completed activities that day, but 0 minutes logged. */
+  unregistered: boolean;
 }
 
 export interface WeeklyCompletedModule {
@@ -26,8 +28,20 @@ export interface WeeklyReport {
   reviews: {
     count: number;
     goodOrBetter: number;
-    /** Share of reviews graded Good (3) or Easy (4); null when there were none. */
+    /**
+     * Share of ALL reviews graded Good (3) or Easy (4), first exposures of new
+     * cards included; null when there were none. Not a retention figure: see `retention`.
+     */
     percentGoodOrBetter: number | null;
+  };
+  /**
+   * Real retention: only reviews of cards that were already in the FSRS Review
+   * state, where Hard (2) or better counts as remembered. null when there were none.
+   */
+  retention: {
+    count: number;
+    correct: number;
+    percent: number | null;
   };
   /** Cards whose first-ever review falls inside the window. */
   newCardsIntroduced: number;
@@ -64,12 +78,24 @@ export function buildWeeklyReport(
          UNION ALL
          SELECT date(d, '+1 day') FROM days WHERE d < ?
        )
-       SELECT days.d AS date, COALESCE(dl.minutes, 0) AS minutes
+       SELECT days.d AS date,
+              COALESCE(dl.minutes, 0) AS minutes,
+              CASE WHEN COALESCE(dl.minutes, 0) = 0 AND (
+                     EXISTS (SELECT 1 FROM vocabulary_reviews r
+                              WHERE date(r.reviewed_at, 'localtime') = days.d)
+                  OR EXISTS (SELECT 1 FROM activity_attempts a
+                              WHERE a.completed_at IS NOT NULL
+                                AND date(a.completed_at, 'localtime') = days.d)
+                   ) THEN 1 ELSE 0 END AS unregistered
          FROM days
          LEFT JOIN daily_logs dl ON dl.log_date = days.d
         ORDER BY days.d`,
     )
-    .all(start, end) as WeeklyMinutesDay[];
+    .all(start, end)
+    .map((row) => {
+      const day = row as { date: string; minutes: number; unregistered: number };
+      return { date: day.date, minutes: day.minutes, unregistered: day.unregistered === 1 };
+    }) as WeeklyMinutesDay[];
   const totalMinutes = minutesPerDay.reduce((sum, day) => sum + day.minutes, 0);
 
   // A module counts as completed when every one of its activities has at least
@@ -106,6 +132,18 @@ export function buildWeeklyReport(
     )
     .get(start, end) as { count: number; goodOrBetter: number };
 
+  // prev_state is the ts-fsrs Card as JSON before the review; state 2 = Review.
+  // json_extract throws on malformed JSON, so it is only read when json_valid.
+  const retentionRow = db
+    .prepare(
+      `SELECT COUNT(*) AS count,
+              COALESCE(SUM(CASE WHEN grade >= 2 THEN 1 ELSE 0 END), 0) AS correct
+         FROM vocabulary_reviews
+        WHERE date(reviewed_at, 'localtime') BETWEEN ? AND ?
+          AND CASE WHEN json_valid(prev_state) THEN json_extract(prev_state, '$.state') END = 2`,
+    )
+    .get(start, end) as { count: number; correct: number };
+
   const newCardsIntroduced = (
     db
       .prepare(
@@ -135,6 +173,12 @@ export function buildWeeklyReport(
       percentGoodOrBetter:
         reviewRow.count === 0 ? null : Math.round((reviewRow.goodOrBetter / reviewRow.count) * 100),
     },
+    retention: {
+      count: retentionRow.count,
+      correct: retentionRow.correct,
+      percent:
+        retentionRow.count === 0 ? null : Math.round((retentionRow.correct / retentionRow.count) * 100),
+    },
     newCardsIntroduced,
     dueCardsPending,
   };
@@ -149,12 +193,20 @@ function weekday(isoDate: string): string {
 
 /** Plain-text summary, one fact per line, meant to be pasted into a chat. */
 export function formatWeeklyText(report: Omit<WeeklyReport, 'text'>): string {
-  const { reviews, modulesCompleted } = report;
+  const { reviews, retention, modulesCompleted } = report;
   const lines: string[] = [];
   lines.push(`Weekly summary: ${report.start} to ${report.end}`);
   lines.push(`Minutes studied: ${report.totalMinutes}`);
   for (const day of report.minutesPerDay) {
-    lines.push(`  ${weekday(day.date)} ${day.date}: ${day.minutes}`);
+    lines.push(
+      `  ${weekday(day.date)} ${day.date}: ${day.minutes}${day.unregistered ? ' (minutos sin registrar)' : ''}`,
+    );
+  }
+  const unregistered = report.minutesPerDay.filter((d) => d.unregistered);
+  if (unregistered.length > 0) {
+    lines.push(
+      `Días con minutos sin registrar: ${unregistered.map((d) => `${weekday(d.date)} ${d.date}`).join(', ')}`,
+    );
   }
   lines.push(
     modulesCompleted.count === 0
@@ -163,11 +215,21 @@ export function formatWeeklyText(report: Omit<WeeklyReport, 'text'>): string {
           .map((m) => `${m.id} ${m.title}`)
           .join('; ')})`,
   );
-  lines.push(
-    reviews.count === 0
-      ? 'Reviews: 0'
-      : `Reviews: ${reviews.count} (${reviews.percentGoodOrBetter}% graded Good or Easy)`,
-  );
+  lines.push(`Reviews: ${reviews.count}`);
+  if (reviews.count > 0) {
+    // Two different figures, named so they are not mistaken for each other:
+    // the first counts every review (first exposures too), the second only cards that were in Review.
+    lines.push(
+      `Calificaciones Good/Easy, todas las tarjetas: ${reviews.percentGoodOrBetter}% (${reviews.goodOrBetter} de ${reviews.count})`,
+    );
+    lines.push(
+      `Retención real (repasos de tarjetas que ya estaban en Review, nota ≥2): ${
+        retention.percent === null
+          ? 'sin datos todavía'
+          : `${retention.percent}% (${retention.correct} de ${retention.count})`
+      }`,
+    );
+  }
   lines.push(`New cards introduced: ${report.newCardsIntroduced}`);
   lines.push(`Due cards pending: ${report.dueCardsPending}`);
   return lines.join('\n');

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { endpoints } from '../api/endpoints';
 import { ApiError } from '../api/client';
 import type {
@@ -10,6 +10,17 @@ import type {
 } from '../api/types';
 import { useApi } from '../hooks/useApi';
 import { AsyncView } from '../components/ui';
+import {
+  dutchVoices,
+  getPreferredVoiceId,
+  onVoicesChanged,
+  pickDutchVoice,
+  setPreferredVoiceId,
+  speakDutch,
+  ttsAvailable,
+  voiceId,
+} from '../lib/tts';
+import { onlyFlemishVoices } from '../lib/dutchVoice';
 
 interface SettingsData {
   settings: SettingsMap;
@@ -39,6 +50,92 @@ const LEVEL_OPTIONS = [
   { label: 'B2 — confident user', value: 100 },
 ];
 const GITHUB_URL = 'https://github.com/Jpperez09/Holandes-B2';
+const VOICE_SAMPLE = 'Goedemorgen! Ik heet Juan. Ik leer Nederlands.';
+
+/**
+ * Which voice reads the Dutch aloud. Voices belong to the browser, so the choice
+ * is kept in this browser (localStorage), not in the app's settings table.
+ */
+function VoiceSettings(): React.JSX.Element {
+  const [voices, setVoices] = useState<SpeechSynthesisVoice[]>(dutchVoices);
+  const [chosen, setChosen] = useState<string>(() => getPreferredVoiceId() ?? '');
+
+  // Voices load after the first render, and the "voiceschanged" event may already
+  // have fired by now: read the list again as soon as we subscribe.
+  useEffect(() => {
+    const refresh = () => setVoices(dutchVoices());
+    refresh();
+    return onVoicesChanged(refresh);
+  }, []);
+
+  if (!ttsAvailable()) {
+    return (
+      <div className="card">
+        <p className="mb-0 muted">Este navegador no puede leer en voz alta.</p>
+      </div>
+    );
+  }
+
+  const automatic = pickDutchVoice(voices);
+  const effective = pickDutchVoice(voices, chosen || null);
+
+  function choose(id: string): void {
+    setChosen(id);
+    setPreferredVoiceId(id || null);
+  }
+
+  return (
+    <div className="card">
+      <div className="field">
+        <label htmlFor="set-voice">
+          Voz{' '}
+          <span className="hint">(las voces dependen de este navegador)</span>
+        </label>
+        <select
+          id="set-voice"
+          className="select"
+          value={chosen}
+          onChange={(e) => choose(e.target.value)}
+        >
+          <option value="">
+            {automatic
+              ? `Automática — ${automatic.name} (${automatic.lang})`
+              : 'Automática'}
+          </option>
+          {voices.map((v) => (
+            <option key={voiceId(v)} value={voiceId(v)}>
+              {v.name} ({v.lang})
+            </option>
+          ))}
+        </select>
+      </div>
+      <button
+        type="button"
+        className="btn btn--ghost"
+        onClick={() => speakDutch(VOICE_SAMPLE)}
+      >
+        ▶ Probar
+      </button>
+      {voices.length === 0 && (
+        <p className="form-msg form-msg--err">
+          No hay ninguna voz neerlandesa instalada en este navegador; se usará la voz
+          predeterminada del sistema.
+        </p>
+      )}
+      {voices.length > 0 && onlyFlemishVoices(voices) && (
+        <p className="form-msg form-msg--err">
+          Solo hay voces flamencas (nl-BE). Para neerlandés de los Países Bajos instala una
+          voz nl-NL en el sistema.
+        </p>
+      )}
+      {effective && effective.lang.replace('_', '-').toLowerCase() === 'nl-be' && voices.length > 1 && (
+        <p className="faint mb-0 mt-s">
+          Estás usando una voz flamenca (nl-BE) a propósito; hay voces nl-NL en la lista.
+        </p>
+      )}
+    </div>
+  );
+}
 
 export function Settings(): React.JSX.Element {
   const { data, error, loading, reload } = useApi(loadSettings, []);
@@ -224,6 +321,10 @@ function SettingsForm({
           </p>
         )}
       </div>
+
+      {/* Dutch voice */}
+      <h2 className="section-title">Voz neerlandesa</h2>
+      <VoiceSettings />
 
       {/* App health */}
       <h2 className="section-title">App health</h2>

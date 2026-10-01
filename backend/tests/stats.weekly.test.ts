@@ -80,11 +80,19 @@ function vocabIds(n: number): number[] {
   ).map((r) => r.id);
 }
 
-function addReview(vocabId: number, localDay: string, grade: number, time = '12:00:00'): void {
+/** `prevState` is the ts-fsrs State the card was in before the review (0 New, 1 Learning, 2 Review, 3 Relearning). */
+function addReview(
+  vocabId: number,
+  localDay: string,
+  grade: number,
+  time = '12:00:00',
+  prevState: number | string | null = null,
+): void {
+  const prev = typeof prevState === 'number' ? JSON.stringify({ state: prevState }) : prevState;
   db.prepare(
-    `INSERT INTO vocabulary_reviews (vocabulary_id, reviewed_at, grade)
-     VALUES (?, ${localAt(localDay, time)}, ?)`,
-  ).run(vocabId, grade);
+    `INSERT INTO vocabulary_reviews (vocabulary_id, reviewed_at, grade, prev_state)
+     VALUES (?, ${localAt(localDay, time)}, ?, ?)`,
+  ).run(vocabId, grade, prev);
 }
 
 function activityIds(moduleSourceId: string): number[] {
@@ -301,8 +309,147 @@ describe('weekly plain-text summary', () => {
     expect(lines).toContain('  Wed 2026-03-11: 45');
     expect(lines).toContain('  Sun 2026-03-15: 0');
     expect(lines.find((l) => l.startsWith('Modules completed: 1 (MOD-001'))).toBeDefined();
-    expect(lines).toContain('Reviews: 2 (50% graded Good or Easy)');
+    expect(lines).toContain('Reviews: 2');
+    expect(lines).toContain('Calificaciones Good/Easy, todas las tarjetas: 50% (1 de 2)');
     expect(lines).toContain('New cards introduced: 2');
     expect(lines).toContain('Due cards pending: 0');
+  });
+});
+
+// docs/SPEC_2026-10_v2.md, P4. "% Good or better" counted every review, so ten new
+// cards graded Good on their first exposure read 100%. Retention only counts reviews
+// of cards that were already in the Review state, and a Hard (2) is a hit in FSRS.
+describe('GET /api/stats/weekly — real retention', () => {
+  it('does not count the first exposure of new cards: ten new cards graded Good are 100% Good/Easy but no retention', async () => {
+    vocabIds(10).forEach((id) => addReview(id, '2026-03-10', 3, '12:00:00', 0));
+    const { body } = await getWeekly();
+    expect(body.reviews).toEqual({ count: 10, goodOrBetter: 10, percentGoodOrBetter: 100 });
+    expect(body.retention).toEqual({ count: 0, correct: 0, percent: null });
+  });
+
+  it('counts only reviews of cards that were in the Review state, with grade 2 or better as a hit', async () => {
+    const ids = vocabIds(8);
+    // in Review: Again (miss), Hard (hit), Good (hit), Easy (hit) -> 3 of 4
+    [1, 2, 3, 4].forEach((grade, i) => addReview(ids[i], '2026-03-11', grade, '12:00:00', 2));
+    // not in Review: new, learning, relearning -> out of the metric
+    addReview(ids[4], '2026-03-11', 1, '12:00:00', 0);
+    addReview(ids[5], '2026-03-11', 3, '12:00:00', 1);
+    addReview(ids[6], '2026-03-11', 3, '12:00:00', 3);
+    const { body } = await getWeekly();
+    expect(body.retention).toEqual({ count: 4, correct: 3, percent: 75 });
+    expect(body.reviews.count).toBe(7);
+  });
+
+  it('keeps the Good/Easy percentage with its old meaning (Hard is not Good)', async () => {
+    const [a, b] = vocabIds(2);
+    addReview(a, '2026-03-11', 2, '12:00:00', 2);
+    addReview(b, '2026-03-11', 3, '12:00:00', 2);
+    const { body } = await getWeekly();
+    expect(body.reviews.percentGoodOrBetter).toBe(50);
+    expect(body.retention.percent).toBe(100);
+  });
+
+  it('ignores reviews outside the window and reviews with no (or unreadable) previous state, without failing', async () => {
+    const ids = vocabIds(5);
+    addReview(ids[0], '2026-03-08', 3, '12:00:00', 2); // day before the window
+    addReview(ids[1], '2026-03-16', 3, '12:00:00', 2); // day after
+    addReview(ids[2], '2026-03-12', 3, '12:00:00', null); // old row, no state
+    addReview(ids[3], '2026-03-12', 3, '12:00:00', 'not json');
+    addReview(ids[4], '2026-03-12', 3, '12:00:00', '{"nostate":true}');
+    const { status, body } = await getWeekly();
+    expect(status).toBe(200);
+    expect(body.retention).toEqual({ count: 0, correct: 0, percent: null });
+  });
+
+  it('reads the state the way the review route writes it (ts-fsrs Card as JSON, state 2 = Review)', async () => {
+    const { initializeCard, scheduleReview, cardToJson } = await import('../src/services/srs-fsrs');
+    const t0 = new Date('2026-03-10T15:00:00.000Z');
+    const learning = scheduleReview(initializeCard(), 3, t0).card; // New -> Learning
+    const review = scheduleReview(learning, 3, new Date(t0.getTime() + 11 * 60_000)).card; // Learning -> Review
+    expect(review.state).toBe(2);
+    const [a, b] = vocabIds(2);
+    db.prepare(
+      `INSERT INTO vocabulary_reviews (vocabulary_id, reviewed_at, grade, prev_state)
+       VALUES (?, ${localAt('2026-03-12')}, 3, ?), (?, ${localAt('2026-03-12')}, 1, ?)`,
+    ).run(a, cardToJson(review), b, cardToJson(initializeCard()));
+    const { body } = await getWeekly();
+    expect(body.retention).toEqual({ count: 1, correct: 1, percent: 100 });
+  });
+});
+
+describe('GET /api/stats/weekly — minutes not logged', () => {
+  const byDate = (body: any, date: string) => body.minutesPerDay.find((d: { date: string }) => d.date === date);
+
+  it('flags a day with reviews but 0 minutes, and a day with completed activities but 0 minutes', async () => {
+    const [a] = vocabIds(1);
+    addReview(a, '2026-03-10', 3);
+    completeActivity(activityIds('MOD-001')[0], '2026-03-12');
+    const { body } = await getWeekly();
+    expect(byDate(body, '2026-03-10').unregistered).toBe(true);
+    expect(byDate(body, '2026-03-12').unregistered).toBe(true);
+  });
+
+  it('does not flag a day with nothing done, or one whose minutes were logged', async () => {
+    const [a] = vocabIds(1);
+    addReview(a, '2026-03-11', 3);
+    addLog('2026-03-11', 20);
+    const { body } = await getWeekly();
+    expect(byDate(body, '2026-03-09').unregistered).toBe(false); // nothing happened
+    expect(byDate(body, '2026-03-11').unregistered).toBe(false); // 20 minutes logged
+  });
+
+  it('flags a day whose log says 0 minutes even though something was done', async () => {
+    const [a] = vocabIds(1);
+    addLog('2026-03-13', 0);
+    addReview(a, '2026-03-13', 4);
+    const { body } = await getWeekly();
+    expect(byDate(body, '2026-03-13').unregistered).toBe(true);
+  });
+
+  it('uses the local day: a review at 23:59 local counts for that day, not the next UTC day', async () => {
+    const [a] = vocabIds(1);
+    addReview(a, '2026-03-14', 3, '23:59:00');
+    const { body } = await getWeekly();
+    expect(byDate(body, '2026-03-14').unregistered).toBe(true);
+    expect(byDate(body, '2026-03-15').unregistered).toBe(false);
+  });
+
+  it('does not count an activity that was started but never completed', async () => {
+    db.prepare(
+      `INSERT INTO activity_attempts (user_id, activity_id, started_at, completed_at)
+       VALUES (1, ?, ${localAt('2026-03-12')}, NULL)`,
+    ).run(activityIds('MOD-001')[0]);
+    const { body } = await getWeekly();
+    expect(byDate(body, '2026-03-12').unregistered).toBe(false);
+  });
+});
+
+describe('weekly plain-text summary — both retention figures and the unlogged minutes', () => {
+  it('prints Good/Easy (all cards) and real retention on their own lines, and marks the unlogged days', async () => {
+    const ids = vocabIds(4);
+    addLog('2026-03-09', 30);
+    addReview(ids[0], '2026-03-09', 3, '12:00:00', 0); // first exposure, in a logged day
+    addReview(ids[1], '2026-03-10', 3, '12:00:00', 2); // retention hit, day without minutes
+    addReview(ids[2], '2026-03-10', 1, '12:00:00', 2); // retention miss
+    addReview(ids[3], '2026-03-10', 2, '12:00:00', 2); // retention hit (Hard)
+    const { body } = await getWeekly();
+    const lines = (body.text as string).split('\n');
+    expect(lines).toContain('Reviews: 4');
+    expect(lines).toContain('Calificaciones Good/Easy, todas las tarjetas: 50% (2 de 4)');
+    expect(lines).toContain('Retención real (repasos de tarjetas que ya estaban en Review, nota ≥2): 67% (2 de 3)');
+    expect(lines).toContain('  Tue 2026-03-10: 0 (minutos sin registrar)');
+    expect(lines).toContain('  Mon 2026-03-09: 30');
+    expect(lines).toContain('Días con minutos sin registrar: Tue 2026-03-10');
+  });
+
+  it('says there is no retention data yet instead of printing 0%, and has no unlogged line when all is logged', async () => {
+    const [a] = vocabIds(1);
+    addLog('2026-03-10', 15);
+    addReview(a, '2026-03-10', 3, '12:00:00', 0);
+    const { body } = await getWeekly();
+    const lines = (body.text as string).split('\n');
+    expect(lines).toContain('Retención real (repasos de tarjetas que ya estaban en Review, nota ≥2): sin datos todavía');
+    expect(lines.some((l) => l.startsWith('Días con minutos sin registrar'))).toBe(false);
+    expect(lines.some((l) => l.includes('minutos sin registrar)'))).toBe(false);
   });
 });

@@ -39,6 +39,12 @@ export function markActivityDone(activityId: number): void {
   writeSet(ACTIVITY_KEY, set);
 }
 
+export function unmarkActivityDone(activityId: number): void {
+  const set = readSet(ACTIVITY_KEY);
+  set.delete(activityId);
+  writeSet(ACTIVITY_KEY, set);
+}
+
 // --- Today's checklist steps (ephemeral, reset each day) ---
 
 type TodaySteps = { date: string; done: string[] };

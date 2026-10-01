@@ -53,7 +53,7 @@ tags: [module, MOD-008, A0, foundation, time, days, months]
 | Dutch | Article | Plural / forms | IPA | English | Español | Example |
 |---|---|---|---|---|---|---|
 | maandag | de | maandagen | /ˈmaːndɑx/ | Monday | lunes | *Vandaag is het maandag.* |
-| dinsdag | de | dinsdagen | /ˈdinzdɑx/ | Tuesday | martes | *Morgen is het dinsdag.* |
+| dinsdag | de | dinsdagen | /ˈdɪnzdɑx/ | Tuesday | martes | *Morgen is het dinsdag.* |
 | woensdag | de | woensdagen | /ˈʋunzdɑx/ | Wednesday | miércoles | *Woensdag werk ik niet.* |
 | donderdag | de | donderdagen | /ˈdɔndərdɑx/ | Thursday | jueves | *Donderdag werk ik in Amsterdam.* |
 | vrijdag | de | vrijdagen | /ˈvrɛidɑx/ | Friday | viernes | *Vrijdag ben ik moe.* |
@@ -223,7 +223,7 @@ Say each sentence in Dutch. Write the ones you miss.
 
 ### 8.1. Dialogue for shadowing (planning the week, about 135 words, 60–90 seconds)
 
-Paste the Dutch below into your system voice (or the browser's speech synthesis), listen once without reading, then read it aloud *with* the voice (shadowing) two times.
+In the app, press ▶ (the whole text, or one line at a time). Outside the app, paste the Dutch below into your system voice. Listen once without reading, then read it aloud *with* the voice (shadowing) two times.
 
 ```
 Anna: Hallo Juan! Wanneer komt je broer?

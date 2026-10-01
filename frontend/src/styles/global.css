@@ -463,6 +463,67 @@ a { color: var(--primary); }
 }
 .md th { background: var(--surface-soft); font-weight: 700; }
 
+/* Fenced code blocks — the module dialogues. Meant to be read, so body font. */
+.md-code {
+  margin: 10px 0; padding: 12px 14px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: inherit; font-size: 0.95rem; line-height: 1.65;
+  white-space: pre-wrap; overflow-wrap: anywhere;
+}
+.md-code code { background: none; padding: 0; font-size: inherit; }
+
+/* Answer keys stay folded until asked for. */
+.answer-key { margin: 12px 0; }
+.answer-key .md h3 { margin: 12px 0 8px; }
+
+/* "Ir a §8.1" chips under an activity. */
+.check-row__refs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.ref-chip {
+  border: 1px solid var(--border-strong); background: var(--surface);
+  border-radius: 999px; padding: 2px 10px;
+  font-size: 0.78rem; color: var(--primary); cursor: pointer;
+}
+.ref-chip:hover { background: var(--surface-tint); }
+
+/* A dialogue with audio: play it whole or line by line. */
+.dialogue {
+  margin: 10px 0; padding: 12px 14px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.dialogue__bar { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 10px; }
+.dialogue__speed { display: inline-flex; border: 1px solid var(--border-strong); border-radius: 999px; overflow: hidden; }
+.speed-btn {
+  border: none; background: var(--surface); color: var(--text);
+  padding: 6px 14px; font-size: 0.85rem; font-weight: 600; cursor: pointer;
+}
+.speed-btn + .speed-btn { border-left: 1px solid var(--border-strong); }
+.speed-btn.is-on { background: var(--primary); color: #fff; }
+.dialogue__lines { display: flex; flex-direction: column; gap: 2px; }
+.dialogue__line {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 4px 6px; border-radius: 8px; line-height: 1.6;
+}
+.dialogue__line.is-active { background: var(--surface-tint); }
+.dialogue__play {
+  flex: none; width: 28px; height: 28px; margin-top: 1px;
+  border: 1px solid var(--border-strong); border-radius: 50%;
+  background: var(--surface); color: var(--primary);
+  font-size: 0.7rem; cursor: pointer;
+}
+.dialogue__play:hover { background: var(--surface-tint); }
+.dialogue__speaker { color: var(--primary); }
+.dialogue__note { margin: 0 0 8px; font-size: 0.85rem; }
+
+/* A Belgian (Flemish) source in the Resources hub. */
+.chip--flemish { background: var(--accent-soft); border-color: #f0dcc2; }
+
+/* Study timer on Today. */
+.study-timer__clock { font-size: 1.9rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+
 /* ---------- Forms ---------- */
 .field { margin-bottom: 16px; }
 .field label {

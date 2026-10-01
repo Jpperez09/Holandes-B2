@@ -140,7 +140,7 @@ tags: [module, MOD-002, A0, foundation, sounds, greetings, numbers]
 | A2 | vocab | Active recall on 25 vocabulary items. Cover the English; produce from Dutch. | 8 min |
 | A3 | grammar | Fill-in drill: 5 sentences using *Ik heet ___ / Hij heet ___ / Zij heet ___*. | 5 min |
 | A4 | speaking | Record a 30-second simulated greeting + self-introduction exchange. | 5 min |
-| A5 | listening | One 60-second slow-Dutch monologue introducing a person. Find 3 greetings + 1 number. | 5 min |
+| A5 | listening | Listen to the 60-second monologue in §8.1 once without reading, then shadow it twice. Find 3 greetings + 1 number (§8.3). | 5 min |
 | A6 | writing | Write 4 sentences: a greeting + your name + a thank-you + a goodbye. | 5 min |
 | A7 | real-world | Greet one Dutch speaker (real or simulated) and respond to their greeting. | 5 min |
 
@@ -155,9 +155,43 @@ tags: [module, MOD-002, A0, foundation, sounds, greetings, numbers]
 
 ## 8. Listening Practice
 
-- See A1 (greetings + numbers) and A5 (60-second monologue).
-- Suggested source for A5: any A1-level "Hallo, ik ben…" introduction video on YouTube (Bart de Pau, *Heb je zin?*, *Dutch with Kim*).
+- A1 is the word-by-word audio of greetings and numbers (use the ▶ on each review card).
+- A5 is the 60-second monologue below, built only from the words and patterns of MOD-001 and MOD-002.
 
+### 8.1. Monologue for shadowing (introducing yourself, about 90 words, ~60 seconds at a slow pace)
+
+In the app, press ▶ (the whole text, or one line at a time). Outside the app, paste the Dutch below into your system voice. Listen once without reading, then read it aloud *with* the voice (shadowing) two times.
+
+```
+Hallo! Goedemorgen, mevrouw. Goedemorgen, meneer. Dag!
+Mijn naam is Juan. Ik heet Juan Pablo. Ik ben Juan. En u?
+Hij heet Pieter. Zij heet Anna. Pieter en Anna, goedemorgen! Hallo, Pieter! Hallo, Anna!
+Ik kom uit Colombia. Ik leer Nederlands. Ja, ik leer Nederlands. Goed!
+Ik leer nul, een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien. Tien! Goed!
+Goedemiddag, mevrouw. Goedenavond, meneer. Goedenacht, Anna!
+Alstublieft, meneer. Dank u wel, mevrouw. Alsjeblieft, Pieter. Dank je wel, Anna.
+Tot ziens, mevrouw. Tot ziens, meneer. Doei, Anna! Doei, Pieter! Dag!
+```
+
+### 8.2. English
+
+| Speaker | Dutch | English |
+|---|---|---|
+| Juan | Hallo! Goedemorgen, mevrouw. Goedemorgen, meneer. Dag! | Hello! Good morning, madam. Good morning, sir. Bye / hi! |
+| Juan | Mijn naam is Juan. Ik heet Juan Pablo. Ik ben Juan. En u? | My name is Juan. I'm called Juan Pablo. I am Juan. And you? |
+| Juan | Hij heet Pieter. Zij heet Anna. Pieter en Anna, goedemorgen! Hallo, Pieter! Hallo, Anna! | He is called Pieter. She is called Anna. Pieter and Anna, good morning! Hello, Pieter! Hello, Anna! |
+| Juan | Ik kom uit Colombia. Ik leer Nederlands. Ja, ik leer Nederlands. Goed! | I come from Colombia. I'm learning Dutch. Yes, I'm learning Dutch. Good! |
+| Juan | Ik leer nul, een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien. Tien! Goed! | I'm learning zero, one, two, three, four, five, six, seven, eight, nine, ten. Ten! Good! |
+| Juan | Goedemiddag, mevrouw. Goedenavond, meneer. Goedenacht, Anna! | Good afternoon, madam. Good evening, sir. Good night, Anna! |
+| Juan | Alstublieft, meneer. Dank u wel, mevrouw. Alsjeblieft, Pieter. Dank je wel, Anna. | Here you are, sir (formal). Thank you, madam (formal). Here you are, Pieter (informal). Thank you, Anna (informal). |
+| Juan | Tot ziens, mevrouw. Tot ziens, meneer. Doei, Anna! Doei, Pieter! Dag! | Goodbye, madam. Goodbye, sir. Bye, Anna! Bye, Pieter! Bye! |
+
+### 8.3. Check
+
+- Find 3 different greetings (they all start with *goede-*). Which one is for the afternoon? (*goedemiddag*)
+- Which number does Juan say twice in a row? (*tien*)
+- Who are the two people Juan introduces? (*Pieter*, *Anna*)
+- Juan says *dank u wel* to *mevrouw* and *dank je wel* to Anna. Which one is formal? (*dank u wel*)
 ---
 
 ## 9. Speaking Practice
