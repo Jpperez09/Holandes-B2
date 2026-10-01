@@ -3,11 +3,11 @@ title: Vocabulary Seed — A1 (October 2026)
 type: vocabulary-seed
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-006, MOD-007]
+covers_modules: [MOD-006, MOD-007, MOD-008]
 created: 2026-09-30
 updated: 2026-09-30
-total_items: 28
-tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007]
+total_items: 42
+tags: [vocabulary, seed, A0, A1, october, MOD-006, MOD-007, MOD-008]
 ---
 
 # Vocabulary Seed — A1 (MOD-006 to MOD-018)
@@ -70,3 +70,22 @@ Same as `Vocabulary_Seed_A0_A1`, plus two optional columns:
 | voc-A1-156 | euro | de | noun | euro's | — | /ˈøːro/ | euro | euro | true | *Het kost tien euro.* | MOD-007 |
 | voc-A1-157 | prijs | de | noun | prijzen | — | /prɛis/ | price | precio | partial | *Wat is de prijs?* | MOD-007 |
 | voc-A1-158 | kosten | — | verb | — | het kost, ze kosten · kostte · gekost | /ˈkɔstə(n)/ | to cost | costar | true | *Hoeveel kost de fiets?* | MOD-007 |
+
+### 2.3. Time, days and months (MOD-008)
+
+| id | dutch | article | pos | plural | forms | ipa | gloss_en | gloss_es | cognate_en | example_nl | module_id |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| voc-A1-159 | maandag | de | noun | maandagen | — | /ˈmaːndɑx/ | Monday | lunes | false | *Vandaag is het maandag.* | MOD-008 |
+| voc-A1-160 | dinsdag | de | noun | dinsdagen | — | /ˈdinzdɑx/ | Tuesday | martes | false | *Morgen is het dinsdag.* | MOD-008 |
+| voc-A1-161 | woensdag | de | noun | woensdagen | — | /ˈʋunzdɑx/ | Wednesday | miércoles | false | *Woensdag werk ik niet.* | MOD-008 |
+| voc-A1-162 | donderdag | de | noun | donderdagen | — | /ˈdɔndərdɑx/ | Thursday | jueves | partial | *Donderdag werk ik in Amsterdam.* | MOD-008 |
+| voc-A1-163 | vrijdag | de | noun | vrijdagen | — | /ˈvrɛidɑx/ | Friday | viernes | false | *Vrijdag ben ik moe.* | MOD-008 |
+| voc-A1-164 | zaterdag | de | noun | zaterdagen | — | /ˈzaːtərdɑx/ | Saturday | sábado | partial | *Wat doe je zaterdag?* | MOD-008 |
+| voc-A1-165 | zondag | de | noun | zondagen | — | /ˈzɔndɑx/ | Sunday | domingo | partial | *Zondag werkt mijn vader niet.* | MOD-008 |
+| voc-A1-166 | week | de | noun | weken | — | /ʋeːk/ | week | semana | true | *Een week heeft zeven dagen.* | MOD-008 |
+| voc-A1-167 | maand | de | noun | maanden | — | /maːnt/ | month | mes | partial | *Een maand heeft dertig dagen.* | MOD-008 |
+| voc-A1-168 | uur | het | noun | uren | — | /yr/ | hour; o'clock | hora; en punto | false | *Het is vijf uur.* | MOD-008 |
+| voc-A1-169 | laat | — | adj | — | — | /laːt/ | late | tarde | partial | *Hoe laat is het?* | MOD-008 |
+| voc-A1-170 | vroeg | — | adj | — | — | /vrux/ | early | temprano | false | *Zij is vroeg.* | MOD-008 |
+| voc-A1-171 | half | — | adj | — | — | /hɑlf/ | half | medio | true | *Het is half drie.* | MOD-008 |
+| voc-A1-172 | kwart | — | num | — | — | /kʋɑrt/ | quarter | cuarto | true | *Het is kwart over drie.* | MOD-008 |

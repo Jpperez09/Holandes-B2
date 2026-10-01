@@ -3,10 +3,10 @@ title: Grammar Pattern Registry — A1 (October 2026)
 type: grammar-pattern-registry
 status: draft
 cefr_band: A0-A1
-covers_modules: [MOD-007]
+covers_modules: [MOD-007, MOD-008]
 created: 2026-09-30
 updated: 2026-09-30
-total_patterns: 2
+total_patterns: 4
 tags: [grammar, patterns, registry, A0, A1, october]
 ---
 
@@ -54,6 +54,40 @@ tags: [grammar, patterns, registry, A0, A1, october]
 | **practice_activity** | Answer 8 questions about ages and prices in full sentences (A4). |
 | **srs_cloze_candidate** | true |
 
+### 3. `telling-time`
+
+| Field | Value |
+|---|---|
+| **slug** | `telling-time` |
+| **name_en** | Asking and telling the time |
+| **pienemann_stage** | 2 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-008_Time_Days_and_Months]] |
+| **dutch_pattern** | `Hoe laat is het?` → `Het is [hour] uur` · `kwart over / voor [hour]` · `[n] over / voor [hour]` · `half [next hour]` · `om [time]` |
+| **english_meaning** | "What time is it? It is half past three." *Half* counts towards the next hour. |
+| **spanish_contrast** | Spanish *las tres y media* adds half an hour to three. Dutch *half vier* is half an hour BEFORE four, so 3:30. |
+| **examples** | Hoe laat is het? Het is half vier. / Het is kwart over drie. / Het is tien voor vier. / Ik kom om half negen. |
+| **common_mistake** | Saying *half drie* for 3:30 (it is 2:30), and using *op* instead of *om* with clock times. |
+| **practice_activity** | Write 10 clock times in Dutch, then say 10 more aloud from digits (A3). |
+| **srs_cloze_candidate** | true |
+
+### 4. `days-and-months`
+
+| Field | Value |
+|---|---|
+| **slug** | `days-and-months` |
+| **name_en** | Days of the week and months |
+| **pienemann_stage** | 1 |
+| **cefr_band** | A0-A1 |
+| **module_introduced** | [[../../03_Curriculum/Modules/MOD-008_Time_Days_and_Months]] |
+| **dutch_pattern** | `[day]` lower case, `de`-nouns · `[Day] + [V-fin] + [subject]` (V2) · `op [day]` · `in [month]` |
+| **english_meaning** | Monday to Sunday and January to December, written with a lower-case first letter. |
+| **spanish_contrast** | Spanish also uses lower case, but says *el lunes*; Dutch uses the bare day (*Maandag werk ik.*) or *op maandag*. |
+| **examples** | Vandaag is het maandag. / Zaterdag werk ik niet. / Ik ben in oktober in Nederland. / Het is vandaag negen oktober. |
+| **common_mistake** | English habit: capital letters (`*Maandag`, `*Oktober`) and a Spanish-style article (`*de maandag`). |
+| **practice_activity** | Say what you do on each day of next week, one sentence per day (A7). |
+| **srs_cloze_candidate** | true |
+
 ---
 
 ## Pattern Index (by Module)
@@ -61,6 +95,7 @@ tags: [grammar, patterns, registry, A0, A1, october]
 | Module | Patterns drilled |
 |---|---|
 | MOD-007 | `numbers-11-100`, `age-and-price` |
+| MOD-008 | `telling-time`, `days-and-months` |
 
 ---
 
