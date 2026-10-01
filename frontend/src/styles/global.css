@@ -487,6 +487,37 @@ a { color: var(--primary); }
 }
 .ref-chip:hover { background: var(--surface-tint); }
 
+/* A dialogue with audio: play it whole or line by line. */
+.dialogue {
+  margin: 10px 0; padding: 12px 14px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.dialogue__bar { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 10px; }
+.dialogue__speed { display: inline-flex; border: 1px solid var(--border-strong); border-radius: 999px; overflow: hidden; }
+.speed-btn {
+  border: none; background: var(--surface); color: var(--text);
+  padding: 6px 14px; font-size: 0.85rem; font-weight: 600; cursor: pointer;
+}
+.speed-btn + .speed-btn { border-left: 1px solid var(--border-strong); }
+.speed-btn.is-on { background: var(--primary); color: #fff; }
+.dialogue__lines { display: flex; flex-direction: column; gap: 2px; }
+.dialogue__line {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 4px 6px; border-radius: 8px; line-height: 1.6;
+}
+.dialogue__line.is-active { background: var(--surface-tint); }
+.dialogue__play {
+  flex: none; width: 28px; height: 28px; margin-top: 1px;
+  border: 1px solid var(--border-strong); border-radius: 50%;
+  background: var(--surface); color: var(--primary);
+  font-size: 0.7rem; cursor: pointer;
+}
+.dialogue__play:hover { background: var(--surface-tint); }
+.dialogue__speaker { color: var(--primary); }
+.dialogue__note { margin: 0 0 8px; font-size: 0.85rem; }
+
 /* ---------- Forms ---------- */
 .field { margin-bottom: 16px; }
 .field label {

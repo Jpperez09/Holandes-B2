@@ -6,6 +6,7 @@ import type { Activity, ModuleDetailResponse, VaultModuleRaw } from '../api/type
 import { useApi } from '../hooks/useApi';
 import { AsyncView, ProgressBar } from '../components/ui';
 import { Markdown, extractSection } from '../components/Markdown';
+import { Dialogue } from '../components/Dialogue';
 import { getCompletedActivities, markActivityDone } from '../lib/storage';
 import {
   activityIcon,
@@ -86,12 +87,16 @@ function AnswerKey({
 
 /** What is inside one "##" section of the module body, answer keys folded. */
 function StudyBody({ section }: { section: StudySection }): React.JSX.Element {
+  // The code blocks of the listening section are the dialogues: give them audio.
+  const renderCode = /listening/i.test(section.title)
+    ? (code: string) => <Dialogue code={code} />
+    : undefined;
   return (
     <>
-      {section.intro && <Markdown source={section.intro} />}
+      {section.intro && <Markdown source={section.intro} renderCode={renderCode} />}
       {section.items.map((item, i) =>
         item.kind === 'md' ? (
-          <Markdown key={i} source={item.markdown} />
+          <Markdown key={i} source={item.markdown} renderCode={renderCode} />
         ) : (
           <AnswerKey key={i} item={item} />
         ),
